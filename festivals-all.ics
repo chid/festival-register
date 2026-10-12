@@ -1,0 +1,1772 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//chid//Festival Register//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Festival Calendar (All Cities)
+X-WR-CALDESC:Verified recurring festivals in Sydney\, Melbourne\, and Canb
+ erra
+X-WR-TIMEZONE:Australia/Sydney
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:summernats-20260108@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Summernats
+DESCRIPTION:City: Canberra\n\nCategory: Motoring / music / car festival\n\
+ nPricing: Premium (Season pass (Summernats 37\, Jan 2025 per official pag
+ e via search): adult $170\, youth $70\, family $410 plus booking fee\; Oz
+ tix. Single-day prices not found.)\n\nDates Note: 2025: Thu 2 - Sun 5 Jan
+  2025 (Exhibition Park\, EPIC). 2026: Thu 8 - Sun 11 Jan 2026.\n\nNote: M
+ ust-see. Official Summernats site not returned by search\; url is ACT Gov
+ ernment notice for the 2026 edition. Prices unverified for all years.\n\n
+ Website: https://summernats.com.au/spectators
+LOCATION:Exhibition Park in Canberra (EPIC)\, Mitchell\, Canberra\, Austra
+ lia
+DTSTART;VALUE=DATE:20260108
+DTEND;VALUE=DATE:20260112
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://summernats.com.au/spectators
+END:VEVENT
+BEGIN:VEVENT
+UID:enlighten-festival-20260228@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Enlighten Festival
+DESCRIPTION:City: Canberra\n\nCategory: Light / arts\n\nPricing: Free (Man
+ y events free\; some ticketed from $25 (Novotel listing\, 2025). Free eve
+ nts often need a reservation.)\n\nDates Note: 2025: Fri 28 Feb - Mon 10 M
+ ar 2025 (15th year\, 11 days). 2026 dates not confirmed.\n\nNote: Must-se
+ e. 2025 dates from ACT Government guide. Balloon Spectacular was separate
+  from Enlighten in 2025.\n\nWebsite: https://enlightencanberra.com/
+LOCATION:City centre and Parliamentary Triangle\, Canberra\, Canberra\, Au
+ stralia
+DTSTART;VALUE=DATE:20260228
+DTEND;VALUE=DATE:20260311
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://enlightencanberra.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:national-multicultural-festival-20260206@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:National Multicultural Festival
+DESCRIPTION:City: Canberra\n\nCategory: Cultural / community / food\n\nPri
+ cing: Free (Entry free. Food and market purchases extra.)\n\nDates Note: 
+ 2025: Fri 7 - Sun 9 Feb 2025 (Fri 5pm-11pm\, Sat 10am-11pm\, Sun 10am-5pm
+ ). 2026: 6-8 Feb 2026 (28th edition).\n\nNote: Must-see. 2025 entry confi
+ rmed free on VisitCanberra. 2024 edition not searched.\n\nWebsite: https:
+ //visitcanberra.com.au/articles/what-to-expect-at-the-national-multicultu
+ ral-festival
+LOCATION:Civic Square\, City Walk\, Bunda Street\, Akuna Street\, Glebe Pa
+ rk\, Canberra\, Canberra\, Australia
+DTSTART;VALUE=DATE:20260206
+DTEND;VALUE=DATE:20260209
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://visitcanberra.com.au/articles/what-to-expect-at-the-national-m
+ ulticultural-festival
+END:VEVENT
+BEGIN:VEVENT
+UID:canberra-balloon-spectacular-20260315@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Canberra Balloon Spectacular
+DESCRIPTION:City: Canberra\n\nCategory: Spectacle / family\n\nPricing: Fre
+ e (Free for spectators. Balloons launch from around 6am weather permittin
+ g.)\n\nDates Note: 2025: Sat 15 - Sun 23 Mar 2025. 2024: 9-17 Mar 2024 (t
+ ied to Enlighten).\n\nNote: Must-see. 2025 dates per Events ACT and Canbe
+ rra Times-era coverage. 2026 dates not confirmed.\n\nWebsite: https://vis
+ itcanberra.com.au/events/56b23af4266140594567dc27/canberra-balloon-specta
+ cular
+LOCATION:John Dunmore Lang Place (between Questacon and National Portrait 
+ Gallery)\, Canberra\, Canberra\, Australia
+DTSTART;VALUE=DATE:20260315
+DTEND;VALUE=DATE:20260324
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://visitcanberra.com.au/events/56b23af4266140594567dc27/canberra-
+ balloon-spectacular
+END:VEVENT
+BEGIN:VEVENT
+UID:skyfire-and-canberra-new-year-s-eve-fireworks-20260315@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Skyfire and Canberra New Year's Eve Fireworks
+DESCRIPTION:City: Canberra\n\nCategory: Fireworks / community\n\nPricing: 
+ Free (Skyfire and NYE fireworks free to the public (Skyfire free-for-fami
+ lies per local coverage). 2024 VIP function was a promotional giveaway on
+ ly.)\n\nDates Note: Skyfire 2025: Sat 15 Mar 2025 (Regatta Point\, Lake B
+ urley Griffin). NYE 2025: Wed 31 Dec 2025 (two displays\, 9pm and midnigh
+ t).\n\nNote: Prompt listed Skyfire/NYE together\; entry combines two even
+ ts. Skyfire is autumn\, NYE is year-end. Free status from local coverage\
+ , not official ticketing.\n\nWebsite: https://www.cmtedd.act.gov.au/open_
+ government/inform/act_government_media_releases/barr/2025/celebrate-new-y
+ ears-eve-by-the-lake
+LOCATION:Lake Burley Griffin: Regatta Point / Central Basin\; NYE celebrat
+ ion hubs at Rond Terrace\, Wendouree Drive\, Ferry Gate\, John Dunmore La
+ ng Place\, Canberra\, Australia
+DTSTART;VALUE=DATE:20260315
+DTEND;VALUE=DATE:20260316
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.cmtedd.act.gov.au/open_government/inform/act_government_me
+ dia_releases/barr/2025/celebrate-new-years-eve-by-the-lake
+END:VEVENT
+BEGIN:VEVENT
+UID:art-not-apart-20260316@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Art\, Not Apart
+DESCRIPTION:City: Canberra\n\nCategory: Visual art / performance (street-a
+ rt day)\n\nPricing: Free (Free entry per Time Out listing\; 1-7pm.)\n\nDa
+ tes Note: Usually one Saturday in mid-March (2019: Sat 16 Mar). 2024 and 
+ 2025 dates not confirmed.\n\nNote: Official URL not confirmed in search r
+ esults (artnotapart.com named in result text only\; left blank). Time Out
+  page is not dated. Verify before listing as recurring.
+LOCATION:New Acton\, Canberra city centre (CBD sites incl. NFSA\, Shine Do
+ me\, QT Canberra in 2019)\, Canberra\, Australia
+DTSTART;VALUE=DATE:20260316
+DTEND;VALUE=DATE:20260317
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:national-folk-festival-20260403@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:National Folk Festival
+DESCRIPTION:City: Canberra\n\nCategory: Music / arts / cultural\n\nPricing
+ : Low (Multi-day tickets: 2024 range $14.50 to $591.34 (under-5s free). L
+ owest entry ~$14.50 (2024)\; 2025 prices not verified. Season and camping
+  passes extra. Ticketing via Humanitix.)\n\nDates Note: 2025: Thu 17 - Mo
+ n 21 Apr 2025 (Easter). 2024: 28 Mar - 1 Apr 2024. 2026: 3-6 Apr 2026 per
+  one listing.\n\nNote: Must-see. Tier set to Mid from 2024 price range (c
+ heapest adult ~$14.50 would make it Low\; full-season passes are Premium)
+ . 2025 price not confirmed.\n\nWebsite: https://folkfednsw.org.au/?p=1128
+ 1
+LOCATION:Exhibition Park in Canberra (EPIC)\, Flemington Road\, Mitchell\,
+  Canberra\, Australia
+DTSTART;VALUE=DATE:20260403
+DTEND;VALUE=DATE:20260407
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://folkfednsw.org.au/?p=11281
+END:VEVENT
+BEGIN:VEVENT
+UID:canberra-international-music-festival-20260430@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Canberra International Music Festival
+DESCRIPTION:City: Canberra\n\nCategory: Music (classical / chamber)\n\nPri
+ cing: Low (2025 prices not found. 2026 listing: Adult $25-85\, Concession
+  $25-65\, Child $18 (HerCanberra). Festival and TOP FIVE passes available
+ . Ticketing via Humanitix.)\n\nDates Note: 2025: Wed 30 Apr - Sun 4 May 2
+ 025. 2024: 1-5 May 2024 (30th year). 2026 listed.\n\nNote: Tier Low is es
+ timated from the 2026 cheapest price (child $18)\; 2025 price unverified.
+  Must-see for classical music audiences.\n\nWebsite: https://cimf.org.au/
+ ?p=7432
+LOCATION:Ainslie Arts Centre\, Braddon\, and other Canberra venues\, Canbe
+ rra\, Australia
+DTSTART;VALUE=DATE:20260430
+DTEND;VALUE=DATE:20260505
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://cimf.org.au/?p=7432
+END:VEVENT
+BEGIN:VEVENT
+UID:canberra-truffle-festival-20260607@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Canberra Truffle Festival
+DESCRIPTION:City: Canberra\n\nCategory: Food and wine\n\nPricing: Free (Af
+ ter Dark Truffle Fest 2025 $150pp (food4media\, May 2025). Other events n
+ ot priced in search results\; they vary by event.)\n\nDates Note: 2025: t
+ ruffle tasting series 7 Jun - 31 Aug 2025 (Mount Majura Vineyard listing)
+ \; After Dark Truffle Fest 20 Jun 2025. 2024: 21 Jun - 24 Sep 2024.\n\nNo
+ te: Season of separate events\, not one ticketed festival. Official progr
+ am page not found. Tier unverified because events vary\; the $150 After D
+ ark event would be Premium.\n\nWebsite: https://region.com.au/if-youre-lo
+ oking-for-truffle-you-came-to-the-right-place-capital-region-truffle-fest
+ ival-launches-a-bumper-season/781118/
+LOCATION:Multiple Capital Region wineries and restaurants\, Canberra\, Can
+ berra\, Australia
+DTSTART;VALUE=DATE:20260607
+DTEND;VALUE=DATE:20260901
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://region.com.au/if-youre-looking-for-truffle-you-came-to-the-rig
+ ht-place-capital-region-truffle-festival-launches-a-bumper-season/781118/
+END:VEVENT
+BEGIN:VEVENT
+UID:floriade-20260913@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Floriade
+DESCRIPTION:City: Canberra\n\nCategory: Flower festival / arts\n\nPricing:
+  Free (Daytime entry free. NightFest (evening\, 4 nights in early Oct) is
+  ticketed: 2024 listing Adults $25\, Concession/child $15\, family $65 (u
+ nverified for 2025).)\n\nDates Note: 2025: 13 Sep - 12 Oct 2025 (Commonwe
+ alth Park). 2026 dates not confirmed in sources.\n\nNote: Must-see. 2025 
+ dates from Crowne Plaza Canberra listing and Floriade FAQ. NightFest 2025
+  dates and prices not confirmed\; 2025 NightFest listed 2-5 Oct by one so
+ urce and 1-4 Oct by another.\n\nWebsite: https://floriadeaustralia.com/
+LOCATION:Commonwealth Park\, Canberra\, Canberra\, Australia
+DTSTART;VALUE=DATE:20260913
+DTEND;VALUE=DATE:20261013
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://floriadeaustralia.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:canberra-writers-festival-20261015@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Canberra Writers Festival
+DESCRIPTION:City: Canberra\n\nCategory: Literature\n\nPricing: Low (2025 i
+ ndividual sessions approx $20-30 (one session $28). Library Pass $100 (4 
+ standard events\, Sat/Sun)\; Parliament Pass for 4 events at MOAD.)\n\nDa
+ tes Note: 2025: Wed 22 - Sun 26 Oct 2025. 2026: Thu 15 - Sun 18 Oct 2026 
+ (10th anniversary\, 110 events).\n\nNote: Official 2025 program PDF used 
+ as url. 2026 pricing: see website.\n\nWebsite: https://canberrawritersfes
+ tival.com.au/
+LOCATION:Multiple: National Library of Australia\, NFSA\, National Museum 
+ of Australia\, MOAD\, ANU\, Hyatt Hotel Canberra\, Canberra\, Australia
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261019
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://canberrawritersfestival.com.au/
+END:VEVENT
+BEGIN:VEVENT
+UID:midsumma-festival-20260118@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Midsumma Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Arts / LGBTIQ+ culture\n\nPricing
+ : Free (Midsumma Carnival and Pride March free\; some events ticketed at 
+ set prices (not extracted)\; some family events free with booking.)\n\nDa
+ tes Note: 2024: 21 Jan - 11 Feb 2024\; 2026: 18 Jan - 8 Feb 2026 (2025 da
+ tes not confirmed)\n\nNote: 2025 edition not found\; a RACV listing with 
+ 2025 in its title actually describes 2026 details. Tier Free based on fre
+ e flagship events.\n\nWebsite: https://www.midsumma.org.au
+LOCATION:Melbourne CBD incl. Alexandra Gardens\, Victorian Pride Centre\, 
+ Fed Square\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260118
+DTEND;VALUE=DATE:20260209
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.midsumma.org.au
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-chinese-lunar-new-year-festival-chinatown-20260222@chid.gith
+ ub.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne Chinese Lunar New Year Festival (Chinatown)
+DESCRIPTION:City: Melbourne\n\nCategory: Cultural / festival\n\nPricing: F
+ ree (Free street festival\; Millennium Dragon Parade\, food stalls\, kids
+ ' area.)\n\nDates Note: 2025: Sun 2 Feb 2025\, 10am-8pm\; 2024: Sun 11 Fe
+ b 2024 (one listing says 10 Feb)\; 2026: Sun 22 Feb 2026\n\nNote: Must-se
+ e. Official URL is the City of Melbourne events listing page. Related fre
+ e Lunar New Year events at Queen Victoria Market and NGV in 2025.\n\nWebs
+ ite: https://whatson.melbourne.vic.gov.au/article/melbournes-lunar-new-ye
+ ar-festival-events
+LOCATION:Chinatown Melbourne: Lonsdale\, Bourke and Little Bourke Streets\
+ , Melbourne\, Australia
+DTSTART;VALUE=DATE:20260222
+DTEND;VALUE=DATE:20260223
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://whatson.melbourne.vic.gov.au/article/melbournes-lunar-new-year
+ -festival-events
+END:VEVENT
+BEGIN:VEVENT
+UID:australian-open-20260112@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Australian Open
+DESCRIPTION:City: Melbourne\n\nCategory: Sport (tennis)\n\nPricing: Low (G
+ round passes from $19 (week two) to $49 (week one) early-bird\; $59 stand
+ ard week one\, $35 week two from 1 Dec (2025 edition). Kids from $5. Rese
+ rved seats on Rod Laver\, Margaret Court\, John Cain Arenas cost more.)\n
+ \nDates Note: 2026: 12 Jan - 1 Feb (main draw from 18 Jan). 2025: main dr
+ aw from 12 Jan.\n\nNote: Must-see. Tickets via Ticketmaster\; 2026 genera
+ l sale opened 7 Oct 2026. Over one million attendees in both 2024 and 202
+ 5. 2026 edition has already run\; 2027 dates not yet confirmed in sources
+ .\n\nWebsite: https://ausopen.com/node/257147
+LOCATION:Melbourne Park\, Melbourne (VIC)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260112
+DTEND;VALUE=DATE:20260202
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://ausopen.com/node/257147
+END:VEVENT
+BEGIN:VEVENT
+UID:st-kilda-festival-20260215@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:St Kilda Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Music / community\n\nPricing: Fre
+ e (Free entry\, no bookings required (2024 and 2025).)\n\nDates Note: 202
+ 5: 15 - 16 Feb 2025\; 2024: 17 - 18 Feb 2024 (2026 dates not searched)\n\
+ nNote: Must-see. Official URL domain appeared in search results but a liv
+ e fetch returned HTTP 429 during verification\, so the domain is unconfir
+ med. Council is City of Port Phillip.\n\nWebsite: https://gdaystkilda.com
+ .au
+LOCATION:St Kilda Foreshore: South Beach Reserve\, O'Donnell Gardens and s
+ urrounds\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260215
+DTEND;VALUE=DATE:20260217
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://gdaystkilda.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:moonee-valley-festival-20260222@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Moonee Valley Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Music / community\n\nPricing: Fre
+ e (Free\, all ages\, no registration required.)\n\nDates Note: 2025: Sat 
+ 22 Feb 2025\, 10am-10pm\; 2024: Sat 24 Feb 2024 (2026 dates not confirmed
+ )\n\nNote: Council-run free festival. Related free Moonee Valley events: 
+ Mediterranean Fiesta (Mar 2025)\, Twilight Concert at Lincoln Park (Mar 2
+ 025). Youth Fest (Sep 2024) also free at Queens Park.\n\nWebsite: https:/
+ /mvcc.vic.gov.au/festival
+LOCATION:Queens Park\, Moonee Ponds\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260222
+DTEND;VALUE=DATE:20260223
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://mvcc.vic.gov.au/festival
+END:VEVENT
+BEGIN:VEVENT
+UID:moomba-festival-20260305@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Moomba Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Community / festival (parade\, fi
+ reworks\, carnival)\n\nPricing: Free (Entry free. Moomba Ride Pass $50 (2
+ 025\, unlimited rides)\; $4 coupon ticketing for rides. Birdman Rally fre
+ e (2026).)\n\nDates Note: 2024: 7-11 Mar (Labour Day weekend). 2025: 6-10
+  Mar. 2026: 5-9 Mar. 2027: 4-8 Mar (TBC).\n\nNote: Must-see. City of Melb
+ ourne event. Parade on Monday of the long weekend. 2027 dates listed as T
+ hursday 4 March 2027 to Monday 8 March 2027\, with some details still TBC
+ .\n\nWebsite: https://moomba.melbourne.vic.gov.au
+LOCATION:Alexandra Gardens\, Birrarung Marr\, Kings Domain\, Yarra River p
+ recinct (VIC)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260305
+DTEND;VALUE=DATE:20260310
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://moomba.melbourne.vic.gov.au
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-international-comedy-festival-20260326@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne International Comedy Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Comedy\n\nPricing: Low (Tickets f
+ rom $10\; average about $35. 25-hour flash sale at $25 per show (Feb 2024
+  and Feb 2025). Members get 20% off some shows\; discount for 3+ shows.)\
+ n\nDates Note: 2024: 27 Mar - 21 Apr. 2025: 26 Mar - 20 Apr.\n\nNote: Mus
+ t-see. Major comedy festival\; the Sydney equivalent is Sydney Comedy Fes
+ tival. Special events can sell out early. Resale capped at 10% above face
+  value. 2026 dates not checked.\n\nWebsite: https://www.comedyfestival.co
+ m.au
+LOCATION:Melbourne Town Hall and about 137 venues citywide (VIC)\, Melbour
+ ne\, Australia
+DTSTART;VALUE=DATE:20260326
+DTEND;VALUE=DATE:20260421
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.comedyfestival.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:australian-grand-prix-formula-1-20260313@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Australian Grand Prix (Formula 1)
+DESCRIPTION:City: Melbourne\n\nCategory: Sport (motorsport)\n\nPricing: Pr
+ emium (2025 Park Pass (GA) base $309 (up from $279 in 2024)\; Thursday Pa
+ rk Pass from about $45 per one reseller (unverified). Grandstand 4-day fr
+ om about $580 (2024). Dynamic pricing: up to 55% above base at peak deman
+ d. Kids under 14 Thursday free.)\n\nDates Note: 2024: 21-24 Mar. 2025: ap
+ prox. 13-16 Mar (sources differ). 2026 race not checked.\n\nNote: Must-se
+ e. Park Passes sold out in 2024. Official Park Pass and grandstand prices
+  are not fully verified in the sources. 2025 dates conflict across sites 
+ (one spam site\, March 21-23\, ignored).\n\nWebsite: https://www.grandpri
+ x.com.au
+LOCATION:Albert Park Circuit\, Albert Park (VIC)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260313
+DTEND;VALUE=DATE:20260317
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.grandprix.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-food-wine-festival-20260321@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne Food & Wine Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Food & wine\n\nPricing: Premium (
+ Prices vary by event\; not found in the sources. World's Longest Lunch is
+  ticketed (three-course lunch\, wines). Subscriber pre-sale precedes gene
+ ral sale.)\n\nDates Note: 2024: 15-24 Mar (10 days\, 300-400+ events). 20
+ 25: 21-30 Mar.\n\nNote: Must-see. Official program and tickets at mfwf.co
+ m.au (listed in a government release). 2025 general sale opened 28 Nov 20
+ 24. 2026 edition dates and prices not checked.\n\nWebsite: https://melbou
+ rnefoodandwine.com.au
+LOCATION:Citywide Melbourne and regional Victoria (flagship World's Longes
+ t Lunch at a central venue)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260321
+DTEND;VALUE=DATE:20260331
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://melbournefoodandwine.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-food-and-wine-festival-20260321@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne Food and Wine Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Food and wine\n\nPricing: Premium
+  (General prices not found. Event-level examples: 2024 shared dinner $175
+  per person\; World's Longest Lunch ticketed (price not extracted).)\n\nD
+ ates Note: 2025: 21 - 30 Mar 2025\; 2024: 15 - 24 Mar 2024\n\nNote: Must-
+ see. Tier left Unverified\; events range from low-cost to premium dinners
+ . Official site name appeared in results as melbournefoodandwine.com.au (
+ 2024 sources also cite mfwf.com.au\; not verified).\n\nWebsite: https://m
+ elbournefoodandwine.com.au
+LOCATION:Citywide Melbourne and regional Victoria (200-300 events)\, Melbo
+ urne\, Australia
+DTSTART;VALUE=DATE:20260321
+DTEND;VALUE=DATE:20260331
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://melbournefoodandwine.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:anzac-day-dawn-service-shrine-of-remembrance-20260425@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Anzac Day Dawn Service (Shrine of Remembrance)
+DESCRIPTION:City: Melbourne\n\nCategory: Civic / commemorative\n\nPricing:
+  Free (Free\, no booking required. Free PTV shuttle from selected RSLs (b
+ ookings required in 2025).)\n\nDates Note: 2025: 25 Apr 2025 (dawn servic
+ e about 5:30-6:30am). Anzac Day is 25 April each year.\n\nNote: Dawn serv
+ ice and parade in the CBD. Expect more than 50\,000 people across the daw
+ n service and parade (2025). 2026 details not checked.\n\nWebsite: https:
+ //shrine.org.au/anzac-day-2025
+LOCATION:Shrine of Remembrance\, Melbourne (VIC)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260425
+DTEND;VALUE=DATE:20260426
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://shrine.org.au/anzac-day-2025
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-writers-festival-20260507@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne Writers Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Literature\n\nPricing: Unverified
+  (Per-event and pass prices not found for 2025. 2024 early-bird 10% disco
+ unt (select events\, workshops excluded)\; concession prices available at
+  many events.)\n\nDates Note: 2025: 8 - 11 May 2025\; 2026: 7 - 10 May 20
+ 26\n\nNote: Must-see. 2024 start date conflicts across sources (6 May vs 
+ 8 May)\; 6-12 May used. Price tier left Unverified as no general prices w
+ ere found.\n\nWebsite: https://mwf.com.au
+LOCATION:Venues across Melbourne CBD incl. Wheeler Centre and State Librar
+ y Victoria\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260507
+DTEND;VALUE=DATE:20260511
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://mwf.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:rising-festival-20260604@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:RISING Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Arts / music / performance\n\nPri
+ cing: Free (Per-event prices not found. Organisers emphasise free experie
+ nces and affordable ticketing\; 2024 booking 3+ events in one transaction
+  got 15% off standard ticket price.)\n\nDates Note: 2025: 4 - 15 Jun 2025
+  (2026 lineup referenced\, dates not confirmed)\n\nNote: Must-see. Tier c
+ ould not be verified from search results\; check the official booking pag
+ e. 2025 presale began 14 Mar 2025.\n\nWebsite: https://rising.melbourne
+LOCATION:Multiple Melbourne venues incl. Melbourne Town Hall\, Hamer Hall\
+ , St Paul's Cathedral\, trams and streets\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260604
+DTEND;VALUE=DATE:20260616
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://rising.melbourne
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-international-film-festival-miff-20260807@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne International Film Festival (MIFF)
+DESCRIPTION:City: Melbourne\n\nCategory: Film\n\nPricing: Premium (Multi-d
+ ay passes: Multipass-12 $285.60 ($257.10 concession)\, Multipass-6 $151.2
+ 0 ($136.10 concession) (2025). Single session prices not verified (listed
+  as varies).)\n\nDates Note: 2025: 7 - 24 Aug 2025 in cinemas\; online 15
+  - 31 Aug 2025 (2026 edition is live on the official site\, dates not ext
+ racted)\n\nNote: Must-see. Tier set to Premium because the cheapest stand
+ ard option is a multi-day pass per the register rule\; single-session tic
+ kets are cheaper but unverified. Program counts differ between sources (2
+ 50-275+ films).\n\nWebsite: https://www.miff.com.au
+LOCATION:Cinemas across Melbourne CBD and suburbs\; regional Victoria\; on
+ line nationwide\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260807
+DTEND;VALUE=DATE:20260825
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.miff.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-fringe-festival-20260930@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne Fringe Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Arts (multi-disciplinary)\n\nPric
+ ing: Free (Mixed: some events free\, most paid with prices varying by eve
+ nt. 48-hour flash sales at 25% off\; Hub Club membership gives 20% off fu
+ ll-price tickets (2025).)\n\nDates Note: 2025: 30 Sep - 19 Oct 2025\; 202
+ 4: 1 - 20 Oct 2024\n\nNote: Must-see. Classified Free because some events
+  are free (cheapest typical entry)\; the rest are paid and unverified per
+  event. 2024 event count 470+\, 2025 500+.\n\nWebsite: https://melbournef
+ ringe.com.au
+LOCATION:Citywide Melbourne venues incl. Fringe Westside (Footscray)\, Mel
+ bourne\, Australia
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261020
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://melbournefringe.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:royal-melbourne-show-20260925@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Royal Melbourne Show
+DESCRIPTION:City: Melbourne\n\nCategory: Family / agricultural show\n\nPri
+ cing: Mid (2025 adult $49.50\, concession $36\, child (5-12) $26\, family
+  (2 adults + 2 kids) $99\; online discount up to 20%\; evening after 5pm 
+ $30 adult. Children 4 and under free. Seniors Day $25.)\n\nDates Note: 20
+ 24: 26 Sep - 6 Oct. 2025: 25 Sep - 5 Oct (11 days).\n\nNote: Must-see/fam
+ ily. Early online adult about $42 in 2024. 2026 dates and prices not conf
+ irmed in these sources\; check royalshow.com.au.\n\nWebsite: https://roya
+ lshow.com.au
+LOCATION:Melbourne Showgrounds\, Ascot Vale (VIC)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20261006
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://royalshow.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:afl-grand-final-20260926@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:AFL Grand Final
+DESCRIPTION:City: Melbourne\n\nCategory: Sport (Australian rules football)
+ \n\nPricing: Premium (2025 top-tier ticket $515 (2026 top price $536). En
+ try-level reserved seats $185 in 2024 (frozen for entry-level finals tick
+ ets). Minimum grand final price reported at $195 in one unconfirmed artic
+ le.)\n\nDates Note: 2025: 27 Sep 2025. 2026: 26 Sep 2026 (per 2026 price 
+ announcement).\n\nNote: Must-see. Ticketing via Ticketek (MCG). Crowd 100
+ \,022 in 2025. The $195 minimum is unconfirmed for 2025. Some sources cit
+ e category ranges without verification\; not used.\n\nWebsite: https://ww
+ w.afl.com.au
+LOCATION:Melbourne Cricket Ground (MCG)\, Jolimont (VIC)\, Melbourne\, Aus
+ tralia
+DTSTART;VALUE=DATE:20260926
+DTEND;VALUE=DATE:20260927
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.afl.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-international-jazz-festival-20261017@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne International Jazz Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Music (jazz)\n\nPricing: Free (Mo
+ re than one-third of the program is free (2024 and 2025). Ticketed events
+  and Jazz at the Bowl priced separately\; prices not extracted.)\n\nDates
+  Note: 2025: 17 - 26 Oct 2025\; 2024: 18 - 27 Oct 2024 (2026 dates not co
+ nfirmed)\n\nNote: Must-see. Tier Free because a third or more of events a
+ re free (cheapest typical entry). Ticketed price points not verified.\n\n
+ Website: https://melbournejazz.com
+LOCATION:About 40 venues across Melbourne CBD incl. Fed Square\, The JazzL
+ ab\, Bowl (Jazz at the Bowl)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261027
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://melbournejazz.com
+END:VEVENT
+BEGIN:VEVENT
+UID:lygon-street-festa-carlton-italian-festa-20261018@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Lygon Street Festa (Carlton Italian Festa)
+DESCRIPTION:City: Melbourne\n\nCategory: Cultural / food (Italian)\n\nPric
+ ing: Free (Free entry (2025\, Royal Exhibition Building)\; ticketed add-o
+ ns such as wine and jazz.)\n\nDates Note: No confirmed 2024 or 2025 editi
+ on found\n\nNote: No official URL found\; revival campaign reported Sep 2
+ 025\, unconfirmed. Italian Festa & Expo 2025 (Carlton Gardens\, Co.As.It)
+  is a possibly different event with no admission details. Leave URL blank
+  per rule.\n\nWebsite: https://whatson.melbourne.vic.gov.au/things-to-do/
+ italian-festa-and-expo
+LOCATION:Lygon Street / Argyle Square\, Carlton\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20261018
+DTEND;VALUE=DATE:20261020
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://whatson.melbourne.vic.gov.au/things-to-do/italian-festa-and-ex
+ po
+END:VEVENT
+BEGIN:VEVENT
+UID:oakleigh-glendi-greek-festival-20261031@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Oakleigh Glendi (Greek festival)
+DESCRIPTION:City: Melbourne\n\nCategory: Cultural / food / music\n\nPricin
+ g: Free (2024 admission free and open to all. 2025 admission not confirme
+ d\; 2025 raffle for a $6\,000 travel voucher (raffle tickets sold separat
+ ely).)\n\nDates Note: 2025: 1 - 2 Nov 2025\; 2024: 2 - 3 Nov 2024\; 2026:
+  31 Oct - 1 Nov 2026\n\nNote: Official URL is the Monash council listing 
+ for the 2024 edition\; not a verified 2025/2026 page. Greek Film Festival
+  (Oct 2025) and Antipodes Festival (Feb 2025) are separate Greek events.\
+ n\nWebsite: https://www.oakleighglendi.com.au/
+LOCATION:Warrawee Park\, Oakleigh (Monash)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261102
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.oakleighglendi.com.au/
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-cup-carnival-flemington-race-days-incl-lexus-melbourne-cup-2
+ 0261101@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne Cup Carnival (Flemington race days incl. Lexus Melbourne
+  Cup)
+DESCRIPTION:City: Melbourne\n\nCategory: Sport (horse racing)\n\nPricing: 
+ Mid (2025 Daily Flemington Pass $50-$120\; Four Day Pass $250\; VIP/Elms 
+ $250-$350. 2024 General Admission: Oaks Day $48 early bird / $65 full\; D
+ erby Day $65 / $88\; Cup Day $75 / $99. Children under 12 with adult free
+ . 2026 GA adult: Oaks $50\, Champions $65\, Derby $88\, Cup $120 (vrc.com
+ .au).)\n\nDates Note: 2025: 1 Nov (Victoria Derby Day)\, 4 Nov (Melbourne
+  Cup)\, 6 Nov (Crown Oaks)\, 8 Nov (TAB Champions Stakes). 2024: 2\, 5\, 
+ 7\, 9 Nov.\n\nNote: Must-see. Cup Day is the Tuesday of the first full we
+ ek of November. Hospitality packages on Cup Day from about $1\,255. 2026 
+ prices and dates not confirmed in these sources\; check vrc.com.au.\n\nWe
+ bsite: https://www.vrc.com.au/melbourne-cup-carnival/melbourne-cup-carniv
+ al-2026/
+LOCATION:Flemington Racecourse\, Flemington (VIC)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261109
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.vrc.com.au/melbourne-cup-carnival/melbourne-cup-carnival-2
+ 026/
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-new-year-s-eve-city-of-melbourne-celebration-zones-and-firew
+ orks-20261231@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne New Year's Eve (City of Melbourne Celebration Zones and 
+ fireworks)
+DESCRIPTION:City: Melbourne\n\nCategory: Civic / New Year's Eve\n\nPricing
+ : Free (Free to attend the celebration zones and fireworks viewing\; food
+  and drink extra.)\n\nDates Note: 31 Dec 2024 (into 2025). 31 Dec 2025 (i
+ nto 2026).\n\nNote: Must-see. The 2025 zone list and show format are only
+  from local media guides and not verified against the City of Melbourne p
+ age\; check before relying on it. Crowds are large.\n\nWebsite: https://w
+ ww.melbourne.vic.gov.au/new-years-eve
+LOCATION:Celebration Zones: Docklands\, Flagstaff Gardens\, Treasury Garde
+ ns\, the Shrine (2024-25 zone list). CBD rooftop fireworks.\, Melbourne\,
+  Australia
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.melbourne.vic.gov.au/new-years-eve
+END:VEVENT
+BEGIN:VEVENT
+UID:ngv-triennial-20261213@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:NGV Triennial
+DESCRIPTION:City: Melbourne\n\nCategory: Art / design\n\nPricing: Free (Fr
+ ee entry (2023 and 2026 editions).)\n\nDates Note: 2023 edition: 3 Dec 20
+ 23 - 7 Apr 2024\; 2026 edition: 13 Dec 2026 - 11 Apr 2027\n\nNote: Must-s
+ ee. Triennial is held every three years\, so there is no 2025 edition\; t
+ he 2023 edition ran into 2024. Next edition is 2026-27. Attendance 1\,063
+ \,675 for 2023 edition. The official URL path in search results is spelle
+ d 'exhibitons' and is kept verbatim.\n\nWebsite: https://www.ngv.vic.gov.
+ au/exhibition/triennial-2026/
+LOCATION:NGV International\, 180 St Kilda Road\, Melbourne\, Melbourne\, A
+ ustralia
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20270412
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.ngv.vic.gov.au/exhibition/triennial-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:boxing-day-test-mcg-20261226@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Boxing Day Test (MCG)
+DESCRIPTION:City: Melbourne\n\nCategory: Sport (cricket)\n\nPricing: Mid (
+ 2025 Day 3: adult $74 unreserved / $86 reserved\; child (7-16) $29 / $35\
+ ; plus $9 Ticketek fee. Day 5 price TBC in listing. 2024 Day 5 adult from
+  $10 (GA)\; season packages from $30 (Cricket Victoria).)\n\nDates Note: 
+ 2025: 26-30 Dec (Day 5 is 30 Dec). 2024: 26-30 Dec.\n\nNote: Must-see. Da
+ y 1 and 2 public tickets often sell out. Tickets via Ticketek and cricket
+ .com.au. Corporate hospitality from about $895-$995 ex GST (2024). 2026 s
+ ummer fixtures not checked.\n\nWebsite: https://www.mcg.org.au/events/202
+ 5/december/boxing-day-test-day-5---australia-v-england
+LOCATION:Melbourne Cricket Ground (MCG)\, Jolimont (VIC)\, Melbourne\, Aus
+ tralia
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20261231
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.mcg.org.au/events/2025/december/boxing-day-test-day-5---au
+ stralia-v-england
+END:VEVENT
+BEGIN:VEVENT
+UID:queen-victoria-market-night-markets-summer-hawker-88-winter-fringe-fla
+ vours-20261119@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Queen Victoria Market Night Markets (Summer\, Hawker 88\, Winter\,
+  Fringe Flavours)
+DESCRIPTION:City: Melbourne\n\nCategory: Markets / food\n\nPricing: Free (
+ Free entry\; food\, drink and goods paid. Summer market closed 24 and 31 
+ Dec.)\n\nDates Note: 2025: Summer Night Market 19 Nov 2025 - 11 Mar 2026\
+ ; Hawker 88 9 Apr - 7 May\; Winter 4 Jun - 27 Aug\; Fringe Flavours 17 Se
+ p - 15 Oct. All Wednesdays 5-10pm.\n\nNote: Series of night markets\, not
+  a single event. Free entry confirmed for summer and winter 2025\; Fringe
+  Flavours free-entry not confirmed. 2026 season dates not announced in so
+ urces.\n\nWebsite: https://qvm.com.au/
+LOCATION:Queen Victoria Market\, Melbourne CBD (VIC)\, Melbourne\, Austral
+ ia
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20270312
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://qvm.com.au/
+END:VEVENT
+BEGIN:VEVENT
+UID:white-night-melbourne-20260201@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:White Night Melbourne
+DESCRIPTION:City: Melbourne\n\nCategory: Arts / night festival\n\nPricing:
+  Free (Historic CBD editions described as free with 90+ events\; not veri
+ fied for recent editions.)\n\nDates Note: No confirmed Melbourne CBD edit
+ ion for 2024 or 2025\n\nNote: No confirmed 2024 or 2025 Melbourne edition
+  from search. Regional editions (Shepparton\, Bendigo\, Geelong\, Ballara
+ t) reported. Melbourne Museum's Nocturnal after-hours series (Feb-Dec 202
+ 5\, paid) is a different event. Flag for verification.\n\nWebsite: https:
+ //whitenight.com.au
+LOCATION:Melbourne CBD (historical)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260201
+DTEND;VALUE=DATE:20260401
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://whitenight.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:sydney-festival-20260108@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Sydney Festival
+DESCRIPTION:City: Sydney\n\nCategory: Multi-arts (theatre\, dance\, music\
+ , visual arts\, First Nations)\n\nPricing: Free (Mixed: free and ticketed
+  events. Tickets for 2026 went on sale 6 Nov 2025. Specific prices not ve
+ rified.)\n\nDates Note: 2026: 8-25 Jan (50th anniversary). 2027: unconfir
+ med (third-party estimate 7-24 Jan).\n\nNote: 2027 dates flagged UNCONFIR
+ MED: only third-party estimates found (carnifest\, Australian Pride Netwo
+ rk). Official sydneyfestival.org.au not returned as a result. Usually ann
+ ounced mid-year\; recheck. Festival director Kris Nelson for 2026.\n\nWeb
+ site: https://www.sydneyfestival.org.au/
+LOCATION:Citywide: Sydney Opera House\, Barangaroo\, Tumbalong Park\, hist
+ oric venues and pop-up spaces\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260108
+DTEND;VALUE=DATE:20260126
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.sydneyfestival.org.au/
+END:VEVENT
+BEGIN:VEVENT
+UID:epiphany-greek-festival-carss-bush-park-20260111@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Epiphany Greek Festival (Carss Bush Park)
+DESCRIPTION:City: Sydney\n\nCategory: Cultural / Community\n\nPricing: Fre
+ e (Free entry per listing\; live music\, dance and fireworks)\n\nDates No
+ te: Sun 11 Jan 2026\, 11am-8pm\n\nNote: Source is a community news site\,
+  not an official organiser site. Not Greater Sydney CBD\; included as sou
+ thern Sydney event. Annual date (Jan 2027) unconfirmed.\n\nWebsite: https
+ ://epiphanygreekfestival.com.au/
+LOCATION:Carss Bush Park\, Carss Park Rd\, Kogarah/Carss Park area\, south
+ ern Sydney\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260111
+DTEND;VALUE=DATE:20260112
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://epiphanygreekfestival.com.au/
+END:VEVENT
+BEGIN:VEVENT
+UID:sydney-harbour-australia-day-20260126@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Sydney Harbour Australia Day
+DESCRIPTION:City: Sydney\n\nCategory: Sport / harbour event (Australia Day
+ )\n\nPricing: Free (Australia Day Live concert free (ticketed free precin
+ ct on Opera House forecourt\, non-ticketed space across Circular Quay). H
+ arbour cruises are separately ticketed.)\n\nDates Note: 26 Jan 2026 (Aust
+ ralia Day\; past)\n\nNote: Precedent is the 2026 NSW Govt harbour event p
+ age\, which is past. Price tier set to Free from 2024 and 2025 editions\,
+  where the main concert was free.\n\nWebsite: https://www.nsw.gov.au/driv
+ ing-boating-and-transport/using-waterways-boating-and-transport-informati
+ on/boating-on-sydney-harbour/sydney-harbour-major-events/sydney-harbour-a
+ ustralia-day-2026
+LOCATION:Sydney Harbour\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260126
+DTEND;VALUE=DATE:20260127
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.nsw.gov.au/driving-boating-and-transport/using-waterways-b
+ oating-and-transport-information/boating-on-sydney-harbour/sydney-harbour
+ -major-events/sydney-harbour-australia-day-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:australia-day-live-sydney-opera-house-20260126@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Australia Day Live (Sydney Opera House)
+DESCRIPTION:City: Sydney\n\nCategory: Music / national day event\n\nPricin
+ g: Free (Free ticketed (booking required). Seated forecourt tickets cappe
+ d at 4 per customer\; free tickets released 15 Jan 2025. 2024: viewing fr
+ om Circular Quay public areas free without ticket.)\n\nDates Note: 2025: 
+ Sun 26 Jan 2025 (gates 6pm). 2026: Mon 26 Jan 2026 (7:30pm). 2024 edition
+  also held.\n\nNote: Covers the Australia Day / Invasion Day event\; even
+ t name is 'Australia Day Live' and it is run on 26 Jan. Some groups call 
+ the day Invasion Day\; no separate protest/alternative event was searched
+ .\n\nWebsite: https://sydneyoperahouse.com/contemporary-music/australia-d
+ ay-live-2025
+LOCATION:Sydney Opera House forecourt\, Circular Quay\, Sydney\, Sydney\, 
+ Australia
+DTSTART;VALUE=DATE:20260126
+DTEND;VALUE=DATE:20260127
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://sydneyoperahouse.com/contemporary-music/australia-day-live-202
+ 5
+END:VEVENT
+BEGIN:VEVENT
+UID:field-day-20260101@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Field Day
+DESCRIPTION:City: Sydney\n\nCategory: Music (dance / electronic)\n\nPricin
+ g: Premium (2025 from $142 (Botanic Gardens listing). 2026 from $167.80-$
+ 188 (listings vary). 2027 listing from $109.90 (Botanic Gardens page\, 1 
+ Jan 2027). 18+ event.)\n\nDates Note: 2025: Wed 1 Jan 2025 (12pm-11pm). 2
+ 026: Thu 1 Jan 2026. 2027 listed.\n\nNote: Official site not returned by 
+ search\, so url left blank. Moshtix is the official ticket outlet for 202
+ 6. 2024 edition not found in search.\n\nWebsite: https://fieldday.com.au/
+LOCATION:The Domain (Gadigal land)\, Sydney\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260101
+DTEND;VALUE=DATE:20260102
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://fieldday.com.au/
+END:VEVENT
+BEGIN:VEVENT
+UID:sydney-lunar-festival-lunar-new-year-20260214@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Sydney Lunar Festival (Lunar New Year)
+DESCRIPTION:City: Sydney\n\nCategory: Cultural / Food\n\nPricing: Free (St
+ reet\, lion dance and lantern events free. Paid items include Lunar New Y
+ ear Concert at Sydney Opera House from $68 (Sat 21 Feb 2026))\n\nDates No
+ te: 14 Feb - 1 Mar 2026 (2026 edition finished\; 2027 dates not announced
+ ). Lunar New Year Day 17 Feb 2026\n\nNote: Festival is annual\, so the 20
+ 27 edition is expected in Feb 2027 but unannounced. Ella's List gave an e
+ arlier start (7 Feb) that conflicts with City of Sydney's 14 Feb\, so the
+  City of Sydney dates were used.\n\nWebsite: https://whatson.cityofsydney
+ .nsw.gov.au/programs/sydney-lunar-festival
+LOCATION:Haymarket\, Chinatown\, Darling Harbour\, Darling Square\, Town H
+ all\, Opera House\, Kensington St (Chippendale)\, Thaitown\, Sydney\, Aus
+ tralia
+DTSTART;VALUE=DATE:20260214
+DTEND;VALUE=DATE:20260302
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://whatson.cityofsydney.nsw.gov.au/programs/sydney-lunar-festival
+END:VEVENT
+BEGIN:VEVENT
+UID:greek-festival-of-sydney-20260201@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Greek Festival of Sydney
+DESCRIPTION:City: Sydney\n\nCategory: Cultural\n\nPricing: Free (Darling H
+ arbour closing performance free\; other program events vary (some tickete
+ d concerts and talks))\n\nDates Note: Program Feb-May\; 44th edition main
+  day Sun 1 Mar 2026\, Darling Harbour (Tumbalong Park closing performance
+ )\n\nNote: Program is multi-month\, not a single day. Precedent is a news
+  article\, not the festival site. Hellenic Museum (Ashfield) event not co
+ nfirmed in search.\n\nWebsite: https://greekfestivalofsydney.com.au/about
+LOCATION:Darling Harbour (Tumbalong Park)\, plus Greek Festival program ve
+ nues across Sydney (exhibitions\, talks\, concerts)\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260201
+DTEND;VALUE=DATE:20260601
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://greekfestivalofsydney.com.au/about
+END:VEVENT
+BEGIN:VEVENT
+UID:greek-summer-festival-carss-bush-park-20260215@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Greek Summer Festival (Carss Bush Park)
+DESCRIPTION:City: Sydney\n\nCategory: Cultural / Community\n\nPricing: Fre
+ e (Listed as free (single listing\, not checked against organiser))\n\nDa
+ tes Note: Sun 15 Feb 2026 (listed\; details not fully verified)\n\nNote: 
+ Only one news listing found for this event. Verify whether it recurs annu
+ ally before including in register.\n\nWebsite: https://greekherald.com.au
+ /?p=204770
+LOCATION:Carss Bush Park\, southern Sydney\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260215
+DTEND;VALUE=DATE:20260216
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://greekherald.com.au/?p=204770
+END:VEVENT
+BEGIN:VEVENT
+UID:burwood-lunar-lanes-20260221@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Burwood Lunar Lanes
+DESCRIPTION:City: Sydney\n\nCategory: Cultural / Lunar New Year\n\nPricing
+ : Free (Free)\n\nDates Note: Sat 21 Feb 2026\, 5pm-10pm (past)\n\nNote: R
+ ecurrence not verified. Precedent is the 2026 council page\, which is pas
+ t. Overlaps worker B's cultural theme. 2025 edition was the Lunar New Yea
+ r Street Party (renamed Lunar Lanes for 2026).\n\nWebsite: https://www.bu
+ rwood.nsw.gov.au/For-Residents/Events-and-Activities/Lunar-New-Year-2026
+LOCATION:Burwood (inner west)\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260221
+DTEND;VALUE=DATE:20260222
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.burwood.nsw.gov.au/For-Residents/Events-and-Activities/Lun
+ ar-New-Year-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:sydney-gay-and-lesbian-mardi-gras-parade-20260214@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Sydney Gay and Lesbian Mardi Gras Parade
+DESCRIPTION:City: Sydney\n\nCategory: Parade / LGBTQIA+ / cultural\n\nPric
+ ing: Free (Street viewing free. Ticketed premium viewing areas along rout
+ e (prices not found). Grandstand prices not found. Pre-parade party packa
+ ges (e.g. $229pp hotel package 2024) are not the parade.)\n\nDates Note: 
+ 2025: Sat 1 Mar 2025 (festival 14 Feb - 2 Mar 2025). 2024: Sat 2 Mar 2024
+  (festival 16 Feb - 3 Mar 2024).\n\nNote: Must-see. Prompt asked to add M
+ ardi Gras Parade. Grandstand/premium viewing prices should be checked on 
+ mardigras.org.au.\n\nWebsite: https://mardigras.org.au/event/parade
+LOCATION:Route from Hyde Park to Moore Park via Oxford St\, Flinders St\, 
+ Anzac Pde\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260214
+DTEND;VALUE=DATE:20260303
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://mardigras.org.au/event/parade
+END:VEVENT
+BEGIN:VEVENT
+UID:queer-screen-mardi-gras-film-festival-20260212@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Queer Screen Mardi Gras Film Festival
+DESCRIPTION:City: Sydney\n\nCategory: Film (LGBTQIA+)\n\nPricing: Low (202
+ 6 festival: $25 full / $22 concession film-only\; Opening/Closing Night f
+ ilm+party $50/$47\; on-demand $18.)\n\nDates Note: 2026: 12-26 Feb (third
+ -party listing\, Gay Agenda). 2025: 13-27 Feb in cinemas\; online 28 Feb 
+ - 10 Mar.\n\nNote: No official site returned\; url left blank. 2026 dates
+  from third-party listing https://www.thegayagenda.fyi/world-events/event
+ /queer-screen-mardi-gras-film-feb-2026 (flag as unconfirmed). Australian 
+ Pride Network listed 2026 as TBC.\n\nWebsite: https://queerscreen.org.au/
+ mgff-ticketings-and-flexi-passes/
+LOCATION:Event Cinemas George Street and Hurstville\, Dendy Newtown\, Ritz
+  Randwick\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260212
+DTEND;VALUE=DATE:20260227
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://queerscreen.org.au/mgff-ticketings-and-flexi-passes/
+END:VEVENT
+BEGIN:VEVENT
+UID:laneway-festival-sydney-20260209@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Laneway Festival Sydney
+DESCRIPTION:City: Sydney\n\nCategory: Music (indie / alternative)\n\nPrici
+ ng: Premium (2025 GA from $189.90 + fees (presale)\, up to $229.90 later 
+ releases\; VIP 18+ $289.90 + fees. 2024 from $214.10 (unofficial listing)
+ .)\n\nDates Note: 2025: Sun 9 Feb 2025 (venue announced at Sydney Showgro
+ und\, later changed per Time Out). 2024: Sun 4 Feb 2024 (Sydney Showgroun
+ d\, Olympic Park).\n\nNote: Official lanewayfestival.com not returned in 
+ search results\; url is a news page. Price data from pre-sale reporting.\
+ n\nWebsite: https://www.thenote.com.au/news/laneway-festival-2025-dates-t
+ ickets
+LOCATION:Sydney Showground\, Olympic Park (2025 venue changed\; new site n
+ ot captured)\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260209
+DTEND;VALUE=DATE:20260210
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.thenote.com.au/news/laneway-festival-2025-dates-tickets
+END:VEVENT
+BEGIN:VEVENT
+UID:biennale-of-sydney-20260314@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Biennale of Sydney
+DESCRIPTION:City: Sydney\n\nCategory: Visual arts\n\nPricing: Free (Free a
+ dmission to the public (per organiser).)\n\nDates Note: 2026 (25th): 14 M
+ ar - 14 Jun. 2024 (24th): 9 Mar - 10 Jun.\n\nNote: Biennial (even years)\
+ , so next edition is 2028. Cockatoo Island and MCA NOT confirmed as 2026 
+ venues\, despite the prompt. A sydney.com listing gave a wrong 2024 start
+  date (29 Apr)\; organiser release used.\n\nWebsite: https://www.biennale
+ ofsydney.art/biennale-of-sydney-announces-first-details-for-the-25th-edit
+ ion-in-2026/
+LOCATION:White Bay Power Station\, Art Gallery of NSW\, Chau Chak Wing Mus
+ eum (USyd)\, Campbelltown Arts Centre\, Penrith Regional Gallery. 2024 al
+ so at MCA\, Artspace\, UNSW Galleries.\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260314
+DTEND;VALUE=DATE:20260615
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.biennaleofsydney.art/biennale-of-sydney-announces-first-de
+ tails-for-the-25th-edition-in-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:tab-golden-slipper-day-20260321@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:TAB Golden Slipper Day
+DESCRIPTION:City: Sydney\n\nCategory: Sport / horse racing\n\nPricing: Low
+  (Tickets $20-$99 (NSW Govt listing). Travel packages from about $590 pp 
+ (reseller).)\n\nDates Note: Sat 21 Mar 2026 (70th running\; past). 2027 d
+ ate not yet listed\n\nNote: Precedent Racing NSW page covers the 63rd run
+ ning\; 2019 derived from 2026 being the 70th running\, not stated on the 
+ page. Cheapest ticket sets tier Low\; top ticket is Mid.\n\nWebsite: http
+ s://www.nsw.gov.au/visiting-and-exploring-nsw/nsw-events/tab-golden-slipp
+ er-day
+LOCATION:Rosehill Gardens Racecourse\, James Ruse Drive\, Rosehill\, Sydne
+ y\, Australia
+DTSTART;VALUE=DATE:20260321
+DTEND;VALUE=DATE:20260322
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.nsw.gov.au/visiting-and-exploring-nsw/nsw-events/tab-golde
+ n-slipper-day
+END:VEVENT
+BEGIN:VEVENT
+UID:taste-of-sydney-20260301@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Taste of Sydney
+DESCRIPTION:City: Sydney\n\nCategory: Food / Wine\n\nPricing: Low (Past ed
+ itions from $25 (2017\, per listing)\; current prices not verified)\n\nDa
+ tes Note: 2026 not found. Past editions ran multi-day in March at Centenn
+ ial Park (e.g. 9-12 Mar 2017)\n\nNote: No 2026 edition confirmed. Officia
+ l site (tasteofsydney.com.au) appeared only in search summary text\, not 
+ a verified result\, so url left blank. Centennial Parklands cap rise may 
+ allow more events in 2026.
+LOCATION:Centennial Park\, Sydney\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260301
+DTEND;VALUE=DATE:20260401
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sydney-comedy-festival-20260413@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Sydney Comedy Festival
+DESCRIPTION:City: Sydney\n\nCategory: Comedy\n\nPricing: Low (Festival lis
+ ting starts from $26 (City of Sydney). Headline and tour shows $45-50+. F
+ ree family show (Great Laugh in the Park) listed 19 Apr 2026 but price no
+ t verified.)\n\nDates Note: 2026: 13 Apr - 17 May (extended five-week run
+ \, 400+ shows). Gala on the Green 18 Apr. 2025 edition ran 21 Apr - 18 Ma
+ y.\n\nNote: 2026 dates confirmed from City of Sydney and Destination NSW 
+ sources. Official festival site not returned by search\; verify before bo
+ oking. Destination NSW newsroom page is the 2025 precedent.\n\nWebsite: h
+ ttps://whatson.cityofsydney.nsw.gov.au/events/sydney-comedy-festival-2026
+LOCATION:Multiple: Enmore Theatre (Newtown)\, Factory Theatre (Marrickvill
+ e)\, Comedy Store\, Darling Quarter Theatre\, Tumbalong Park\, Sydney Ope
+ ra House\, Bondi Pavilion (6-17 May 2026 separate run)\, Sydney\, Austral
+ ia
+DTSTART;VALUE=DATE:20260413
+DTEND;VALUE=DATE:20260518
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://whatson.cityofsydney.nsw.gov.au/events/sydney-comedy-festival-
+ 2026
+END:VEVENT
+BEGIN:VEVENT
+UID:sydney-royal-easter-show-20260402@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Sydney Royal Easter Show
+DESCRIPTION:City: Sydney\n\nCategory: Fair / Family festival (agricultural
+  show)\n\nPricing: Mid (Per Ella's List (not official): Adult $48\, Child
+  $29.50\, Family $138. Public transport included with ticket. Early bird 
+ tickets sold to 1 Apr 2026)\n\nDates Note: Thu 2 - Mon 13 Apr 2026 (12 da
+ ys\, Easter long weekend)\; After Dark program included\n\nNote: Price ti
+ er classified by cheapest typical entry (child). Adult price not from off
+ icial site\, so verify. Daily hours listed as 9am-9pm by one source\, unv
+ erified. Precedent link is the 2026 ticket-sale release\; it is current\,
+  not a past edition.\n\nWebsite: https://www.eastershow.com.au/show-stori
+ es/save-the-date-2026/
+LOCATION:Sydney Showground\, Sydney Olympic Park\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260402
+DTEND;VALUE=DATE:20260414
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.eastershow.com.au/show-stories/save-the-date-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:vivid-sydney-20260522@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Vivid Sydney
+DESCRIPTION:City: Sydney\n\nCategory: Light\, music and ideas\n\nPricing: 
+ Free (Over 80% of the program is free. Vivid LIVE at Sydney Opera House a
+ nd some other events are ticketed (prices not verified).)\n\nDates Note: 
+ 2026: Fri 22 May - Sat 13 Jun (23 nights). 2025: 23 May - 14 Jun.\n\nNote
+ : 2026 dates confirmed by NSW Government release. Ideas pillar renamed Vi
+ vid Minds for 2026. Official site vividsydney.com was named in sources bu
+ t not returned as a result. Creator call for 2026 closed 26 Sep 2025.\n\n
+ Website: https://www.nsw.gov.au/departments-and-agencies/dciths/ministeri
+ al-media-releases/vivid-sydney-calls-for-creatives-as-2026-dates-confirme
+ d
+LOCATION:Citywide across five precincts incl. Circular Quay\, The Rocks\, 
+ Darling Harbour\, Sydney Opera House (Vivid LIVE)\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260522
+DTEND;VALUE=DATE:20260614
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.nsw.gov.au/departments-and-agencies/dciths/ministerial-med
+ ia-releases/vivid-sydney-calls-for-creatives-as-2026-dates-confirmed
+END:VEVENT
+BEGIN:VEVENT
+UID:sydney-writers-festival-20260517@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Sydney Writers' Festival
+DESCRIPTION:City: Sydney\n\nCategory: Literature\n\nPricing: Free (Live & 
+ Local streams are free. Carriageworks session tickets not verified (price
+  varies by session).)\n\nDates Note: 2026: Sun 17 May - Sun 24 May (almos
+ t 200 events). 2025: 19-27 May.\n\nNote: 2026 dates confirmed by multiple
+  sources. Official site swf.org.au was named in sources but not returned 
+ as a result\, so url left blank per rule. Precedent is Carriageworks list
+ ing. Verify official URL and ticket prices.\n\nWebsite: https://www.swf.o
+ rg.au/
+LOCATION:Carriageworks (Eveleigh) main hub\, plus city and Parramatta venu
+ es. Free regional Live & Local livestream 21-24 May at libraries and comm
+ unity centres.\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260517
+DTEND;VALUE=DATE:20260525
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.swf.org.au/
+END:VEVENT
+BEGIN:VEVENT
+UID:sydney-con-jazz-festival-20260531@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Sydney Con Jazz Festival
+DESCRIPTION:City: Sydney\n\nCategory: Music (jazz)\n\nPricing: Low (Ticket
+  prices not verified for 2026. 2024 edition: $20-$169 (Student $20-$80\; 
+ Adult $29-$169)\; 2026 listing says tickets from $29.)\n\nDates Note: 202
+ 6: Sun 31 May (single day\, noon-9pm)\, 26 concerts\, about 140 artists.\
+ n\nNote: Already occurred in 2026. Earlier editions not searched. Next ed
+ ition date not confirmed.\n\nWebsite: https://whatson.cityofsydney.nsw.go
+ v.au/events/2026-sydney-con-jazz-festival-26-concerts-sunday-may-31
+LOCATION:Sydney Conservatorium of Music\, six halls\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260531
+DTEND;VALUE=DATE:20260601
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://whatson.cityofsydney.nsw.gov.au/events/2026-sydney-con-jazz-fe
+ stival-26-concerts-sunday-may-31
+END:VEVENT
+BEGIN:VEVENT
+UID:winter-magic-festival-katoomba-20260620@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Winter Magic Festival (Katoomba)
+DESCRIPTION:City: Sydney\n\nCategory: Seasonal / winter\n\nPricing: Free (
+ Not verified)\n\nDates Note: Around winter solstice\; a 2026 travel listi
+ ng gives Sat 20 Jun (sources vary 20-21 Jun)\n\nNote: No official site fo
+ und in search. Official site per search summary: www.wintermagic.org.au (
+ not fetched\, so url left blank). Katoomba is in the Blue Mountains\, at 
+ the edge of Greater Sydney. 2026 date from a travel aggregator only. Roun
+ d 2: a 2026 report says the parade returned after a 2025 hiatus.\n\nWebsi
+ te: https://wintermagic.org.au/
+LOCATION:Katoomba\, Blue Mountains\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260620
+DTEND;VALUE=DATE:20260622
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://wintermagic.org.au/
+END:VEVENT
+BEGIN:VEVENT
+UID:sydney-film-festival-20260603@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Sydney Film Festival
+DESCRIPTION:City: Sydney\n\nCategory: Film\n\nPricing: Low (Single tickets
+  adult $26 (2025/2026)\, $27.50 on current page (2027)\; concession $22-2
+ 3\; youth $20\; Flexipass 10 about $19.50 per film.)\n\nDates Note: 2026:
+  Wed 3 Jun - Sun 14 Jun (73rd edition\, 12 days\, 248 films). 2025: 4-15 
+ Jun.\n\nNote: Official URL is the festival's own dates-announcement PDF (
+ cms.sff.org.au)\, since sff.org.au was not returned as a result. Opening 
+ gala Silenced at State Theatre per Esquire preview.\n\nWebsite: https://w
+ ww.sff.org.au/tickets/
+LOCATION:State Theatre\, Sydney Opera House\, Event Cinemas George Street\
+ , Sydney\, Australia
+DTSTART;VALUE=DATE:20260603
+DTEND;VALUE=DATE:20260615
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.sff.org.au/tickets/
+END:VEVENT
+BEGIN:VEVENT
+UID:good-food-wine-show-sydney-20260619@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Good Food & Wine Show Sydney
+DESCRIPTION:City: Sydney\n\nCategory: Food / Wine (consumer show)\n\nPrici
+ ng: Mid (2024 tickets from $39 (City of Sydney listing). 2025 and 2026 pr
+ ices not verified in search.)\n\nDates Note: Fri 19 - Sun 21 Jun 2026 (20
+ 25 edition 20-22 Jun 2025)\n\nNote: Separate from Good Food Month. 2026 d
+ ates come from a secondary summary\; the ICC page was not read directly\,
+  so verify before use. Price tier set from 2024 cheapest ticket ($39) sin
+ ce no 2025/2026 price was found.\n\nWebsite: https://goodfoodshow.com.au/
+ sydney
+LOCATION:ICC Sydney\, Darling Harbour\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260619
+DTEND;VALUE=DATE:20260622
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://goodfoodshow.com.au/sydney
+END:VEVENT
+BEGIN:VEVENT
+UID:winterfest-sydney-medieval-fair-20260704@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Winterfest Sydney Medieval Fair
+DESCRIPTION:City: Sydney\n\nCategory: Cultural / winter\n\nPricing: Low (2
+ 025 one-day $30 adult / $15 child\; two-day $45 adult / $20 child (Ella's
+  List). 2026 adult $35 per one listing. Cheapest entry is the child ticke
+ t\, so tier is Low\; adult tier is Mid.)\n\nDates Note: 4-5 Jul 2026 (per
+  aggregator listing\; not verified)\n\nNote: Only an aggregator snippet f
+ ound for 2026\; no official URL located. Round 2 found 2024 and 2025 edit
+ ions via aggregators only.\n\nWebsite: https://winterfest.com.au
+LOCATION:Hawkesbury Showground\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260704
+DTEND;VALUE=DATE:20260706
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://winterfest.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:bondi-festival-july-20260703@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Bondi Festival (July)
+DESCRIPTION:City: Sydney\n\nCategory: Seasonal / community (Bondi)\n\nPric
+ ing: Low (Official site says tickets for events are all under $30 (excl. 
+ booking fee)\; many free activities (light shows\, bonfire procession). F
+ estival ran 3-19 Jul 2026.)\n\nDates Note: 3-19 Jul 2026 (per travel blog
+ \; not verified)\n\nNote: Name and dates from a single aggregator snippet
+ . Official site not located. Round 2 found the 2024 and 2025 editions on 
+ Waverley Council and City of Sydney sources\, which supports the festival
+  being recurring.\n\nWebsite: https://www.bondifestival.com.au
+LOCATION:Bondi Beach area\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260703
+DTEND;VALUE=DATE:20260720
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.bondifestival.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:sydney-fringe-festival-20260901@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Sydney Fringe Festival
+DESCRIPTION:City: Sydney\n\nCategory: Independent performing and visual ar
+ ts\n\nPricing: Free (Free street party and some free events\; many shows 
+ are ticketed (prices not verified).)\n\nDates Note: 2026: opens Sat 29 Au
+ g (Fringe Ignite street party)\, main run approx. 1-30 Sep (NSW listing).
+  Some sources run 2-29 Sep or into Oct.\n\nNote: Sources disagree on end 
+ date (30 Sep vs Oct for satellite events). Official site sydneyfringe.com
+  named in text\, not verified as a search result.\n\nWebsite: https://www
+ .sydneyfringe.com
+LOCATION:350+ events across 64-70 venues\, incl. Darlinghurst (Stanley St)
+ \, The Rocks\, Hurstville (Georges River Council\, 10-12 Sep 2026)\, Sydn
+ ey\, Australia
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20261001
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.sydneyfringe.com
+END:VEVENT
+BEGIN:VEVENT
+UID:voltaren-city2surf-20260809@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Voltaren City2Surf
+DESCRIPTION:City: Sydney\n\nCategory: Sport / running\n\nPricing: Mid (Off
+ icial entry page first listed adult $139\, ages 10-17 $78\, under-10 $55\
+ , plus $600 VIP lane. Later snapshot: general entries sold out\, charity 
+ entries and VIP still available. Time Out cites $99 adult first-release.)
+ \n\nDates Note: 2026: Sun 9 Aug (14km\, Hyde Park to Bondi Beach\; past).
+  2025: Sun 10 Aug\n\nNote: Price figures conflict across sources\; the of
+ ficial page is authoritative. Participant event\, so spectators are not c
+ harged at Bondi.\n\nWebsite: https://city2surf.com.au/entry-info/
+LOCATION:Hyde Park\, Sydney to Bondi Beach\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260809
+DTEND;VALUE=DATE:20260810
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://city2surf.com.au/entry-info/
+END:VEVENT
+BEGIN:VEVENT
+UID:tcs-sydney-marathon-20260830@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:TCS Sydney Marathon
+DESCRIPTION:City: Sydney\n\nCategory: Sport / running\n\nPricing: Premium 
+ (Ballot entry free to apply. Successful entrants charged AUD 280 (residen
+ ts) or AUD 330 (international)\, plus optional donation. Charity places a
+ lso available. The AUD 280/330 fee is the 2026 race fee per the official 
+ FAQ.)\n\nDates Note: 2026 edition: Sun 30 Aug 2026 (past). 2025 edition: 
+ 31 Aug 2025 (first run as a World Marathon Major)\n\nNote: Official TCS S
+ ydney Marathon FAQ URL (found in search\, tcssydneymarathon.com) now fill
+ ed. Ballot details taken from a Time Out article (https://www.timeout.com
+ /australia/news/want-to-run-the-2025-sydney-marathon-heres-how-to-enter-t
+ he-ballot-120924) and a 2026 race guide (https://the5krunner.com/2026/07/
+ 23/the-sydney-marathon-2026-all-you-need-to-know/). Participant event\; s
+ pectators not charged.\n\nWebsite: https://www.tcssydneymarathon.com/freq
+ uently-asked-questions
+LOCATION:Sydney CBD and harbour course\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260830
+DTEND;VALUE=DATE:20260831
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.tcssydneymarathon.com/frequently-asked-questions
+END:VEVENT
+BEGIN:VEVENT
+UID:mid-autumn-moon-festival-haymarket-chinatown-20260927@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Mid-Autumn Moon Festival (Haymarket Chinatown)
+DESCRIPTION:City: Sydney\n\nCategory: Cultural / Food\n\nPricing: Free (St
+ reet lanterns\, lion dance and performances expected free\; Market City m
+ ooncake sale and workshops may charge)\n\nDates Note: Expected around Fri
+  25 Sep 2026 (15th day of 8th lunar month) - not confirmed\; 2025 Market 
+ City Moon Festival ran until 12 Oct 2025\n\nNote: No 2026 announcement fo
+ und. URL is the Haymarket Chamber events page (not a City of Sydney progr
+ am)\, so verify before use. Date is inferred from the lunar calendar.\n\n
+ Website: https://haymarketchamber.org.au/our-events/page/2/
+LOCATION:Haymarket / Chinatown\, Market City\, Hay and Thomas Streets\, Sy
+ dney\, Australia
+DTSTART;VALUE=DATE:20260927
+DTEND;VALUE=DATE:20261013
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://haymarketchamber.org.au/our-events/page/2/
+END:VEVENT
+BEGIN:VEVENT
+UID:parramatta-moon-festival-20261001@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Parramatta Moon Festival
+DESCRIPTION:City: Sydney\n\nCategory: Seasonal / cultural (Mid-Autumn\, la
+ nterns)\n\nPricing: Free (Admission free per the 2026 Parramatta Square l
+ isting)\n\nDates Note: Thu 1 Oct 2026\, 11am-9pm\n\nNote: Listing from Pa
+ rramatta Square site\; not the council's own page. No past edition found.
+  Lantern display within a market. Earliest Parramatta Moon Markets found:
+  Lennox Bridge\, Sep 2022 (not 2024 or 2025).\n\nWebsite: https://www.psq
+ .com.au/whats-on/events/2026/10/city-of-parramatta/parramatta-moon-festiv
+ al/
+LOCATION:Centenary Square and Parramatta Square\, Parramatta\, Sydney\, Au
+ stralia
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.psq.com.au/whats-on/events/2026/10/city-of-parramatta/parr
+ amatta-moon-festival/
+END:VEVENT
+BEGIN:VEVENT
+UID:festival-of-the-winds-bondi-beach-20260914@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Festival of the Winds (Bondi Beach)
+DESCRIPTION:City: Sydney\n\nCategory: Outdoor / family / kite festival\n\n
+ Pricing: Free (Free entry\; food stalls and kids' courtyard extra.)\n\nDa
+ tes Note: 2025: Sun 14 Sep 2025 (11am-4pm).\n\nNote: Listing-site source\
+ ; official organiser page not returned. 2024 edition not searched.\n\nWeb
+ site: https://www.ellaslist.com.au/sydney/events/festival-of-the-winds
+LOCATION:Bondi Beach\, Sydney\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260914
+DTEND;VALUE=DATE:20260915
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.ellaslist.com.au/sydney/events/festival-of-the-winds
+END:VEVENT
+BEGIN:VEVENT
+UID:sydney-underground-film-festival-20260910@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Sydney Underground Film Festival
+DESCRIPTION:City: Sydney\n\nCategory: Film (independent and cult)\n\nPrici
+ ng: Low (2026 (10-13 Sep\, Factory Theatre Marrickville): standard sessio
+ n $24 adult / $22 concession\; Opening Night $40/$38\; Closing Night $30/
+ $28\; 3-film pass $60\, 5-pass $90\, 10-pass $160\, Sunday pass $80\, Ful
+ l pass $240. Prices incl fees.)\n\nDates Note: 2026: Thu 10 - Sun 13 Sep 
+ (20th anniversary). 2025: 11-14 Sep (FilmInk\, FestAgent)\; one listing g
+ ives 10-13 Sep.\n\nNote: url is a Limelight Arts event listing\, not the 
+ festival's own site (none returned). 2025 dates vary slightly across sour
+ ces. 780+ submissions for 2026.\n\nWebsite: https://www.suff.com.au/ticke
+ ts
+LOCATION:2026: Factory Theatre\, Marrickville. 2025: Dendy Newtown.\, Sydn
+ ey\, Australia
+DTSTART;VALUE=DATE:20260910
+DTEND;VALUE=DATE:20260914
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.suff.com.au/tickets
+END:VEVENT
+BEGIN:VEVENT
+UID:sydney-contemporary-20260903@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Sydney Contemporary
+DESCRIPTION:City: Sydney\n\nCategory: Visual arts (art fair)\n\nPricing: M
+ id (Paid entry\; ticket prices not verified.)\n\nDates Note: 2026 (10th e
+ dition): Thu 3 - Sun 6 Sep\, collector preview 2 Sep.\n\nNote: It is an a
+ rt fair rather than a festival\; included as a major arts event. One stal
+ e page gave 11-13 Sep\, which conflicts with official 3-6 Sep. No past-ed
+ ition URL found in search.\n\nWebsite: https://sydneycontemporary.com.au
+LOCATION:Carriageworks\, Eveleigh\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260903
+DTEND;VALUE=DATE:20260907
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://sydneycontemporary.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:listen-out-20260901@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Listen Out
+DESCRIPTION:City: Sydney\n\nCategory: Music (dance / hip hop / rock)\n\nPr
+ icing: Premium (2023 third release from $199.90\; VIP from $288.00 (most 
+ recent Sydney price found). 2024 and 2025 prices not found.)\n\nDates Not
+ e: No 2025 Sydney edition (festival paused July 2025). 2026 listed as hia
+ tus. 2024 edition held in Sydney (dates not captured).\n\nNote: Festival 
+ on hiatus\; included because it is a major Sydney festival\, but may not 
+ be recurring. Official listenout site not returned by search.\n\nWebsite:
+  https://www.thenote.com.au/news/listen-out-2024-lineup
+LOCATION:Centennial Parklands\, Sydney (2023 venue)\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20261101
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.thenote.com.au/news/listen-out-2024-lineup
+END:VEVENT
+BEGIN:VEVENT
+UID:antidote-sydney-opera-house-20260901@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Antidote (Sydney Opera House)
+DESCRIPTION:City: Sydney\n\nCategory: Ideas\, art and action\n\nPricing: U
+ nverified (Not verified.)\n\nDates Note: 2026: not found. Past editions: 
+ 2-3 Sep 2017\, 2018 1-2 Sep\, 11 Sep 2022.\n\nNote: No 2025 or 2026 dates
+  confirmed in search. Replaced the Festival of Dangerous Ideas. Not a fil
+ m festival despite the prompt's suggestion of festival-of-ideas formats. 
+ Verify whether it still runs.
+LOCATION:Sydney Opera House\, Sydney\, Australia
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20261001
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sculpture-by-the-sea-bondi-20261016@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Sculpture by the Sea (Bondi)
+DESCRIPTION:City: Sydney\n\nCategory: Visual arts (outdoor sculpture)\n\nP
+ ricing: Free (Free admission.)\n\nDates Note: 2026: 16 Oct - 2 Nov (NSW G
+ overnment\, Transport NSW\, sydney.com). One Sydney Tourism guide gives 2
+ 3 Oct - 8 Nov.\n\nNote: 2026 dates confirmed by government and tourism so
+ urces\; the conflicting Sydney Tourism date looks wrong. No past-edition 
+ URL found\, so precedent is blank. Recheck official site before attending
+ .\n\nWebsite: https://www.nsw.gov.au/visiting-and-exploring-nsw/nsw-event
+ s/sculpture-by-sea
+LOCATION:Bondi to Tamarama coastal walk (Marks Park\, Tamarama). About 100
+  works along roughly 2 km.\, Sydney\, Australia
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261103
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.nsw.gov.au/visiting-and-exploring-nsw/nsw-events/sculpture
+ -by-sea
+END:VEVENT
+BEGIN:VEVENT
+UID:granny-smith-festival-20261017@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Granny Smith Festival
+DESCRIPTION:City: Sydney\n\nCategory: Community / Family festival\n\nPrici
+ ng: Free (Free entry per City of Ryde sponsorship proposal and council co
+ verage\; rides\, food trucks and some activities may be paid)\n\nDates No
+ te: Sat 17 Oct 2026\, 9:00am-8:30pm (2026 date from allevents.in only\; 2
+ 025 was Sat 18 Oct 2025\, 9am-8:30pm)\n\nNote: 2026 date NOT yet confirme
+ d by City of Ryde\; the Oct 17 date comes from allevents.in listings. Fre
+ e-entry wording not seen verbatim in the 2025 release. Post-event attenda
+ nce estimates 80\,000+ (Ryde History Hub).\n\nWebsite: https://www.ryde.n
+ sw.gov.au/Events/Listing/Granny-Smith-Festival
+LOCATION:Eastwood town centre (City of Ryde)\, Eastwood NSW\, Sydney\, Aus
+ tralia
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.ryde.nsw.gov.au/Events/Listing/Granny-Smith-Festival
+END:VEVENT
+BEGIN:VEVENT
+UID:parramatta-lanes-20261021@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Parramatta Lanes
+DESCRIPTION:City: Sydney\n\nCategory: Food / Music / Community (street fes
+ tival)\n\nPricing: Free (Entry free\; all event sites open to the public)
+ \n\nDates Note: Wed 21 - Sat 24 Oct 2026 (4 nights\, 5pm-10pm Wed/Thu\, 5
+ pm-10:30pm Fri/Sat)\n\nNote: 2026 dates from City of Parramatta official 
+ page. Attendance reported as 335\,000 (City) vs 400\,000 (Urban List) for
+  2025\; City figure preferred.\n\nWebsite: https://atparramatta.com/lanes
+LOCATION:Parramatta CBD (20+ festival sites\, 10 music stages\, 70+ food v
+ endors)\, Sydney\, Australia
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261025
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://atparramatta.com/lanes
+END:VEVENT
+BEGIN:VEVENT
+UID:diwali-festival-bella-vista-farm-and-sydney-diwali-events-20261020@chi
+ d.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Diwali Festival (Bella Vista Farm and Sydney Diwali events)
+DESCRIPTION:City: Sydney\n\nCategory: Cultural / Community / Family\n\nPri
+ cing: Free (Bella Vista event free per listings\, with rides and food ext
+ ra\; not verified in detail)\n\nDates Note: Diwali 2025 around Mon 20 Oct
+  2025 (Bella Vista event 20 Oct 2025 per SBS). 2026 Diwali expected aroun
+ d Sun 8 Nov 2026 (not verified in search)\n\nNote: Sources disagree on Pa
+ rramatta Diwali dates (11-12 Oct vs 26 Oct 2025). 2026 event not confirme
+ d. Diwali date for 2026 is not from a verified source. Indianlink URL not
+  confirmed to be the 2025 page.\n\nWebsite: https://indianlink.com.au/wha
+ ts-on/celebrate-diwali-at-bella-vista
+LOCATION:Bella Vista Farm (Norwest\, Hills)\; other Sydney venues incl. Pa
+ rramatta and Powerhouse Castle Hill\, Sydney\, Australia
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://indianlink.com.au/whats-on/celebrate-diwali-at-bella-vista
+END:VEVENT
+BEGIN:VEVENT
+UID:sydney-jacaranda-season-20261015@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Sydney Jacaranda Season
+DESCRIPTION:City: Sydney\n\nCategory: Seasonal / nature\n\nPricing: Free (
+ Free self-guided viewing)\n\nDates Note: Annual Oct-Nov bloom\; self-guid
+ ed\, no fixed dates\n\nNote: Not a ticketed event. Viewing locations per 
+ Destination NSW as summarised in search results\; no official URL fetched
+ . Grafton Jacaranda Festival (23 Oct - 7 Nov 2026) is on the NSW North Co
+ ast\, not Sydney\, and was excluded. Round 2: no official Sydney festival
+  with dates found for 2024 or 2025\; only the bloom season and unofficial
+  'festival' pages.\n\nWebsite: https://www.sydney.com/articles/sydney-jac
+ aranda-trail
+LOCATION:Circular Quay\, The Rocks\, Paddington\, Kirribilli\, Lavender Ba
+ y\, Glebe\, University of Sydney\, Parramatta\, Camden\, Royal Botanic Ga
+ rdens\, Sydney\, Australia
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261116
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.sydney.com/articles/sydney-jacaranda-trail
+END:VEVENT
+BEGIN:VEVENT
+UID:night-noodle-markets-20261001@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Night Noodle Markets
+DESCRIPTION:City: Sydney\n\nCategory: Food / Market\n\nPricing: Low (Food 
+ sold per dish (not verified)\; entry free)\n\nDates Note: 2026 not found.
+  Past editions ran in October (e.g. 4-21 Oct and 8-25 Oct in earlier year
+ s)\n\nNote: Likely not running in its traditional form in 2026. Venue and
+  status unclear. Excluded from the final register unless a 2026 edition i
+ s confirmed.\n\nWebsite: https://www.goodfoodevents.com.au/
+LOCATION:Hyde Park previously\; 2022 Sydney edition moved to Prince Alfred
+  Park. Hyde Park use reportedly blocked by City of Sydney for future mark
+ ets\, Sydney\, Australia
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261101
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.goodfoodevents.com.au/
+END:VEVENT
+BEGIN:VEVENT
+UID:oktoberfest-in-the-gardens-the-domain-20261031@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Oktoberfest in the Gardens (The Domain)
+DESCRIPTION:City: Sydney\n\nCategory: Food / Beer festival\n\nPricing: Mid
+  (Ticketed via Moshtix\, 18+ only\; price not verified. Up to 16\,000 pat
+ rons expected)\n\nDates Note: Sat 31 Oct 2026\, 1pm-9pm (site fenced 26 O
+ ct - 4 Nov 2026)\n\nNote: Not at Darling Harbour as the brief suggested. 
+ Separate SYD Official German Oktoberfest (24 Sep 2026) is member-exclusiv
+ e with limited seats\; not listed as a public festival.\n\nWebsite: https
+ ://oktoberfestinthegardens.com.au
+LOCATION:Phillip Precinct\, The Domain\, Royal Botanic Garden Sydney\, Syd
+ ney\, Australia
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://oktoberfestinthegardens.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:sydney-international-women-s-jazz-festival-20261022@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Sydney International Women's Jazz Festival
+DESCRIPTION:City: Sydney\n\nCategory: Music (jazz)\n\nPricing: Unverified 
+ (Ticket prices not verified.)\n\nDates Note: 2026: Thu 22 - Sat 31 Oct (1
+ 0-day program\, 15th year). 2025: 23 Oct - 2 Nov.\n\nNote: Organised by S
+ IMA. Starts in 10 days from today (2026-10-12). Official site not returne
+ d\; url is 2026 program release.\n\nWebsite: https://sima.org.au/events/c
+ ategory/siwjf/
+LOCATION:Opens at State Theatre\; citywide venues incl. City Recital Hall 
+ and Joan Sutherland Performing Arts Centre\, Penrith\, Sydney\, Australia
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261101
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://sima.org.au/events/category/siwjf/
+END:VEVENT
+BEGIN:VEVENT
+UID:art-about-sydney-20261023@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Art & About Sydney
+DESCRIPTION:City: Sydney\n\nCategory: Visual arts (street and public art)\
+ n\nPricing: Unverified (Entry price not verified\; likely free public dis
+ plays but not confirmed.)\n\nDates Note: 2026: Fri 23 - Sun 25 Oct (three
+  days\, per City of Sydney call and regional save-the-date).\n\nNote: Cit
+ y of Sydney artist call page used as url because it is the council's own 
+ page for this event. Artist EOI closed 12 Nov 2025. No daily schedule fou
+ nd.\n\nWebsite: https://www.cityofsydney.nsw.gov.au/opportunities/express
+ ion-of-interest-art-and-about
+LOCATION:Darlinghurst: Taylor Square\, Oxford Square\, East Sydney Communi
+ ty and Arts Centre\, Darlinghurst Community Space\, Sydney\, Australia
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261026
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.cityofsydney.nsw.gov.au/opportunities/expression-of-intere
+ st-art-and-about
+END:VEVENT
+BEGIN:VEVENT
+UID:good-food-month-20261001@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Good Food Month
+DESCRIPTION:City: Sydney\n\nCategory: Food\n\nPricing: Unverified (Events 
+ and dinners are paid\, prices vary\; some free and low-cost events likely
+ . Cheapest typical entry not verified)\n\nDates Note: Whole of October (2
+ 026 dates and program not confirmed)\n\nNote: Official Good Food Month si
+ te not found in search results\, so url left blank. The precedent link is
+  a 2015 Broadsheet guide\, not an official source. Do not confuse with th
+ e Good Food & Wine Show (separate entry). Night Noodle Markets is a relat
+ ed event with its own entry.\n\nWebsite: https://www.goodfoodevents.com.a
+ u/
+LOCATION:Sydney CBD and across Sydney and regional NSW (venues vary by eve
+ nt)\, Sydney\, Australia
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261101
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.goodfoodevents.com.au/
+END:VEVENT
+BEGIN:VEVENT
+UID:eden-whale-festival-regional-outside-greater-sydney-20261016@chid.gith
+ ub.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Eden Whale Festival (regional\, outside Greater Sydney)
+DESCRIPTION:City: Sydney\n\nCategory: Whale / nature\n\nPricing: Unverifie
+ d (Not verified)\n\nDates Note: 16-18 Oct 2026 (per official site)\n\nNot
+ e: Outside Greater Sydney\; included only as the nearest whale festival. 
+ Recommend dropping at merge. Dates conflict between sources. No Sydney-sp
+ ecific whale festival found.\n\nWebsite: https://www.edenwhalefestival.co
+ m.au
+LOCATION:Eden\, far South Coast NSW (about 350km south of Sydney)\, Sydney
+ \, Australia
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261019
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.edenwhalefestival.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:greek-fest-brighton-le-sands-bay-street-20261116@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Greek Fest Brighton-Le-Sands (Bay Street)
+DESCRIPTION:City: Sydney\n\nCategory: Cultural / Food\n\nPricing: Free (Fr
+ ee entry per 2025 coverage\, food and drink paid)\n\nDates Note: 2025: Su
+ n 16 Nov 2025\, 11am-11pm (moved from 9 Nov). 2026 not confirmed\n\nNote:
+  No official organiser URL found in results\, so url blank. Price claim c
+ omes from news coverage\, not verified. Check for a 2026 announcement bef
+ ore listing.\n\nWebsite: https://greekfestivalofsydney.com.au
+LOCATION:Bay Street\, Brighton-Le-Sands (Kogarah council area)\, Sydney\, 
+ Australia
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://greekfestivalofsydney.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:just-for-laughs-sydney-20261109@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Just For Laughs Sydney
+DESCRIPTION:City: Sydney\n\nCategory: Comedy\n\nPricing: Mid (Ticket price
+ s not verified\; headline shows (e.g. Eddie Izzard) are likely premium-ra
+ nge but unconfirmed.)\n\nDates Note: 9-22 Nov 2026 (per Opera House page)
+ \n\nNote: Separate from Sydney Comedy Festival (April-May). 2026 edition 
+ not confirmed in search.\n\nWebsite: https://www.sydneyoperahouse.com/jus
+ t-for-laughs
+LOCATION:Sydney Opera House and other Sydney venues\, Sydney\, Australia
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261123
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.sydneyoperahouse.com/just-for-laughs
+END:VEVENT
+BEGIN:VEVENT
+UID:rolex-sydney-to-hobart-yacht-race-start-20261226@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Rolex Sydney to Hobart Yacht Race (start)
+DESCRIPTION:City: Sydney\n\nCategory: Sport / yacht race\n\nPricing: Free 
+ (Harbour foreshore viewing free\; ticketed vantage packages exist (prices
+  not verified))\n\nDates Note: 2025 start: Fri 26 Dec 2025\, 1pm. 2026 st
+ art date not verified (traditionally around 26 Dec)\n\nNote: Start locati
+ on varies by source (Nielsen Park vs Sydney Heads). 80th race in 2025 per
+  search results. Official rolexsydneyhobart.com not fetched. 2026 dates u
+ nconfirmed.\n\nWebsite: https://www.rolexsydneyhobart.com/
+LOCATION:Sydney Harbour start (Nielsen Park per NSW Govt listing)\; finish
+  in Hobart\, Sydney\, Australia
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20261227
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.rolexsydneyhobart.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:sydney-new-year-s-eve-fireworks-20261231@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Sydney New Year's Eve Fireworks
+DESCRIPTION:City: Sydney\n\nCategory: Celebration / fireworks\n\nPricing: 
+ Free (Free. Several top vantage points need a free ticket ballot (Cahill 
+ Expressway\, Opera House\, Botanic Gardens/Domain). Darling Harbour is fi
+ rst-come\, first-served.)\n\nDates Note: 31 Dec (2026-27 edition expected
+ \; 2025 ran 9pm and midnight fireworks plus 7:30pm smoking ceremony)\n\nN
+ ote: 2026-27 ballot dates unconfirmed\; ballots usually open around early
+  September. Check sydneynewyearseve.com (named in search text only\, not 
+ fetched).\n\nWebsite: https://www.sydneynewyearseve.com/
+LOCATION:Sydney Harbour: Opera House forecourt\, Cahill Expressway\, Botan
+ ic Gardens and Domain\, Darling Harbour\, Sydney\, Australia
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.sydneynewyearseve.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:good-things-festival-sydney-20261206@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Good Things Festival Sydney
+DESCRIPTION:City: Sydney\n\nCategory: Music (rock / alternative / punk)\n\
+ nPricing: Premium (Sydney 2026 (Sat 5 Dec\, Sydney Showground): Adult 18+
+  $274.95\; Youth 16-17 $274.95 (official Oztix-style ticketing page)\; pa
+ y-over-time total $289.98.)\n\nDates Note: 2025: Sat 6 Dec 2025 (Sydney S
+ howground). 2024: Sat 7 Dec 2024 (Centennial Park).\n\nNote: Official goo
+ dthingsfestival.com.au not returned in search results\; url is a news pag
+ e. 2025 pre-sale opened 19 Aug 2025 and GA 21 Aug 2025 via Oztix.\n\nWebs
+ ite: https://www.goodthingsfestival.com.au
+LOCATION:Sydney Showground (2025)\; Centennial Park (2024)\, Sydney\, Aust
+ ralia
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.goodthingsfestival.com.au
+END:VEVENT
+END:VCALENDAR

@@ -2,9 +2,20 @@
 <html class="h-full" lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
   <title>Festival Calendar — Sydney, Melbourne & Canberra</title>
   
+  <!-- PWA & Mobile Web App Meta -->
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="apple-mobile-web-app-title" content="Festivals"/>
+  <meta name="theme-color" content="#0058bc" media="(prefers-color-scheme: light)"/>
+  <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)"/>
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png"/>
+  <link rel="icon" type="image/svg+xml" href="icons/favicon.svg"/>
+
   <!-- Material Symbols Outlined & Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
@@ -138,6 +149,85 @@
     .compact-mode .agenda-date-col {
       width: 8rem !important;
     }
+
+    /* macOS / iOS Dark Mode Appearance */
+    html.dark body {
+      background-color: #1c1c1e;
+      color: #f2f2f7;
+    }
+    html.dark .bg-surface {
+      background-color: #1c1c1e !important;
+    }
+    html.dark .bg-surface-container-low {
+      background-color: #242426 !important;
+    }
+    html.dark .bg-surface-container-lowest {
+      background-color: #1c1c1e !important;
+    }
+    html.dark .bg-surface-container-high {
+      background-color: #2c2c2e !important;
+    }
+    html.dark .bg-surface-container-highest {
+      background-color: #3a3a3c !important;
+    }
+    html.dark .border-outline-variant {
+      border-color: #38383a !important;
+    }
+    html.dark .border-outline-variant\/60,
+    html.dark .border-outline-variant\/50,
+    html.dark .border-outline-variant\/40,
+    html.dark .border-outline-variant\/30,
+    html.dark .border-outline-variant\/70,
+    html.dark .border-outline-variant\/80 {
+      border-color: rgba(68, 68, 72, 0.6) !important;
+    }
+    html.dark .text-on-surface {
+      color: #f2f2f7 !important;
+    }
+    html.dark .text-on-surface-variant {
+      color: #a1a1a6 !important;
+    }
+    html.dark .text-outline {
+      color: #8e8e93 !important;
+    }
+    html.dark input {
+      background-color: #242426 !important;
+      color: #f2f2f7 !important;
+      border-color: #38383a !important;
+    }
+    html.dark .frosted-glass {
+      backdrop-filter: blur(28px) saturate(180%);
+      -webkit-backdrop-filter: blur(28px) saturate(180%);
+      background-color: rgba(28, 28, 30, 0.88) !important;
+    }
+    html.dark .agenda-item {
+      background-color: #242426 !important;
+      border-color: #38383a !important;
+    }
+    html.dark .agenda-item:hover {
+      background-color: #2c2c2e !important;
+      border-color: #007aff !important;
+    }
+    html.dark #monthGridCells > div {
+      border-color: #38383a !important;
+    }
+    html.dark #dataTable thead {
+      background-color: #2c2c2e !important;
+    }
+    html.dark #dataTable tbody tr:hover {
+      background-color: rgba(58, 58, 60, 0.5) !important;
+    }
+    html.dark #eventModal > div,
+    html.dark #subscribeModal > div {
+      background-color: #242426 !important;
+      border-color: #38383a !important;
+    }
+    html.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    html.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.35);
+    }
   </style>
 </head>
 <body class="h-full bg-surface text-on-surface antialiased overflow-hidden select-none font-sans">
@@ -197,17 +287,21 @@
         </button>
       </div>
 
-      <!-- Trailing: Search Bar + Subscribe + Submit CTA -->
-      <div class="flex items-center gap-1.5 sm:gap-space-sm ml-auto sm:ml-0">
+      <!-- Trailing: Search Bar + Theme + Subscribe + Submit CTA -->
+      <div class="flex items-center gap-1 sm:gap-2 ml-auto sm:ml-0">
         <!-- Live Search -->
-        <div class="relative w-32 sm:w-48 lg:w-60">
+        <div class="relative w-28 sm:w-48 lg:w-60">
           <span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-outline text-[16px]">search</span>
           <input id="q" type="search" placeholder="Search... ⌘K" class="w-full bg-surface-container-lowest/90 border border-outline-variant/60 rounded-md pl-7 sm:pl-8 pr-2.5 py-1 text-xs text-on-surface placeholder-on-surface-variant/70 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary shadow-sm" aria-label="Search festivals"/>
         </div>
+        <!-- Theme Toggle (Auto / Dark / Light) -->
+        <button id="themeToggleBtn" class="p-1 sm:p-1.5 rounded-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center justify-center text-xs" title="Toggle Dark/Light Mode">
+          <span id="themeToggleIcon" class="material-symbols-outlined text-[17px]">dark_mode</span>
+        </button>
         <!-- Subscribe (.ics / webcal) Export -->
-        <button id="btnSubscribeIcs" class="hidden sm:flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest border border-outline-variant/60 text-on-surface hover:bg-surface-container rounded-md shadow-sm text-xs font-medium transition-colors active:scale-[0.98]" title="Export all matching festivals to iCalendar (.ics)">
-          <span class="material-symbols-outlined text-[16px]">file_download</span>
-          <span>Subscribe (.ics)</span>
+        <button id="btnSubscribeIcs" class="hidden sm:flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest border border-outline-variant/60 text-on-surface hover:bg-surface-container rounded-md shadow-sm text-xs font-medium transition-colors active:scale-[0.98]" title="Subscribe to Live Calendar Feeds">
+          <span class="material-symbols-outlined text-[16px]">calendar_month</span>
+          <span>Subscribe</span>
         </button>
         <!-- Submit / Suggest Festival (GitHub) -->
         <a id="btnSubmit" href="https://github.com/chid/festival-register/issues/new?template=submit-festival.yml" target="_blank" rel="noopener" class="flex items-center gap-1 px-2.5 sm:px-3 py-1 bg-primary text-on-primary hover:bg-primary/90 rounded-md shadow-sm text-xs font-medium transition-transform active:scale-[0.98]">
@@ -273,9 +367,14 @@
         <!-- Mobile Sidebar Header -->
         <div class="flex items-center justify-between md:hidden pb-2 mb-1 border-b border-outline-variant/60">
           <span class="font-bold text-xs text-on-surface uppercase tracking-wider">Calendars &amp; Filters</span>
-          <button id="sidebarCloseBtn" class="p-1 rounded-md text-on-surface-variant hover:bg-surface-container">
-            <span class="material-symbols-outlined text-[18px]">close</span>
-          </button>
+          <div class="flex items-center gap-1">
+            <button id="mobileThemeToggleBtn" class="p-1 rounded-md text-on-surface-variant hover:bg-surface-container" title="Toggle Appearance">
+              <span id="mobileThemeToggleIcon" class="material-symbols-outlined text-[18px]">dark_mode</span>
+            </button>
+            <button id="sidebarCloseBtn" class="p-1 rounded-md text-on-surface-variant hover:bg-surface-container">
+              <span class="material-symbols-outlined text-[18px]">close</span>
+            </button>
+          </div>
         </div>
         
         <!-- Mini-Month Date Picker -->
@@ -598,6 +697,53 @@
         <button id="modalIcsBtn" class="px-3 py-1.5 text-xs bg-primary text-on-primary hover:bg-primary/90 font-medium rounded-lg flex items-center gap-1 transition-colors shadow-xs">
           <span class="material-symbols-outlined text-[15px]">file_download</span>
           <span>Add to .ics</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Apple Calendar / Google Calendar Live Subscribe Sheet -->
+<div id="subscribeModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm hidden">
+  <div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/80 shadow-2xl max-w-lg w-full overflow-hidden animate-scale-in">
+    <!-- Header -->
+    <div class="px-5 sm:px-6 pt-5 pb-4 border-b border-outline-variant/50 flex items-start justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+          <span class="material-symbols-outlined text-[24px]">calendar_month</span>
+        </div>
+        <div>
+          <h2 class="text-base sm:text-lg font-bold text-on-surface tracking-tight">Subscribe to Calendar</h2>
+          <p class="text-xs text-on-surface-variant">Live calendar feeds with automatic date sync for your devices.</p>
+        </div>
+      </div>
+      <button id="subCloseBtn" class="p-1 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+
+    <!-- Feed Channels List -->
+    <div class="px-5 sm:px-6 py-4 space-y-3.5 max-h-[70vh] overflow-y-auto custom-scrollbar text-xs">
+      <div class="p-3 rounded-xl bg-primary/5 border border-primary/20 text-on-surface text-[11px] leading-relaxed flex items-start gap-2">
+        <span class="material-symbols-outlined text-primary text-[17px] mt-0.5 flex-shrink-0">sync</span>
+        <div>
+          Subscribing via <b>webcal://</b> adds a live calendar to <b>Apple Calendar</b> (iPhone, iPad, Mac), <b>Google Calendar</b>, or <b>Outlook</b>. Confirmed dates and newly added festivals will automatically refresh.
+        </div>
+      </div>
+
+      <div class="space-y-2.5" id="subscribeChannelsList">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Offline Filtered Snapshot Download -->
+      <div class="pt-3 border-t border-outline-variant/40 flex items-center justify-between flex-wrap gap-2">
+        <div>
+          <span class="font-semibold text-on-surface text-xs block">Current Filtered Snapshot</span>
+          <span class="text-[11px] text-on-surface-variant">One-off .ics file matching only your current filters</span>
+        </div>
+        <button id="btnDownloadFilteredSnapshot" class="px-3 py-1.5 bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded-lg font-medium flex items-center gap-1.5 transition-colors shadow-xs">
+          <span class="material-symbols-outlined text-[15px]">file_download</span>
+          <span>Download .ics</span>
         </button>
       </div>
     </div>
@@ -1277,16 +1423,142 @@
     downloadIcsFile(filename, [eventIcs]);
   }
 
-  // Export Agenda iCal
-  $("btnSubscribeIcs").onclick = $("btnExportAgendaIcs").onclick = () => {
-    const list = getFilteredFestivals();
-    if (!list.length) {
-      alert("No festivals match current filters to export.");
-      return;
+  // Appearance (Light / Dark / Auto)
+  let themeMode = localStorage.getItem("festival_theme") || "auto";
+
+  function applyTheme(mode) {
+    themeMode = mode;
+    localStorage.setItem("festival_theme", mode);
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = mode === "dark" || (mode === "auto" && prefersDark);
+
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
     }
-    const events = list.map(createIcsEventString);
-    downloadIcsFile("festival-calendar-agenda.ics", events);
-  };
+
+    const icon = mode === "dark" ? "light_mode" : mode === "light" ? "dark_mode" : "brightness_auto";
+    const title = mode === "dark" ? "Appearance: Dark (click for Light)" :
+                  mode === "light" ? "Appearance: Light (click for Auto)" :
+                  "Appearance: Auto (click for Dark)";
+
+    if ($("themeToggleIcon")) $("themeToggleIcon").textContent = icon;
+    if ($("themeToggleBtn")) $("themeToggleBtn").title = title;
+    if ($("mobileThemeToggleIcon")) $("mobileThemeToggleIcon").textContent = icon;
+    if ($("mobileThemeToggleBtn")) $("mobileThemeToggleBtn").title = title;
+  }
+
+  function cycleTheme() {
+    const next = themeMode === "auto" ? "dark" : themeMode === "dark" ? "light" : "auto";
+    applyTheme(next);
+  }
+
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+    if (themeMode === "auto") applyTheme("auto");
+  });
+
+  // Subscribe Modal & webcal Feeds
+  const SUBSCRIBE_FEEDS = [
+    {
+      id: "all",
+      name: "All Festivals (NSW, VIC, ACT)",
+      desc: "All 89 verified festivals across Sydney, Melbourne and Canberra",
+      filename: "festivals-all.ics",
+      badge: "89 Events",
+      dot: "#007AFF"
+    },
+    {
+      id: "sydney",
+      name: "Sydney Circuit",
+      desc: "52 Greater Sydney festivals, outdoor spectacles & cultural showcases",
+      filename: "festivals-sydney.ics",
+      badge: "52 Events",
+      dot: "#007AFF"
+    },
+    {
+      id: "melbourne",
+      name: "Melbourne Stages",
+      desc: "26 Melbourne comedy, film, music and arts programs",
+      filename: "festivals-melbourne.ics",
+      badge: "26 Events",
+      dot: "#AF52DE"
+    },
+    {
+      id: "canberra",
+      name: "Canberra Events",
+      desc: "11 ACT multicultural, light, balloon and automotive festivals",
+      filename: "festivals-canberra.ics",
+      badge: "11 Events",
+      dot: "#34C759"
+    },
+    {
+      id: "free",
+      name: "Free Festivals Only",
+      desc: "47 free-admission festivals ($0 entrance fee)",
+      filename: "festivals-free.ics",
+      badge: "47 Events",
+      dot: "#34C759"
+    }
+  ];
+
+  function getFeedWebcalUrl(filename) {
+    if (location.protocol.startsWith("http")) {
+      const basePath = location.pathname.replace(/\/[^/]*$/, "");
+      return `webcal://${location.host}${basePath}/${filename}`;
+    }
+    return `webcal://chid.github.io/festival-register/${filename}`;
+  }
+
+  function openSubscribeModal() {
+    const container = $("subscribeChannelsList");
+    container.innerHTML = SUBSCRIBE_FEEDS.map(feed => {
+      const webcalUrl = getFeedWebcalUrl(feed.filename);
+      const gcalUrl = `https://calendar.google.com/calendar/render?cid=${encodeURIComponent(webcalUrl)}`;
+      return `
+        <div class="p-3 rounded-xl bg-surface-container-low border border-outline-variant/60 hover:border-primary/40 transition-colors">
+          <div class="flex items-center justify-between mb-1">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full flex-shrink-0" style="background-color: ${feed.dot}"></span>
+              <span class="font-bold text-on-surface text-xs">${feed.name}</span>
+            </div>
+            <span class="text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant">${feed.badge}</span>
+          </div>
+          <p class="text-[11px] text-on-surface-variant mb-2.5 pl-4.5">${feed.desc}</p>
+          <div class="flex items-center gap-1.5 flex-wrap pl-4.5">
+            <a href="${webcalUrl}" class="px-2.5 py-1 text-[11px] bg-primary text-on-primary hover:bg-primary/90 font-medium rounded-md shadow-xs flex items-center gap-1 transition-colors">
+              <span class="material-symbols-outlined text-[14px]">calendar_today</span>
+              <span>Apple Calendar</span>
+            </a>
+            <a href="${gcalUrl}" target="_blank" rel="noopener" class="px-2.5 py-1 text-[11px] bg-surface-container-highest hover:bg-surface-container-high text-on-surface rounded-md border border-outline-variant/50 font-medium flex items-center gap-1 transition-colors">
+              <span>Google Cal</span>
+              <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+            </a>
+            <button onclick="copyToClipboard('${webcalUrl}', this)" class="px-2 py-1 text-[11px] text-outline hover:text-on-surface rounded hover:bg-surface-container transition-colors flex items-center gap-1">
+              <span class="material-symbols-outlined text-[13px]">content_copy</span>
+              <span>Copy URL</span>
+            </button>
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    $("subscribeModal").classList.remove("hidden");
+  }
+
+  function closeSubscribeModal() {
+    $("subscribeModal").classList.add("hidden");
+  }
+
+  function copyToClipboard(text, btn) {
+    navigator.clipboard.writeText(text).then(() => {
+      const orig = btn.innerHTML;
+      btn.innerHTML = `<span class="material-symbols-outlined text-[13px] text-tertiary">check</span> <span class="text-tertiary font-semibold">Copied!</span>`;
+      setTimeout(() => { btn.innerHTML = orig; }, 2000);
+    }).catch(() => {
+      prompt("Copy calendar feed link:", text);
+    });
+  }
 
   // Export CSV
   $("btnExportCsv").onclick = () => {
@@ -1410,6 +1682,7 @@
       }
       if (e.key === "Escape") {
         closeFestivalModal();
+        closeSubscribeModal();
       }
     });
 
@@ -1492,6 +1765,30 @@
       $("btnDensityComfortable").className = "px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface";
     };
 
+    // Theme toggles
+    if ($("themeToggleBtn")) $("themeToggleBtn").onclick = cycleTheme;
+    if ($("mobileThemeToggleBtn")) $("mobileThemeToggleBtn").onclick = cycleTheme;
+
+    // Subscribe modal triggers & actions
+    if ($("btnSubscribeIcs")) $("btnSubscribeIcs").onclick = openSubscribeModal;
+    if ($("btnExportAgendaIcs")) $("btnExportAgendaIcs").onclick = openSubscribeModal;
+    if ($("tabIcs")) $("tabIcs").onclick = openSubscribeModal;
+    if ($("subCloseBtn")) $("subCloseBtn").onclick = closeSubscribeModal;
+    if ($("subscribeModal")) {
+      $("subscribeModal").onclick = e => { if (e.target === $("subscribeModal")) closeSubscribeModal(); };
+    }
+    if ($("btnDownloadFilteredSnapshot")) {
+      $("btnDownloadFilteredSnapshot").onclick = () => {
+        const list = getFilteredFestivals();
+        if (!list.length) {
+          alert("No festivals match current filters to export.");
+          return;
+        }
+        const events = list.map(createIcsEventString);
+        downloadIcsFile("festivals-filtered-snapshot.ics", events);
+      };
+    }
+
     // Modal
     $("modalCloseBtn").onclick = closeFestivalModal;
     $("eventModal").onclick = e => { if (e.target === $("eventModal")) closeFestivalModal(); };
@@ -1519,8 +1816,14 @@
 
   // Initialization
   async function init() {
+    applyTheme(themeMode);
     setupEvents();
     loadHash();
+
+    // Register Service Worker for offline PWA caching
+    if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+      navigator.serviceWorker.register("./sw.js").catch(err => console.log("SW note:", err));
+    }
 
     try {
       const [dRes, dtRes] = await Promise.all([

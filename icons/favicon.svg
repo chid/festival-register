@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF453A"/>
+      <stop offset="100%" stop-color="#D70015"/>
+    </linearGradient>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  
+  <!-- App Icon Base -->
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="#FFFFFF" filter="url(#shadow)"/>
+  
+  <!-- Apple Calendar Red Header -->
+  <path d="M 16 124 C 16 64.3 64.3 16 124 16 L 388 16 C 447.7 16 496 64.3 496 124 L 496 150 L 16 150 Z" fill="url(#headerGrad)"/>
+  
+  <!-- Header Label -->
+  <text x="256" y="105" text-anchor="middle" font-family="-apple-system, Inter, BlinkMacSystemFont, sans-serif" font-weight="700" font-size="52" fill="#FFFFFF" letter-spacing="4">FESTIVALS</text>
+  
+  <!-- Calendar Body Highlight numeral "26" -->
+  <text x="256" y="325" text-anchor="middle" font-family="-apple-system, Inter, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="160" fill="#1C1C1E" letter-spacing="-4">26</text>
+  
+  <!-- Three City Circuit Dots: Sydney, Melbourne, Canberra -->
+  <circle cx="186" cy="405" r="22" fill="#007AFF"/>
+  <circle cx="256" cy="405" r="22" fill="#AF52DE"/>
+  <circle cx="326" cy="405" r="22" fill="#34C759"/>
+  
+  <!-- Subtle Border Hairline -->
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="none" stroke="#E5E5EA" stroke-width="2"/>
+</svg>

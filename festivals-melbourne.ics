@@ -1,0 +1,537 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//chid//Festival Register//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Festival Calendar — Melbourne Stages
+X-WR-CALDESC:Verified festivals and major recurring events across Melbourn
+ e & Victoria
+X-WR-TIMEZONE:Australia/Sydney
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:midsumma-festival-20260118@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Midsumma Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Arts / LGBTIQ+ culture\n\nPricing
+ : Free (Midsumma Carnival and Pride March free\; some events ticketed at 
+ set prices (not extracted)\; some family events free with booking.)\n\nDa
+ tes Note: 2024: 21 Jan - 11 Feb 2024\; 2026: 18 Jan - 8 Feb 2026 (2025 da
+ tes not confirmed)\n\nNote: 2025 edition not found\; a RACV listing with 
+ 2025 in its title actually describes 2026 details. Tier Free based on fre
+ e flagship events.\n\nWebsite: https://www.midsumma.org.au
+LOCATION:Melbourne CBD incl. Alexandra Gardens\, Victorian Pride Centre\, 
+ Fed Square\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260118
+DTEND;VALUE=DATE:20260209
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.midsumma.org.au
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-chinese-lunar-new-year-festival-chinatown-20260222@chid.gith
+ ub.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne Chinese Lunar New Year Festival (Chinatown)
+DESCRIPTION:City: Melbourne\n\nCategory: Cultural / festival\n\nPricing: F
+ ree (Free street festival\; Millennium Dragon Parade\, food stalls\, kids
+ ' area.)\n\nDates Note: 2025: Sun 2 Feb 2025\, 10am-8pm\; 2024: Sun 11 Fe
+ b 2024 (one listing says 10 Feb)\; 2026: Sun 22 Feb 2026\n\nNote: Must-se
+ e. Official URL is the City of Melbourne events listing page. Related fre
+ e Lunar New Year events at Queen Victoria Market and NGV in 2025.\n\nWebs
+ ite: https://whatson.melbourne.vic.gov.au/article/melbournes-lunar-new-ye
+ ar-festival-events
+LOCATION:Chinatown Melbourne: Lonsdale\, Bourke and Little Bourke Streets\
+ , Melbourne\, Australia
+DTSTART;VALUE=DATE:20260222
+DTEND;VALUE=DATE:20260223
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://whatson.melbourne.vic.gov.au/article/melbournes-lunar-new-year
+ -festival-events
+END:VEVENT
+BEGIN:VEVENT
+UID:australian-open-20260112@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Australian Open
+DESCRIPTION:City: Melbourne\n\nCategory: Sport (tennis)\n\nPricing: Low (G
+ round passes from $19 (week two) to $49 (week one) early-bird\; $59 stand
+ ard week one\, $35 week two from 1 Dec (2025 edition). Kids from $5. Rese
+ rved seats on Rod Laver\, Margaret Court\, John Cain Arenas cost more.)\n
+ \nDates Note: 2026: 12 Jan - 1 Feb (main draw from 18 Jan). 2025: main dr
+ aw from 12 Jan.\n\nNote: Must-see. Tickets via Ticketmaster\; 2026 genera
+ l sale opened 7 Oct 2026. Over one million attendees in both 2024 and 202
+ 5. 2026 edition has already run\; 2027 dates not yet confirmed in sources
+ .\n\nWebsite: https://ausopen.com/node/257147
+LOCATION:Melbourne Park\, Melbourne (VIC)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260112
+DTEND;VALUE=DATE:20260202
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://ausopen.com/node/257147
+END:VEVENT
+BEGIN:VEVENT
+UID:st-kilda-festival-20260215@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:St Kilda Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Music / community\n\nPricing: Fre
+ e (Free entry\, no bookings required (2024 and 2025).)\n\nDates Note: 202
+ 5: 15 - 16 Feb 2025\; 2024: 17 - 18 Feb 2024 (2026 dates not searched)\n\
+ nNote: Must-see. Official URL domain appeared in search results but a liv
+ e fetch returned HTTP 429 during verification\, so the domain is unconfir
+ med. Council is City of Port Phillip.\n\nWebsite: https://gdaystkilda.com
+ .au
+LOCATION:St Kilda Foreshore: South Beach Reserve\, O'Donnell Gardens and s
+ urrounds\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260215
+DTEND;VALUE=DATE:20260217
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://gdaystkilda.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:moonee-valley-festival-20260222@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Moonee Valley Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Music / community\n\nPricing: Fre
+ e (Free\, all ages\, no registration required.)\n\nDates Note: 2025: Sat 
+ 22 Feb 2025\, 10am-10pm\; 2024: Sat 24 Feb 2024 (2026 dates not confirmed
+ )\n\nNote: Council-run free festival. Related free Moonee Valley events: 
+ Mediterranean Fiesta (Mar 2025)\, Twilight Concert at Lincoln Park (Mar 2
+ 025). Youth Fest (Sep 2024) also free at Queens Park.\n\nWebsite: https:/
+ /mvcc.vic.gov.au/festival
+LOCATION:Queens Park\, Moonee Ponds\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260222
+DTEND;VALUE=DATE:20260223
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://mvcc.vic.gov.au/festival
+END:VEVENT
+BEGIN:VEVENT
+UID:moomba-festival-20260305@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Moomba Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Community / festival (parade\, fi
+ reworks\, carnival)\n\nPricing: Free (Entry free. Moomba Ride Pass $50 (2
+ 025\, unlimited rides)\; $4 coupon ticketing for rides. Birdman Rally fre
+ e (2026).)\n\nDates Note: 2024: 7-11 Mar (Labour Day weekend). 2025: 6-10
+  Mar. 2026: 5-9 Mar. 2027: 4-8 Mar (TBC).\n\nNote: Must-see. City of Melb
+ ourne event. Parade on Monday of the long weekend. 2027 dates listed as T
+ hursday 4 March 2027 to Monday 8 March 2027\, with some details still TBC
+ .\n\nWebsite: https://moomba.melbourne.vic.gov.au
+LOCATION:Alexandra Gardens\, Birrarung Marr\, Kings Domain\, Yarra River p
+ recinct (VIC)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260305
+DTEND;VALUE=DATE:20260310
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://moomba.melbourne.vic.gov.au
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-international-comedy-festival-20260326@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne International Comedy Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Comedy\n\nPricing: Low (Tickets f
+ rom $10\; average about $35. 25-hour flash sale at $25 per show (Feb 2024
+  and Feb 2025). Members get 20% off some shows\; discount for 3+ shows.)\
+ n\nDates Note: 2024: 27 Mar - 21 Apr. 2025: 26 Mar - 20 Apr.\n\nNote: Mus
+ t-see. Major comedy festival\; the Sydney equivalent is Sydney Comedy Fes
+ tival. Special events can sell out early. Resale capped at 10% above face
+  value. 2026 dates not checked.\n\nWebsite: https://www.comedyfestival.co
+ m.au
+LOCATION:Melbourne Town Hall and about 137 venues citywide (VIC)\, Melbour
+ ne\, Australia
+DTSTART;VALUE=DATE:20260326
+DTEND;VALUE=DATE:20260421
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.comedyfestival.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:australian-grand-prix-formula-1-20260313@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Australian Grand Prix (Formula 1)
+DESCRIPTION:City: Melbourne\n\nCategory: Sport (motorsport)\n\nPricing: Pr
+ emium (2025 Park Pass (GA) base $309 (up from $279 in 2024)\; Thursday Pa
+ rk Pass from about $45 per one reseller (unverified). Grandstand 4-day fr
+ om about $580 (2024). Dynamic pricing: up to 55% above base at peak deman
+ d. Kids under 14 Thursday free.)\n\nDates Note: 2024: 21-24 Mar. 2025: ap
+ prox. 13-16 Mar (sources differ). 2026 race not checked.\n\nNote: Must-se
+ e. Park Passes sold out in 2024. Official Park Pass and grandstand prices
+  are not fully verified in the sources. 2025 dates conflict across sites 
+ (one spam site\, March 21-23\, ignored).\n\nWebsite: https://www.grandpri
+ x.com.au
+LOCATION:Albert Park Circuit\, Albert Park (VIC)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260313
+DTEND;VALUE=DATE:20260317
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.grandprix.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-food-wine-festival-20260321@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne Food & Wine Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Food & wine\n\nPricing: Premium (
+ Prices vary by event\; not found in the sources. World's Longest Lunch is
+  ticketed (three-course lunch\, wines). Subscriber pre-sale precedes gene
+ ral sale.)\n\nDates Note: 2024: 15-24 Mar (10 days\, 300-400+ events). 20
+ 25: 21-30 Mar.\n\nNote: Must-see. Official program and tickets at mfwf.co
+ m.au (listed in a government release). 2025 general sale opened 28 Nov 20
+ 24. 2026 edition dates and prices not checked.\n\nWebsite: https://melbou
+ rnefoodandwine.com.au
+LOCATION:Citywide Melbourne and regional Victoria (flagship World's Longes
+ t Lunch at a central venue)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260321
+DTEND;VALUE=DATE:20260331
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://melbournefoodandwine.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-food-and-wine-festival-20260321@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne Food and Wine Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Food and wine\n\nPricing: Premium
+  (General prices not found. Event-level examples: 2024 shared dinner $175
+  per person\; World's Longest Lunch ticketed (price not extracted).)\n\nD
+ ates Note: 2025: 21 - 30 Mar 2025\; 2024: 15 - 24 Mar 2024\n\nNote: Must-
+ see. Tier left Unverified\; events range from low-cost to premium dinners
+ . Official site name appeared in results as melbournefoodandwine.com.au (
+ 2024 sources also cite mfwf.com.au\; not verified).\n\nWebsite: https://m
+ elbournefoodandwine.com.au
+LOCATION:Citywide Melbourne and regional Victoria (200-300 events)\, Melbo
+ urne\, Australia
+DTSTART;VALUE=DATE:20260321
+DTEND;VALUE=DATE:20260331
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://melbournefoodandwine.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:anzac-day-dawn-service-shrine-of-remembrance-20260425@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Anzac Day Dawn Service (Shrine of Remembrance)
+DESCRIPTION:City: Melbourne\n\nCategory: Civic / commemorative\n\nPricing:
+  Free (Free\, no booking required. Free PTV shuttle from selected RSLs (b
+ ookings required in 2025).)\n\nDates Note: 2025: 25 Apr 2025 (dawn servic
+ e about 5:30-6:30am). Anzac Day is 25 April each year.\n\nNote: Dawn serv
+ ice and parade in the CBD. Expect more than 50\,000 people across the daw
+ n service and parade (2025). 2026 details not checked.\n\nWebsite: https:
+ //shrine.org.au/anzac-day-2025
+LOCATION:Shrine of Remembrance\, Melbourne (VIC)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260425
+DTEND;VALUE=DATE:20260426
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://shrine.org.au/anzac-day-2025
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-writers-festival-20260507@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne Writers Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Literature\n\nPricing: Unverified
+  (Per-event and pass prices not found for 2025. 2024 early-bird 10% disco
+ unt (select events\, workshops excluded)\; concession prices available at
+  many events.)\n\nDates Note: 2025: 8 - 11 May 2025\; 2026: 7 - 10 May 20
+ 26\n\nNote: Must-see. 2024 start date conflicts across sources (6 May vs 
+ 8 May)\; 6-12 May used. Price tier left Unverified as no general prices w
+ ere found.\n\nWebsite: https://mwf.com.au
+LOCATION:Venues across Melbourne CBD incl. Wheeler Centre and State Librar
+ y Victoria\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260507
+DTEND;VALUE=DATE:20260511
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://mwf.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:rising-festival-20260604@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:RISING Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Arts / music / performance\n\nPri
+ cing: Free (Per-event prices not found. Organisers emphasise free experie
+ nces and affordable ticketing\; 2024 booking 3+ events in one transaction
+  got 15% off standard ticket price.)\n\nDates Note: 2025: 4 - 15 Jun 2025
+  (2026 lineup referenced\, dates not confirmed)\n\nNote: Must-see. Tier c
+ ould not be verified from search results\; check the official booking pag
+ e. 2025 presale began 14 Mar 2025.\n\nWebsite: https://rising.melbourne
+LOCATION:Multiple Melbourne venues incl. Melbourne Town Hall\, Hamer Hall\
+ , St Paul's Cathedral\, trams and streets\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260604
+DTEND;VALUE=DATE:20260616
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://rising.melbourne
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-international-film-festival-miff-20260807@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne International Film Festival (MIFF)
+DESCRIPTION:City: Melbourne\n\nCategory: Film\n\nPricing: Premium (Multi-d
+ ay passes: Multipass-12 $285.60 ($257.10 concession)\, Multipass-6 $151.2
+ 0 ($136.10 concession) (2025). Single session prices not verified (listed
+  as varies).)\n\nDates Note: 2025: 7 - 24 Aug 2025 in cinemas\; online 15
+  - 31 Aug 2025 (2026 edition is live on the official site\, dates not ext
+ racted)\n\nNote: Must-see. Tier set to Premium because the cheapest stand
+ ard option is a multi-day pass per the register rule\; single-session tic
+ kets are cheaper but unverified. Program counts differ between sources (2
+ 50-275+ films).\n\nWebsite: https://www.miff.com.au
+LOCATION:Cinemas across Melbourne CBD and suburbs\; regional Victoria\; on
+ line nationwide\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260807
+DTEND;VALUE=DATE:20260825
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.miff.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-fringe-festival-20260930@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne Fringe Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Arts (multi-disciplinary)\n\nPric
+ ing: Free (Mixed: some events free\, most paid with prices varying by eve
+ nt. 48-hour flash sales at 25% off\; Hub Club membership gives 20% off fu
+ ll-price tickets (2025).)\n\nDates Note: 2025: 30 Sep - 19 Oct 2025\; 202
+ 4: 1 - 20 Oct 2024\n\nNote: Must-see. Classified Free because some events
+  are free (cheapest typical entry)\; the rest are paid and unverified per
+  event. 2024 event count 470+\, 2025 500+.\n\nWebsite: https://melbournef
+ ringe.com.au
+LOCATION:Citywide Melbourne venues incl. Fringe Westside (Footscray)\, Mel
+ bourne\, Australia
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261020
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://melbournefringe.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:royal-melbourne-show-20260925@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Royal Melbourne Show
+DESCRIPTION:City: Melbourne\n\nCategory: Family / agricultural show\n\nPri
+ cing: Mid (2025 adult $49.50\, concession $36\, child (5-12) $26\, family
+  (2 adults + 2 kids) $99\; online discount up to 20%\; evening after 5pm 
+ $30 adult. Children 4 and under free. Seniors Day $25.)\n\nDates Note: 20
+ 24: 26 Sep - 6 Oct. 2025: 25 Sep - 5 Oct (11 days).\n\nNote: Must-see/fam
+ ily. Early online adult about $42 in 2024. 2026 dates and prices not conf
+ irmed in these sources\; check royalshow.com.au.\n\nWebsite: https://roya
+ lshow.com.au
+LOCATION:Melbourne Showgrounds\, Ascot Vale (VIC)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20261006
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://royalshow.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:afl-grand-final-20260926@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:AFL Grand Final
+DESCRIPTION:City: Melbourne\n\nCategory: Sport (Australian rules football)
+ \n\nPricing: Premium (2025 top-tier ticket $515 (2026 top price $536). En
+ try-level reserved seats $185 in 2024 (frozen for entry-level finals tick
+ ets). Minimum grand final price reported at $195 in one unconfirmed artic
+ le.)\n\nDates Note: 2025: 27 Sep 2025. 2026: 26 Sep 2026 (per 2026 price 
+ announcement).\n\nNote: Must-see. Ticketing via Ticketek (MCG). Crowd 100
+ \,022 in 2025. The $195 minimum is unconfirmed for 2025. Some sources cit
+ e category ranges without verification\; not used.\n\nWebsite: https://ww
+ w.afl.com.au
+LOCATION:Melbourne Cricket Ground (MCG)\, Jolimont (VIC)\, Melbourne\, Aus
+ tralia
+DTSTART;VALUE=DATE:20260926
+DTEND;VALUE=DATE:20260927
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.afl.com.au
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-international-jazz-festival-20261017@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne International Jazz Festival
+DESCRIPTION:City: Melbourne\n\nCategory: Music (jazz)\n\nPricing: Free (Mo
+ re than one-third of the program is free (2024 and 2025). Ticketed events
+  and Jazz at the Bowl priced separately\; prices not extracted.)\n\nDates
+  Note: 2025: 17 - 26 Oct 2025\; 2024: 18 - 27 Oct 2024 (2026 dates not co
+ nfirmed)\n\nNote: Must-see. Tier Free because a third or more of events a
+ re free (cheapest typical entry). Ticketed price points not verified.\n\n
+ Website: https://melbournejazz.com
+LOCATION:About 40 venues across Melbourne CBD incl. Fed Square\, The JazzL
+ ab\, Bowl (Jazz at the Bowl)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261027
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://melbournejazz.com
+END:VEVENT
+BEGIN:VEVENT
+UID:lygon-street-festa-carlton-italian-festa-20261018@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Lygon Street Festa (Carlton Italian Festa)
+DESCRIPTION:City: Melbourne\n\nCategory: Cultural / food (Italian)\n\nPric
+ ing: Free (Free entry (2025\, Royal Exhibition Building)\; ticketed add-o
+ ns such as wine and jazz.)\n\nDates Note: No confirmed 2024 or 2025 editi
+ on found\n\nNote: No official URL found\; revival campaign reported Sep 2
+ 025\, unconfirmed. Italian Festa & Expo 2025 (Carlton Gardens\, Co.As.It)
+  is a possibly different event with no admission details. Leave URL blank
+  per rule.\n\nWebsite: https://whatson.melbourne.vic.gov.au/things-to-do/
+ italian-festa-and-expo
+LOCATION:Lygon Street / Argyle Square\, Carlton\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20261018
+DTEND;VALUE=DATE:20261020
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://whatson.melbourne.vic.gov.au/things-to-do/italian-festa-and-ex
+ po
+END:VEVENT
+BEGIN:VEVENT
+UID:oakleigh-glendi-greek-festival-20261031@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Oakleigh Glendi (Greek festival)
+DESCRIPTION:City: Melbourne\n\nCategory: Cultural / food / music\n\nPricin
+ g: Free (2024 admission free and open to all. 2025 admission not confirme
+ d\; 2025 raffle for a $6\,000 travel voucher (raffle tickets sold separat
+ ely).)\n\nDates Note: 2025: 1 - 2 Nov 2025\; 2024: 2 - 3 Nov 2024\; 2026:
+  31 Oct - 1 Nov 2026\n\nNote: Official URL is the Monash council listing 
+ for the 2024 edition\; not a verified 2025/2026 page. Greek Film Festival
+  (Oct 2025) and Antipodes Festival (Feb 2025) are separate Greek events.\
+ n\nWebsite: https://www.oakleighglendi.com.au/
+LOCATION:Warrawee Park\, Oakleigh (Monash)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261102
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.oakleighglendi.com.au/
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-cup-carnival-flemington-race-days-incl-lexus-melbourne-cup-2
+ 0261101@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne Cup Carnival (Flemington race days incl. Lexus Melbourne
+  Cup)
+DESCRIPTION:City: Melbourne\n\nCategory: Sport (horse racing)\n\nPricing: 
+ Mid (2025 Daily Flemington Pass $50-$120\; Four Day Pass $250\; VIP/Elms 
+ $250-$350. 2024 General Admission: Oaks Day $48 early bird / $65 full\; D
+ erby Day $65 / $88\; Cup Day $75 / $99. Children under 12 with adult free
+ . 2026 GA adult: Oaks $50\, Champions $65\, Derby $88\, Cup $120 (vrc.com
+ .au).)\n\nDates Note: 2025: 1 Nov (Victoria Derby Day)\, 4 Nov (Melbourne
+  Cup)\, 6 Nov (Crown Oaks)\, 8 Nov (TAB Champions Stakes). 2024: 2\, 5\, 
+ 7\, 9 Nov.\n\nNote: Must-see. Cup Day is the Tuesday of the first full we
+ ek of November. Hospitality packages on Cup Day from about $1\,255. 2026 
+ prices and dates not confirmed in these sources\; check vrc.com.au.\n\nWe
+ bsite: https://www.vrc.com.au/melbourne-cup-carnival/melbourne-cup-carniv
+ al-2026/
+LOCATION:Flemington Racecourse\, Flemington (VIC)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261109
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.vrc.com.au/melbourne-cup-carnival/melbourne-cup-carnival-2
+ 026/
+END:VEVENT
+BEGIN:VEVENT
+UID:melbourne-new-year-s-eve-city-of-melbourne-celebration-zones-and-firew
+ orks-20261231@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Melbourne New Year's Eve (City of Melbourne Celebration Zones and 
+ fireworks)
+DESCRIPTION:City: Melbourne\n\nCategory: Civic / New Year's Eve\n\nPricing
+ : Free (Free to attend the celebration zones and fireworks viewing\; food
+  and drink extra.)\n\nDates Note: 31 Dec 2024 (into 2025). 31 Dec 2025 (i
+ nto 2026).\n\nNote: Must-see. The 2025 zone list and show format are only
+  from local media guides and not verified against the City of Melbourne p
+ age\; check before relying on it. Crowds are large.\n\nWebsite: https://w
+ ww.melbourne.vic.gov.au/new-years-eve
+LOCATION:Celebration Zones: Docklands\, Flagstaff Gardens\, Treasury Garde
+ ns\, the Shrine (2024-25 zone list). CBD rooftop fireworks.\, Melbourne\,
+  Australia
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.melbourne.vic.gov.au/new-years-eve
+END:VEVENT
+BEGIN:VEVENT
+UID:ngv-triennial-20261213@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:NGV Triennial
+DESCRIPTION:City: Melbourne\n\nCategory: Art / design\n\nPricing: Free (Fr
+ ee entry (2023 and 2026 editions).)\n\nDates Note: 2023 edition: 3 Dec 20
+ 23 - 7 Apr 2024\; 2026 edition: 13 Dec 2026 - 11 Apr 2027\n\nNote: Must-s
+ ee. Triennial is held every three years\, so there is no 2025 edition\; t
+ he 2023 edition ran into 2024. Next edition is 2026-27. Attendance 1\,063
+ \,675 for 2023 edition. The official URL path in search results is spelle
+ d 'exhibitons' and is kept verbatim.\n\nWebsite: https://www.ngv.vic.gov.
+ au/exhibition/triennial-2026/
+LOCATION:NGV International\, 180 St Kilda Road\, Melbourne\, Melbourne\, A
+ ustralia
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20270412
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.ngv.vic.gov.au/exhibition/triennial-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:boxing-day-test-mcg-20261226@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Boxing Day Test (MCG)
+DESCRIPTION:City: Melbourne\n\nCategory: Sport (cricket)\n\nPricing: Mid (
+ 2025 Day 3: adult $74 unreserved / $86 reserved\; child (7-16) $29 / $35\
+ ; plus $9 Ticketek fee. Day 5 price TBC in listing. 2024 Day 5 adult from
+  $10 (GA)\; season packages from $30 (Cricket Victoria).)\n\nDates Note: 
+ 2025: 26-30 Dec (Day 5 is 30 Dec). 2024: 26-30 Dec.\n\nNote: Must-see. Da
+ y 1 and 2 public tickets often sell out. Tickets via Ticketek and cricket
+ .com.au. Corporate hospitality from about $895-$995 ex GST (2024). 2026 s
+ ummer fixtures not checked.\n\nWebsite: https://www.mcg.org.au/events/202
+ 5/december/boxing-day-test-day-5---australia-v-england
+LOCATION:Melbourne Cricket Ground (MCG)\, Jolimont (VIC)\, Melbourne\, Aus
+ tralia
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20261231
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.mcg.org.au/events/2025/december/boxing-day-test-day-5---au
+ stralia-v-england
+END:VEVENT
+BEGIN:VEVENT
+UID:queen-victoria-market-night-markets-summer-hawker-88-winter-fringe-fla
+ vours-20261119@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Queen Victoria Market Night Markets (Summer\, Hawker 88\, Winter\,
+  Fringe Flavours)
+DESCRIPTION:City: Melbourne\n\nCategory: Markets / food\n\nPricing: Free (
+ Free entry\; food\, drink and goods paid. Summer market closed 24 and 31 
+ Dec.)\n\nDates Note: 2025: Summer Night Market 19 Nov 2025 - 11 Mar 2026\
+ ; Hawker 88 9 Apr - 7 May\; Winter 4 Jun - 27 Aug\; Fringe Flavours 17 Se
+ p - 15 Oct. All Wednesdays 5-10pm.\n\nNote: Series of night markets\, not
+  a single event. Free entry confirmed for summer and winter 2025\; Fringe
+  Flavours free-entry not confirmed. 2026 season dates not announced in so
+ urces.\n\nWebsite: https://qvm.com.au/
+LOCATION:Queen Victoria Market\, Melbourne CBD (VIC)\, Melbourne\, Austral
+ ia
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20270312
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://qvm.com.au/
+END:VEVENT
+BEGIN:VEVENT
+UID:white-night-melbourne-20260201@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:White Night Melbourne
+DESCRIPTION:City: Melbourne\n\nCategory: Arts / night festival\n\nPricing:
+  Free (Historic CBD editions described as free with 90+ events\; not veri
+ fied for recent editions.)\n\nDates Note: No confirmed Melbourne CBD edit
+ ion for 2024 or 2025\n\nNote: No confirmed 2024 or 2025 Melbourne edition
+  from search. Regional editions (Shepparton\, Bendigo\, Geelong\, Ballara
+ t) reported. Melbourne Museum's Nocturnal after-hours series (Feb-Dec 202
+ 5\, paid) is a different event. Flag for verification.\n\nWebsite: https:
+ //whitenight.com.au
+LOCATION:Melbourne CBD (historical)\, Melbourne\, Australia
+DTSTART;VALUE=DATE:20260201
+DTEND;VALUE=DATE:20260401
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://whitenight.com.au
+END:VEVENT
+END:VCALENDAR

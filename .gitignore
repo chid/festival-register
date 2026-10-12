@@ -2,3 +2,6 @@
 .DS_Store
 *.original.*
 *.bak
+!icons/
+!icons/**
+

@@ -1,0 +1,232 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//chid//Festival Register//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Festival Calendar — Canberra Events
+X-WR-CALDESC:Verified festivals and cultural showcases across the ACT
+X-WR-TIMEZONE:Australia/Sydney
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:summernats-20260108@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Summernats
+DESCRIPTION:City: Canberra\n\nCategory: Motoring / music / car festival\n\
+ nPricing: Premium (Season pass (Summernats 37\, Jan 2025 per official pag
+ e via search): adult $170\, youth $70\, family $410 plus booking fee\; Oz
+ tix. Single-day prices not found.)\n\nDates Note: 2025: Thu 2 - Sun 5 Jan
+  2025 (Exhibition Park\, EPIC). 2026: Thu 8 - Sun 11 Jan 2026.\n\nNote: M
+ ust-see. Official Summernats site not returned by search\; url is ACT Gov
+ ernment notice for the 2026 edition. Prices unverified for all years.\n\n
+ Website: https://summernats.com.au/spectators
+LOCATION:Exhibition Park in Canberra (EPIC)\, Mitchell\, Canberra\, Austra
+ lia
+DTSTART;VALUE=DATE:20260108
+DTEND;VALUE=DATE:20260112
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://summernats.com.au/spectators
+END:VEVENT
+BEGIN:VEVENT
+UID:enlighten-festival-20260228@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Enlighten Festival
+DESCRIPTION:City: Canberra\n\nCategory: Light / arts\n\nPricing: Free (Man
+ y events free\; some ticketed from $25 (Novotel listing\, 2025). Free eve
+ nts often need a reservation.)\n\nDates Note: 2025: Fri 28 Feb - Mon 10 M
+ ar 2025 (15th year\, 11 days). 2026 dates not confirmed.\n\nNote: Must-se
+ e. 2025 dates from ACT Government guide. Balloon Spectacular was separate
+  from Enlighten in 2025.\n\nWebsite: https://enlightencanberra.com/
+LOCATION:City centre and Parliamentary Triangle\, Canberra\, Canberra\, Au
+ stralia
+DTSTART;VALUE=DATE:20260228
+DTEND;VALUE=DATE:20260311
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://enlightencanberra.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:national-multicultural-festival-20260206@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:National Multicultural Festival
+DESCRIPTION:City: Canberra\n\nCategory: Cultural / community / food\n\nPri
+ cing: Free (Entry free. Food and market purchases extra.)\n\nDates Note: 
+ 2025: Fri 7 - Sun 9 Feb 2025 (Fri 5pm-11pm\, Sat 10am-11pm\, Sun 10am-5pm
+ ). 2026: 6-8 Feb 2026 (28th edition).\n\nNote: Must-see. 2025 entry confi
+ rmed free on VisitCanberra. 2024 edition not searched.\n\nWebsite: https:
+ //visitcanberra.com.au/articles/what-to-expect-at-the-national-multicultu
+ ral-festival
+LOCATION:Civic Square\, City Walk\, Bunda Street\, Akuna Street\, Glebe Pa
+ rk\, Canberra\, Canberra\, Australia
+DTSTART;VALUE=DATE:20260206
+DTEND;VALUE=DATE:20260209
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://visitcanberra.com.au/articles/what-to-expect-at-the-national-m
+ ulticultural-festival
+END:VEVENT
+BEGIN:VEVENT
+UID:canberra-balloon-spectacular-20260315@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Canberra Balloon Spectacular
+DESCRIPTION:City: Canberra\n\nCategory: Spectacle / family\n\nPricing: Fre
+ e (Free for spectators. Balloons launch from around 6am weather permittin
+ g.)\n\nDates Note: 2025: Sat 15 - Sun 23 Mar 2025. 2024: 9-17 Mar 2024 (t
+ ied to Enlighten).\n\nNote: Must-see. 2025 dates per Events ACT and Canbe
+ rra Times-era coverage. 2026 dates not confirmed.\n\nWebsite: https://vis
+ itcanberra.com.au/events/56b23af4266140594567dc27/canberra-balloon-specta
+ cular
+LOCATION:John Dunmore Lang Place (between Questacon and National Portrait 
+ Gallery)\, Canberra\, Canberra\, Australia
+DTSTART;VALUE=DATE:20260315
+DTEND;VALUE=DATE:20260324
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://visitcanberra.com.au/events/56b23af4266140594567dc27/canberra-
+ balloon-spectacular
+END:VEVENT
+BEGIN:VEVENT
+UID:skyfire-and-canberra-new-year-s-eve-fireworks-20260315@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Skyfire and Canberra New Year's Eve Fireworks
+DESCRIPTION:City: Canberra\n\nCategory: Fireworks / community\n\nPricing: 
+ Free (Skyfire and NYE fireworks free to the public (Skyfire free-for-fami
+ lies per local coverage). 2024 VIP function was a promotional giveaway on
+ ly.)\n\nDates Note: Skyfire 2025: Sat 15 Mar 2025 (Regatta Point\, Lake B
+ urley Griffin). NYE 2025: Wed 31 Dec 2025 (two displays\, 9pm and midnigh
+ t).\n\nNote: Prompt listed Skyfire/NYE together\; entry combines two even
+ ts. Skyfire is autumn\, NYE is year-end. Free status from local coverage\
+ , not official ticketing.\n\nWebsite: https://www.cmtedd.act.gov.au/open_
+ government/inform/act_government_media_releases/barr/2025/celebrate-new-y
+ ears-eve-by-the-lake
+LOCATION:Lake Burley Griffin: Regatta Point / Central Basin\; NYE celebrat
+ ion hubs at Rond Terrace\, Wendouree Drive\, Ferry Gate\, John Dunmore La
+ ng Place\, Canberra\, Australia
+DTSTART;VALUE=DATE:20260315
+DTEND;VALUE=DATE:20260316
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://www.cmtedd.act.gov.au/open_government/inform/act_government_me
+ dia_releases/barr/2025/celebrate-new-years-eve-by-the-lake
+END:VEVENT
+BEGIN:VEVENT
+UID:art-not-apart-20260316@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Art\, Not Apart
+DESCRIPTION:City: Canberra\n\nCategory: Visual art / performance (street-a
+ rt day)\n\nPricing: Free (Free entry per Time Out listing\; 1-7pm.)\n\nDa
+ tes Note: Usually one Saturday in mid-March (2019: Sat 16 Mar). 2024 and 
+ 2025 dates not confirmed.\n\nNote: Official URL not confirmed in search r
+ esults (artnotapart.com named in result text only\; left blank). Time Out
+  page is not dated. Verify before listing as recurring.
+LOCATION:New Acton\, Canberra city centre (CBD sites incl. NFSA\, Shine Do
+ me\, QT Canberra in 2019)\, Canberra\, Australia
+DTSTART;VALUE=DATE:20260316
+DTEND;VALUE=DATE:20260317
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:national-folk-festival-20260403@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:National Folk Festival
+DESCRIPTION:City: Canberra\n\nCategory: Music / arts / cultural\n\nPricing
+ : Low (Multi-day tickets: 2024 range $14.50 to $591.34 (under-5s free). L
+ owest entry ~$14.50 (2024)\; 2025 prices not verified. Season and camping
+  passes extra. Ticketing via Humanitix.)\n\nDates Note: 2025: Thu 17 - Mo
+ n 21 Apr 2025 (Easter). 2024: 28 Mar - 1 Apr 2024. 2026: 3-6 Apr 2026 per
+  one listing.\n\nNote: Must-see. Tier set to Mid from 2024 price range (c
+ heapest adult ~$14.50 would make it Low\; full-season passes are Premium)
+ . 2025 price not confirmed.\n\nWebsite: https://folkfednsw.org.au/?p=1128
+ 1
+LOCATION:Exhibition Park in Canberra (EPIC)\, Flemington Road\, Mitchell\,
+  Canberra\, Australia
+DTSTART;VALUE=DATE:20260403
+DTEND;VALUE=DATE:20260407
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://folkfednsw.org.au/?p=11281
+END:VEVENT
+BEGIN:VEVENT
+UID:canberra-international-music-festival-20260430@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Canberra International Music Festival
+DESCRIPTION:City: Canberra\n\nCategory: Music (classical / chamber)\n\nPri
+ cing: Low (2025 prices not found. 2026 listing: Adult $25-85\, Concession
+  $25-65\, Child $18 (HerCanberra). Festival and TOP FIVE passes available
+ . Ticketing via Humanitix.)\n\nDates Note: 2025: Wed 30 Apr - Sun 4 May 2
+ 025. 2024: 1-5 May 2024 (30th year). 2026 listed.\n\nNote: Tier Low is es
+ timated from the 2026 cheapest price (child $18)\; 2025 price unverified.
+  Must-see for classical music audiences.\n\nWebsite: https://cimf.org.au/
+ ?p=7432
+LOCATION:Ainslie Arts Centre\, Braddon\, and other Canberra venues\, Canbe
+ rra\, Australia
+DTSTART;VALUE=DATE:20260430
+DTEND;VALUE=DATE:20260505
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://cimf.org.au/?p=7432
+END:VEVENT
+BEGIN:VEVENT
+UID:canberra-truffle-festival-20260607@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Canberra Truffle Festival
+DESCRIPTION:City: Canberra\n\nCategory: Food and wine\n\nPricing: Free (Af
+ ter Dark Truffle Fest 2025 $150pp (food4media\, May 2025). Other events n
+ ot priced in search results\; they vary by event.)\n\nDates Note: 2025: t
+ ruffle tasting series 7 Jun - 31 Aug 2025 (Mount Majura Vineyard listing)
+ \; After Dark Truffle Fest 20 Jun 2025. 2024: 21 Jun - 24 Sep 2024.\n\nNo
+ te: Season of separate events\, not one ticketed festival. Official progr
+ am page not found. Tier unverified because events vary\; the $150 After D
+ ark event would be Premium.\n\nWebsite: https://region.com.au/if-youre-lo
+ oking-for-truffle-you-came-to-the-right-place-capital-region-truffle-fest
+ ival-launches-a-bumper-season/781118/
+LOCATION:Multiple Capital Region wineries and restaurants\, Canberra\, Can
+ berra\, Australia
+DTSTART;VALUE=DATE:20260607
+DTEND;VALUE=DATE:20260901
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://region.com.au/if-youre-looking-for-truffle-you-came-to-the-rig
+ ht-place-capital-region-truffle-festival-launches-a-bumper-season/781118/
+END:VEVENT
+BEGIN:VEVENT
+UID:floriade-20260913@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Floriade
+DESCRIPTION:City: Canberra\n\nCategory: Flower festival / arts\n\nPricing:
+  Free (Daytime entry free. NightFest (evening\, 4 nights in early Oct) is
+  ticketed: 2024 listing Adults $25\, Concession/child $15\, family $65 (u
+ nverified for 2025).)\n\nDates Note: 2025: 13 Sep - 12 Oct 2025 (Commonwe
+ alth Park). 2026 dates not confirmed in sources.\n\nNote: Must-see. 2025 
+ dates from Crowne Plaza Canberra listing and Floriade FAQ. NightFest 2025
+  dates and prices not confirmed\; 2025 NightFest listed 2-5 Oct by one so
+ urce and 1-4 Oct by another.\n\nWebsite: https://floriadeaustralia.com/
+LOCATION:Commonwealth Park\, Canberra\, Canberra\, Australia
+DTSTART;VALUE=DATE:20260913
+DTEND;VALUE=DATE:20261013
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://floriadeaustralia.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:canberra-writers-festival-20261015@chid.github.io
+DTSTAMP:20261012T125539Z
+SUMMARY:Canberra Writers Festival
+DESCRIPTION:City: Canberra\n\nCategory: Literature\n\nPricing: Low (2025 i
+ ndividual sessions approx $20-30 (one session $28). Library Pass $100 (4 
+ standard events\, Sat/Sun)\; Parliament Pass for 4 events at MOAD.)\n\nDa
+ tes Note: 2025: Wed 22 - Sun 26 Oct 2025. 2026: Thu 15 - Sun 18 Oct 2026 
+ (10th anniversary\, 110 events).\n\nNote: Official 2025 program PDF used 
+ as url. 2026 pricing: see website.\n\nWebsite: https://canberrawritersfes
+ tival.com.au/
+LOCATION:Multiple: National Library of Australia\, NFSA\, National Museum 
+ of Australia\, MOAD\, ANU\, Hyatt Hotel Canberra\, Canberra\, Australia
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261019
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+URL:https://canberrawritersfestival.com.au/
+END:VEVENT
+END:VCALENDAR
