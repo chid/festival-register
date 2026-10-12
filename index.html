@@ -15,6 +15,14 @@ input{flex:1;min-width:180px}.btn{background:var(--ac);color:#fff;border-color:v
 .tag{display:inline-block;font-size:.78rem;padding:1px 8px;border-radius:99px;border:1px solid var(--bd);margin-right:4px}
 .Free{border-color:var(--ac);color:var(--ac)}.Premium{border-color:var(--warn);color:var(--warn)}
 details{margin-top:6px;font-size:.9rem}summary{cursor:pointer;color:var(--mut)}
+#grid{overflow:auto;max-height:75vh;border:1px solid var(--bd);border-radius:10px;background:var(--card)}
+table{border-collapse:collapse;width:max-content;min-width:100%;font-size:.88rem}
+th,td{border-bottom:1px solid var(--bd);border-right:1px solid var(--bd);padding:6px 8px;text-align:left;vertical-align:top;max-width:320px}
+th{position:sticky;top:0;background:var(--card);cursor:pointer;white-space:nowrap;user-select:none;z-index:1}
+tr.f th{top:34px;cursor:default;padding:2px}tr.f input{width:100%;min-width:70px;padding:3px 5px;font-size:.8rem}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--fg) 4%,transparent)}
+#cols{display:none;flex-wrap:wrap;gap:10px;margin:0 0 8px;font-size:.85rem}
+.seg button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
 a{color:var(--ac)}.warn{color:var(--warn)}footer{color:var(--mut);font-size:.85rem;margin-top:32px}
 </style></head><body><main>
 <h1>Festival Register</h1>
@@ -24,9 +32,13 @@ a{color:var(--ac)}.warn{color:var(--warn)}footer{color:var(--mut);font-size:.85r
 <select id="city" aria-label="City"><option value="">All cities</option><option>Sydney</option><option>Melbourne</option><option>Canberra</option></select>
 <select id="tier" aria-label="Price tier"><option value="">All prices</option><option>Free</option><option>Low</option><option>Mid</option><option>Premium</option><option>Unverified</option></select>
 <select id="month" aria-label="Month"><option value="">Any month</option></select>
+<span class="seg"><button id="vcards" class="on">Cards</button><button id="vgrid">Grid</button></span>
+<button id="colbtn" style="display:none">Columns</button><button id="exp" style="display:none">Export CSV</button>
 <a class="btn" id="submit" target="_blank" rel="noopener">+ Submit / correct</a>
 </div>
+<div id="cols"></div>
 <div id="list"></div>
+<div id="grid" style="display:none"></div>
 <footer>Tiers (AUD, cheapest typical paid entry): Free · Low &lt;$30 · Mid $30–100 · Premium &gt;$100. ⚠ = official link did not respond on 2026-10-12 (may be bot-blocking). Submissions go through GitHub issues.</footer>
 </main>
 <script>
@@ -49,6 +61,30 @@ function render(){
   <p style="margin:8px 0 0">${esc(r.price_detail)}</p>
   <details><summary>Dates &amp; past editions</summary><div>${esc(r.dates)}</div>${ed(r.ed2024,"2024")}${ed(r.ed2025,"2025")}${r.notes?`<div><i>${esc(r.notes)}</i></div>`:""}</details></div>`}).join("")||"<p>No matches.</p>";
 }
-["q","city","tier","month"].forEach(i=>$(i).addEventListener("input",render));
-fetch("data.json").then(r=>r.json()).then(d=>{data=d.festivals;render()}).catch(()=>{$("list").textContent="Could not load data.json"});
+["q","city","tier","month"].forEach(i=>$(i).addEventListener("input",()=>go()));
+const COLS=[["name","Festival"],["city","City"],["category","Category"],["month","Month"],["price_tier","Tier"],["price_detail","Price detail"],["dates","Dates"],["venue","Venue"],["url","Website"],["ed2024","2024 edition"],["ed2025","2025 edition"],["confidence","Conf."],["notes","Notes"]];
+let view="cards",sortK="city",sortD=1,vis=new Set(["name","city","month","price_tier","price_detail","url","ed2024","ed2025"]),cf={};
+const cell=(r,k)=>{const v=r[k];if(k==="ed2024"||k==="ed2025")return v&&v.found?`${v.dates||""} · ${v.price||""}`:"not found";return v==null?"":String(v)};
+function filt(){const q=$("q").value.toLowerCase(),c=$("city").value,t=$("tier").value,m=$("month").value;
+ return data.filter(r=>(!c||r.city===c)&&(!t||(r.price_tier||"Unverified")===t)&&(!m||String(r.month||"").slice(0,3)===m)&&(!q||JSON.stringify(r).toLowerCase().includes(q))&&Object.entries(cf).every(([k,v])=>!v||cell(r,k).toLowerCase().includes(v.toLowerCase())))}
+function renderGrid(){
+ const rows=filt().sort((a,b)=>cell(a,sortK).localeCompare(cell(b,sortK),undefined,{numeric:true})*sortD);
+ $("count").textContent=rows.length+" of "+data.length;
+ const cs=COLS.filter(c=>vis.has(c[0]));
+ $("grid").innerHTML=`<table><thead><tr>${cs.map(c=>`<th data-k="${c[0]}">${c[1]}${sortK===c[0]?(sortD>0?" ▲":" ▼"):""}</th>`).join("")}</tr><tr class="f">${cs.map(c=>`<th><input data-f="${c[0]}" value="${esc(cf[c[0]]||"")}" placeholder="filter"></th>`).join("")}</tr></thead><tbody>${rows.map(r=>`<tr>${cs.map(c=>{const k=c[0],v=cell(r,k);return `<td>${k==="url"&&safe(v)?`<a href="${esc(v)}" rel="noopener">link</a>${r.url_flag?' <span class="warn">⚠</span>':""}`:esc(v)}</td>`}).join("")}</tr>`).join("")}</tbody></table>`;
+ $("grid").querySelectorAll("th[data-k]").forEach(h=>h.onclick=()=>{sortD=sortK===h.dataset.k?-sortD:1;sortK=h.dataset.k;renderGrid()});
+ $("grid").querySelectorAll("input[data-f]").forEach(i=>i.oninput=()=>{cf[i.dataset.f]=i.value;const p=i.selectionStart;renderGrid();const n=$("grid").querySelector(`input[data-f="${i.dataset.f}"]`);n.focus();n.setSelectionRange(p,p)});
+}
+function setView(v){view=v;$("vcards").classList.toggle("on",v==="cards");$("vgrid").classList.toggle("on",v==="grid");
+ $("list").style.display=v==="cards"?"":"none";$("grid").style.display=v==="grid"?"":"none";$("colbtn").style.display=$("exp").style.display=v==="grid"?"":"none";if(v!=="grid")$("cols").style.display="none";go()}
+function go(){view==="grid"?renderGrid():render()}
+$("vcards").onclick=()=>setView("cards");$("vgrid").onclick=()=>setView("grid");
+$("cols").innerHTML=COLS.map(c=>`<label><input type="checkbox" data-c="${c[0]}" ${vis.has(c[0])?"checked":""}> ${c[1]}</label>`).join("");
+$("cols").querySelectorAll("input").forEach(i=>i.onchange=()=>{i.checked?vis.add(i.dataset.c):vis.delete(i.dataset.c);renderGrid()});
+$("colbtn").onclick=()=>{const c=$("cols");c.style.display=c.style.display==="flex"?"none":"flex"};
+$("exp").onclick=()=>{const cs=COLS.filter(c=>vis.has(c[0])),q=v=>`"${String(v).replace(/"/g,'""')}"`;
+ const csv=[cs.map(c=>q(c[1])).join(",")].concat(filt().map(r=>cs.map(c=>q(cell(r,c[0]))).join(","))).join("\r\n");
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeff"+csv],{type:"text/csv"}));a.download="festivals.csv";a.click()};
+
+fetch("data.json").then(r=>r.json()).then(d=>{data=d.festivals;go()}).catch(()=>{$("list").textContent="Could not load data.json"});
 </script></body></html>
