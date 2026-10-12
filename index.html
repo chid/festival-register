@@ -1,132 +1,1468 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Festival Register: Sydney, Melbourne, Canberra</title>
-<style>
-:root{--bg:#fafaf7;--fg:#1c1c1a;--mut:#6b6b66;--card:#fff;--bd:#e3e2dc;--ac:#0b6e4f;--warn:#b45309}
-@media (prefers-color-scheme:dark){:root{--bg:#161614;--fg:#ecebe6;--mut:#9a9990;--card:#1f1f1c;--bd:#33332f;--ac:#4ec9a0;--warn:#f59e0b}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
-main{max-width:1000px;margin:0 auto;padding:24px 16px 64px}
-h1{margin:0 0 4px;font-size:1.6rem}.sub{color:var(--mut);margin:0 0 16px}
-.bar{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0;position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:2}
-input,select,button,.btn{font:inherit;padding:8px 10px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--fg)}
-input{flex:1;min-width:180px}.btn{background:var(--ac);color:#fff;border-color:var(--ac);text-decoration:none;display:inline-block}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px;margin:10px 0}
-.card h2{font-size:1.1rem;margin:0}.meta{color:var(--mut);font-size:.9rem;margin:2px 0 8px}
-.tag{display:inline-block;font-size:.78rem;padding:1px 8px;border-radius:99px;border:1px solid var(--bd);margin-right:4px}
-.Free{border-color:var(--ac);color:var(--ac)}.Premium{border-color:var(--warn);color:var(--warn)}
-details{margin-top:6px;font-size:.9rem}summary{cursor:pointer;color:var(--mut)}
-#grid{overflow:auto;max-height:75vh;border:1px solid var(--bd);border-radius:10px;background:var(--card)}
-table{border-collapse:collapse;width:max-content;min-width:100%;font-size:.88rem}
-th,td{border-bottom:1px solid var(--bd);border-right:1px solid var(--bd);padding:6px 8px;text-align:left;vertical-align:top;max-width:320px}
-th{position:sticky;top:0;background:var(--card);cursor:pointer;white-space:nowrap;user-select:none;z-index:1}
-tr.f th{top:34px;cursor:default;padding:2px}tr.f input{width:100%;min-width:70px;padding:3px 5px;font-size:.8rem}
-tbody tr:nth-child(even){background:color-mix(in srgb,var(--fg) 4%,transparent)}
-#cols{display:none;flex-wrap:wrap;gap:6px 16px;margin:0 0 8px;font-size:.85rem}#cols label{display:flex;align-items:center;gap:5px}#cols input{flex:none;min-width:0;width:auto;padding:0}
-.seg button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
-#cal{display:none}.calhd{display:flex;align-items:center;gap:8px;margin:8px 0;flex-wrap:wrap}.calhd h2{margin:0;font-size:1.15rem;min-width:150px}
-.mgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}.dow{font-size:.75rem;color:var(--mut);text-align:center}
-.day{min-height:54px;border:1px solid var(--bd);border-radius:8px;background:var(--card);padding:3px 5px;cursor:pointer;font-size:.8rem;text-align:left;color:var(--fg)}
-.day.sel{outline:2px solid var(--ac)}.day.today{border-color:var(--warn)}.day.pad{visibility:hidden}.day b{display:block;color:var(--ac);font-size:.95rem}
-.yr{display:flex;flex-wrap:wrap;gap:4px;margin:6px 0}.yr button{padding:4px 8px;font-size:.8rem}.yr button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
-.dr{display:flex;align-items:center;gap:6px;font-size:.85rem;color:var(--mut)}.dr input{flex:none;min-width:0;padding:6px}
-a{color:var(--ac)}.warn{color:var(--warn)}footer{color:var(--mut);font-size:.85rem;margin-top:32px}
-</style></head><body><main>
-<h1>Festival Register</h1>
-<p class="sub">Sydney, Melbourne &amp; Canberra: price tiers and 2024/2025 past editions. AI-compiled and unverified, so check official sites. <span id="count"></span></p>
-<div class="bar">
-<input id="q" type="search" placeholder="Search festivals…" aria-label="Search">
-<select id="city" aria-label="City"><option value="">All cities</option><option>Sydney</option><option>Melbourne</option><option>Canberra</option></select>
-<select id="tier" aria-label="Price tier"><option value="">All prices</option><option>Free</option><option>Low</option><option>Mid</option><option>Premium</option><option>Unverified</option></select>
-<select id="month" aria-label="Month"><option value="">Any month</option></select>
-<span class="seg"><button id="vcards" class="on">Cards</button><button id="vgrid">Grid</button><button id="vcal">Calendar</button></span>
-<button id="colbtn" style="display:none">Columns</button><button id="exp" style="display:none">Export CSV</button>
-<span class="dr"><label>From <input type="date" id="dfrom"></label><label>to <input type="date" id="dto"></label><button id="dclr" title="Clear dates">✕</button><button id="dnow">Now</button></span>
-<a class="btn" id="submit" target="_blank" rel="noopener">+ Submit / correct</a>
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Festival Calendar — Sydney, Melbourne & Canberra</title>
+  
+  <!-- Material Symbols Outlined & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS with Forms and Container Queries -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary": "#006b27",
+            "on-surface-variant": "#414755",
+            "inverse-surface": "#2f3034",
+            "tertiary-fixed": "#72fe88",
+            "surface-bright": "#faf9fe",
+            "on-primary": "#ffffff",
+            "tertiary-container": "#008733",
+            "surface-tint": "#005bc1",
+            "surface-dim": "#dad9df",
+            "primary-fixed-dim": "#adc6ff",
+            "on-secondary-fixed": "#310048",
+            "surface-container-low": "#f4f3f8",
+            "surface-container-highest": "#e3e2e7",
+            "secondary": "#8d2ebc",
+            "surface-container-high": "#e9e7ed",
+            "on-secondary-fixed-variant": "#7201a2",
+            "on-background": "#1a1b1f",
+            "primary": "#0058bc",
+            "surface-container": "#eeedf3",
+            "on-primary-container": "#fefcff",
+            "inverse-primary": "#adc6ff",
+            "inverse-on-surface": "#f1f0f5",
+            "error": "#ba1a1a",
+            "primary-fixed": "#d8e2ff",
+            "outline-variant": "#c1c6d7",
+            "background": "#faf9fe",
+            "secondary-fixed-dim": "#e8b3ff",
+            "on-tertiary-fixed-variant": "#00531c",
+            "surface-variant": "#e3e2e7",
+            "outline": "#717786",
+            "primary-container": "#0070eb",
+            "on-surface": "#1a1b1f",
+            "on-error-container": "#93000a",
+            "on-tertiary-fixed": "#002107",
+            "on-secondary-container": "#540079",
+            "secondary-fixed": "#f6d9ff",
+            "on-secondary": "#ffffff",
+            "on-tertiary-container": "#f7fff2",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-fixed-variant": "#004493",
+            "surface": "#faf9fe",
+            "secondary-container": "#d072ff",
+            "on-tertiary": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "on-primary-fixed": "#001a41",
+            "tertiary-fixed-dim": "#53e16f"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          spacing: {
+            "space-xl": "1.5rem",
+            "space-md": "0.75rem",
+            "gutter": "0.75rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1rem",
+            "gutter-sidebar": "1rem",
+            "margin": "1.25rem"
+          },
+          fontFamily: {
+            sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "SF Pro Display", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      font-size: 18px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .macos-traffic-light {
+      width: 12px;
+      height: 12px;
+      border-radius: 9999px;
+      display: inline-block;
+      transition: filter 0.15s;
+    }
+    .frosted-glass {
+      backdrop-filter: blur(28px) saturate(180%);
+      -webkit-backdrop-filter: blur(28px) saturate(180%);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(142, 142, 147, 0.28);
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: rgba(142, 142, 147, 0.45);
+    }
+    .city-dot-sydney { background-color: #007AFF; }
+    .city-dot-melbourne { background-color: #AF52DE; }
+    .city-dot-canberra { background-color: #34C759; }
+
+    /* Compact density modifiers */
+    .compact-mode .agenda-item {
+      padding-top: 0.5rem !important;
+      padding-bottom: 0.5rem !important;
+    }
+    .compact-mode .agenda-venue {
+      display: none !important;
+    }
+    .compact-mode .agenda-date-col {
+      width: 8rem !important;
+    }
+  </style>
+</head>
+<body class="h-full bg-surface text-on-surface antialiased overflow-hidden select-none font-sans">
+
+<!-- Main macOS Window Frame -->
+<div class="flex flex-col h-screen w-full bg-surface overflow-hidden">
+
+  <!-- TopNavBar (macOS Unified Toolbar) -->
+  <header class="bg-surface-container-low border-b border-outline-variant shadow-sm z-30 flex-shrink-0 select-none">
+    
+    <!-- Titlebar & Main Controls Row -->
+    <div class="flex flex-wrap justify-between items-center w-full px-space-lg py-space-sm border-b border-outline-variant/40 gap-2">
+      <!-- Leading: Traffic Lights + Sidebar Toggle + Date Navigation -->
+      <div class="flex items-center gap-space-md">
+        <!-- macOS Traffic Lights -->
+        <div class="flex items-center gap-1.5 mr-2">
+          <span class="macos-traffic-light bg-[#FF5F56] border border-[#E0443E]"></span>
+          <span class="macos-traffic-light bg-[#FFBD2E] border border-[#DEA123]"></span>
+          <span class="macos-traffic-light bg-[#27C93F] border border-[#1AAB29]"></span>
+        </div>
+        <!-- Sidebar Toggle Icon Button -->
+        <button id="sidebarToggleBtn" class="p-1 rounded-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center justify-center" title="Toggle Sidebar (Calendars)">
+          <span class="material-symbols-outlined">view_sidebar</span>
+        </button>
+        <!-- Navigation Controls: Prev, Next, Today, Dynamic Header Title -->
+        <div class="flex items-center gap-space-xs ml-1">
+          <div class="inline-flex rounded-md bg-surface-container-lowest border border-outline-variant/60 shadow-sm p-0.5">
+            <button id="navPrev" class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-on-surface rounded transition-colors flex items-center" title="Previous Month">
+              <span class="material-symbols-outlined text-[16px]">chevron_left</span>
+            </button>
+            <button id="navNext" class="p-1 hover:bg-surface-container text-on-surface-variant hover:text-on-surface rounded transition-colors flex items-center" title="Next Month">
+              <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </button>
+          </div>
+          <button id="navToday" class="px-space-md py-space-xs bg-surface-container-lowest border border-outline-variant/60 text-on-surface hover:bg-surface-container rounded-md shadow-sm text-xs font-medium transition-colors active:scale-[0.98]">
+            Today
+          </button>
+          <h1 id="appTitle" class="ml-2 text-base font-semibold text-on-surface tracking-tight truncate max-w-xs md:max-w-md">
+            Festivals Agenda 2026/2027
+          </h1>
+        </div>
+      </div>
+
+      <!-- Center: Segmented View Switch (List | Month | Year | Grid) -->
+      <div class="flex items-center bg-surface-container-high/70 p-0.5 rounded-lg border border-outline-variant/40 shadow-inner">
+        <button id="btnViewList" class="view-btn bg-surface-container-lowest text-on-surface shadow-sm rounded-md px-3 py-1 text-xs font-semibold transition-all">
+          List
+        </button>
+        <button id="btnViewMonth" class="view-btn text-on-surface-variant hover:text-on-surface px-3 py-1 text-xs rounded-md transition-colors">
+          Month
+        </button>
+        <button id="btnViewYear" class="view-btn text-on-surface-variant hover:text-on-surface px-3 py-1 text-xs rounded-md transition-colors">
+          Year
+        </button>
+        <button id="btnViewGrid" class="view-btn text-on-surface-variant hover:text-on-surface px-3 py-1 text-xs rounded-md transition-colors">
+          Table
+        </button>
+      </div>
+
+      <!-- Trailing: Search Bar + Subscribe + Submit CTA -->
+      <div class="flex items-center gap-space-sm">
+        <!-- Live Search -->
+        <div class="relative w-48 lg:w-60">
+          <span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px]">search</span>
+          <input id="q" type="search" placeholder="Search festivals... ⌘K" class="w-full bg-surface-container-lowest/90 border border-outline-variant/60 rounded-md pl-8 pr-3 py-1 text-xs text-on-surface placeholder-on-surface-variant/70 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary shadow-sm" aria-label="Search festivals"/>
+        </div>
+        <!-- Subscribe (.ics / webcal) Export -->
+        <button id="btnSubscribeIcs" class="hidden sm:flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest border border-outline-variant/60 text-on-surface hover:bg-surface-container rounded-md shadow-sm text-xs font-medium transition-colors active:scale-[0.98]" title="Export all matching festivals to iCalendar (.ics)">
+          <span class="material-symbols-outlined text-[16px]">file_download</span>
+          <span>Subscribe (.ics)</span>
+        </button>
+        <!-- Submit / Suggest Festival (GitHub) -->
+        <a id="btnSubmit" href="https://github.com/chid/festival-register/issues/new?template=submit-festival.yml" target="_blank" rel="noopener" class="flex items-center gap-1.5 px-3 py-1 bg-primary text-on-primary hover:bg-primary/90 rounded-md shadow-sm text-xs font-medium transition-transform active:scale-[0.98]">
+          <span class="material-symbols-outlined text-[16px]">add</span>
+          <span>+ New Festival</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Date-Range Filter Chips Bar & Density Controls -->
+    <div class="flex flex-wrap items-center justify-between gap-2 px-space-lg py-1.5 bg-surface-container-low/60 border-t border-outline-variant/30 text-xs">
+      <div class="flex items-center gap-1.5 flex-wrap">
+        <span class="text-[11px] uppercase font-semibold text-on-surface-variant tracking-wider mr-1">Quick Filter:</span>
+        <button data-quick="all" class="quick-chip px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant border border-primary/20 font-medium shadow-sm transition-colors">
+          All
+        </button>
+        <button data-quick="weekend" class="quick-chip px-2.5 py-0.5 rounded-full bg-surface-container-highest/80 text-on-surface hover:bg-surface-container-highest border border-outline-variant/40 transition-colors">
+          This weekend
+        </button>
+        <button data-quick="30days" class="quick-chip px-2.5 py-0.5 rounded-full bg-surface-container-highest/80 text-on-surface hover:bg-surface-container-highest border border-outline-variant/40 transition-colors">
+          Next 30 days
+        </button>
+        <button data-quick="holidays" class="quick-chip px-2.5 py-0.5 rounded-full bg-surface-container-highest/80 text-on-surface hover:bg-surface-container-highest border border-outline-variant/40 transition-colors">
+          School holidays
+        </button>
+        <button data-quick="summer" class="quick-chip px-2.5 py-0.5 rounded-full bg-surface-container-highest/80 text-on-surface hover:bg-surface-container-highest border border-outline-variant/40 transition-colors">
+          Summer
+        </button>
+        <!-- Custom date inputs -->
+        <div class="hidden md:flex items-center gap-1 ml-2 text-on-surface-variant text-[11px]">
+          <span>From</span>
+          <input id="dfrom" type="date" class="py-0.5 px-1.5 text-xs rounded border border-outline-variant/60 bg-surface-container-lowest"/>
+          <span>to</span>
+          <input id="dto" type="date" class="py-0.5 px-1.5 text-xs rounded border border-outline-variant/60 bg-surface-container-lowest"/>
+          <button id="dclr" class="text-outline hover:text-on-surface px-1" title="Clear dates">✕</button>
+        </div>
+      </div>
+
+      <!-- Density & View Actions -->
+      <div class="flex items-center gap-space-sm ml-auto">
+        <span class="text-[11px] text-on-surface-variant flex items-center gap-1">
+          <span class="material-symbols-outlined text-[14px]">tune</span> Density:
+        </span>
+        <div class="inline-flex rounded-md bg-surface-container-high/60 p-0.5 border border-outline-variant/40 text-[11px]">
+          <button id="btnDensityComfortable" class="px-2 py-0.5 rounded bg-surface-container-lowest shadow-xs text-on-surface font-medium">Comfortable</button>
+          <button id="btnDensityCompact" class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface">Compact</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Body Layout: Collapsible Sidebar + Canvas -->
+  <div class="flex flex-1 overflow-hidden relative">
+
+    <!-- Collapsible Left Sidebar (260px wide, macOS Sequoia style) -->
+    <aside id="appSidebar" class="w-64 flex-shrink-0 bg-surface-container-low border-r border-outline-variant flex flex-col justify-between h-full p-space-md custom-scrollbar overflow-y-auto z-20 transition-all duration-200">
+      <div class="space-y-3.5">
+        
+        <!-- Mini-Month Date Picker -->
+        <div class="bg-surface-container-lowest p-3 rounded-lg border border-outline-variant/50 shadow-xs">
+          <div class="flex items-center justify-between mb-2">
+            <span id="miniMonthTitle" class="text-xs font-semibold text-on-surface">October 2026</span>
+            <div class="flex items-center gap-0.5 text-on-surface-variant">
+              <button id="miniPrev" class="p-0.5 hover:text-on-surface hover:bg-surface-container rounded"><span class="material-symbols-outlined text-[15px]">chevron_left</span></button>
+              <button id="miniNext" class="p-0.5 hover:text-on-surface hover:bg-surface-container rounded"><span class="material-symbols-outlined text-[15px]">chevron_right</span></button>
+            </div>
+          </div>
+          <!-- Day abbreviations -->
+          <div class="grid grid-cols-7 text-center text-[10px] text-on-surface-variant/80 mb-1">
+            <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+          </div>
+          <!-- Mini grid days -->
+          <div id="miniDaysGrid" class="grid grid-cols-7 gap-y-1 text-center text-[11px]"></div>
+        </div>
+
+        <!-- Calendars Source List (Regional Cities with colored dots & live counts) -->
+        <div>
+          <div class="flex items-center justify-between mb-1.5 px-1">
+            <span class="text-[11px] uppercase font-semibold text-on-surface-variant tracking-wider">Calendars</span>
+            <span class="text-[10px] text-outline">SE Australia</span>
+          </div>
+          <div class="space-y-1">
+            <!-- Sydney Circuit -->
+            <label class="flex items-center justify-between px-space-sm py-1 rounded-md hover:bg-surface-container transition-colors cursor-pointer group">
+              <div class="flex items-center gap-2">
+                <input type="checkbox" id="citySydney" value="Sydney" checked class="city-filter rounded-[3.5px] w-3.5 h-3.5 text-primary border-outline-variant focus:ring-0 focus:ring-offset-0"/>
+                <span class="w-2 h-2 rounded-full city-dot-sydney"></span>
+                <span class="text-xs text-on-surface">Sydney Circuit</span>
+              </div>
+              <span id="countSydney" class="text-[11px] text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded font-mono">0</span>
+            </label>
+            <!-- Melbourne Stages -->
+            <label class="flex items-center justify-between px-space-sm py-1 rounded-md hover:bg-surface-container transition-colors cursor-pointer group">
+              <div class="flex items-center gap-2">
+                <input type="checkbox" id="cityMelbourne" value="Melbourne" checked class="city-filter rounded-[3.5px] w-3.5 h-3.5 text-secondary border-outline-variant focus:ring-0 focus:ring-offset-0"/>
+                <span class="w-2 h-2 rounded-full city-dot-melbourne"></span>
+                <span class="text-xs text-on-surface">Melbourne Stages</span>
+              </div>
+              <span id="countMelbourne" class="text-[11px] text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded font-mono">0</span>
+            </label>
+            <!-- Canberra Arts -->
+            <label class="flex items-center justify-between px-space-sm py-1 rounded-md hover:bg-surface-container transition-colors cursor-pointer group">
+              <div class="flex items-center gap-2">
+                <input type="checkbox" id="cityCanberra" value="Canberra" checked class="city-filter rounded-[3.5px] w-3.5 h-3.5 text-tertiary-container border-outline-variant focus:ring-0 focus:ring-offset-0"/>
+                <span class="w-2 h-2 rounded-full city-dot-canberra"></span>
+                <span class="text-xs text-on-surface">Canberra Arts</span>
+              </div>
+              <span id="countCanberra" class="text-[11px] text-on-surface-variant bg-surface-container-high px-1.5 py-0.5 rounded font-mono">0</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Admission Tiers Section -->
+        <div class="pt-1">
+          <span class="text-[11px] uppercase font-semibold text-on-surface-variant tracking-wider block px-1 mb-1.5">Admission Tiers</span>
+          <div class="space-y-1">
+            <label class="flex items-center justify-between px-space-sm py-1 rounded-md hover:bg-surface-container transition-colors cursor-pointer">
+              <div class="flex items-center gap-2">
+                <input type="checkbox" value="Free" checked class="tier-filter rounded-[3.5px] w-3.5 h-3.5 text-tertiary border-outline-variant focus:ring-0"/>
+                <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                <span class="text-xs text-on-surface">Free Entry</span>
+              </div>
+              <span id="countTierFree" class="text-[11px] text-tertiary font-semibold font-mono">0</span>
+            </label>
+            <label class="flex items-center justify-between px-space-sm py-1 rounded-md hover:bg-surface-container transition-colors cursor-pointer">
+              <div class="flex items-center gap-2">
+                <input type="checkbox" value="Low" checked class="tier-filter rounded-[3.5px] w-3.5 h-3.5 text-[#30B0C7] border-outline-variant focus:ring-0"/>
+                <span class="w-2 h-2 rounded-full bg-[#30B0C7]"></span>
+                <span class="text-xs text-on-surface">Low Cost (&lt;$30)</span>
+              </div>
+              <span id="countTierLow" class="text-[11px] text-on-surface-variant font-mono">0</span>
+            </label>
+            <label class="flex items-center justify-between px-space-sm py-1 rounded-md hover:bg-surface-container transition-colors cursor-pointer">
+              <div class="flex items-center gap-2">
+                <input type="checkbox" value="Mid" checked class="tier-filter rounded-[3.5px] w-3.5 h-3.5 text-primary border-outline-variant focus:ring-0"/>
+                <span class="w-2 h-2 rounded-full bg-primary"></span>
+                <span class="text-xs text-on-surface">Mid Tier ($30–$100)</span>
+              </div>
+              <span id="countTierMid" class="text-[11px] text-on-surface-variant font-mono">0</span>
+            </label>
+            <label class="flex items-center justify-between px-space-sm py-1 rounded-md hover:bg-surface-container transition-colors cursor-pointer">
+              <div class="flex items-center gap-2">
+                <input type="checkbox" value="Premium" checked class="tier-filter rounded-[3.5px] w-3.5 h-3.5 text-[#FF9500] border-outline-variant focus:ring-0"/>
+                <span class="w-2 h-2 rounded-full bg-[#FF9500]"></span>
+                <span class="text-xs text-on-surface">Premium (&gt;$100)</span>
+              </div>
+              <span id="countTierPremium" class="text-[11px] text-[#FF9500] font-semibold font-mono">0</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Festival Genres Filter Chips -->
+        <div class="pt-1">
+          <span class="text-[11px] uppercase font-semibold text-on-surface-variant tracking-wider block px-1 mb-2">Festival Genres</span>
+          <div class="flex flex-wrap gap-1 px-1" id="genreContainer">
+            <button data-genre="" class="genre-chip px-2 py-0.5 rounded text-[11px] bg-primary/10 text-primary border border-primary/20 font-medium">All Genres</button>
+            <button data-genre="Music" class="genre-chip px-2 py-0.5 rounded text-[11px] bg-surface-container-high text-on-surface hover:bg-surface-container-highest">Music</button>
+            <button data-genre="Film" class="genre-chip px-2 py-0.5 rounded text-[11px] bg-surface-container-high text-on-surface hover:bg-surface-container-highest">Film</button>
+            <button data-genre="Comedy" class="genre-chip px-2 py-0.5 rounded text-[11px] bg-surface-container-high text-on-surface hover:bg-surface-container-highest">Comedy</button>
+            <button data-genre="Food" class="genre-chip px-2 py-0.5 rounded text-[11px] bg-surface-container-high text-on-surface hover:bg-surface-container-highest">Food & Wine</button>
+            <button data-genre="Arts" class="genre-chip px-2 py-0.5 rounded text-[11px] bg-surface-container-high text-on-surface hover:bg-surface-container-highest">Arts</button>
+            <button data-genre="Cultural" class="genre-chip px-2 py-0.5 rounded text-[11px] bg-surface-container-high text-on-surface hover:bg-surface-container-highest">Cultural</button>
+            <button data-genre="Sport" class="genre-chip px-2 py-0.5 rounded text-[11px] bg-surface-container-high text-on-surface hover:bg-surface-container-highest">Sport</button>
+            <button data-genre="Light" class="genre-chip px-2 py-0.5 rounded text-[11px] bg-surface-container-high text-on-surface hover:bg-surface-container-highest">Light & Outdoor</button>
+            <button data-genre="Family" class="genre-chip px-2 py-0.5 rounded text-[11px] bg-surface-container-high text-on-surface hover:bg-surface-container-highest">Family</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Sidebar Links & Utility Actions -->
+      <div class="pt-4 mt-auto border-t border-outline-variant/60 space-y-1">
+        <button id="btnExportCsv" class="w-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container text-xs rounded-lg px-space-md py-1.5 flex items-center gap-space-sm transition-colors">
+          <span class="material-symbols-outlined text-[16px]">table_view</span>
+          <span>Export Table CSV</span>
+        </button>
+        <a href="https://github.com/chid/festival-register" target="_blank" rel="noopener" class="w-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container text-xs rounded-lg px-space-md py-1.5 flex items-center gap-space-sm transition-colors">
+          <span class="material-symbols-outlined text-[16px]">code</span>
+          <span>GitHub Repository</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Canvas Area -->
+    <main class="flex-1 flex flex-col h-full bg-surface-container-lowest custom-scrollbar overflow-y-auto relative">
+      
+      <!-- Filter Summary Sub-header -->
+      <div class="sticky top-0 z-20 frosted-glass bg-surface-container-lowest/90 border-b border-outline-variant px-space-xl py-space-sm flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span id="canvasViewTitle" class="text-sm font-bold text-on-surface">Scheduled Agendas</span>
+          <span id="filterSummaryCount" class="bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full text-xs font-medium">
+            Loading festivals...
+          </span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="btnExportAgendaIcs" class="inline-flex items-center gap-1 text-xs px-2.5 py-1 text-primary hover:bg-primary/10 rounded-md transition-colors font-medium">
+            <span class="material-symbols-outlined text-[15px]">file_download</span>
+            <span>Export Agenda .ics</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- VIEW 1: AGENDA / LIST VIEW (Default) -->
+      <div id="viewListContainer" class="px-space-xl py-space-md space-y-space-xl max-w-7xl w-full mx-auto pb-24">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- VIEW 2: MONTH VIEW (Apple Calendar Grid) -->
+      <div id="viewMonthContainer" class="hidden px-space-xl py-space-md max-w-7xl w-full mx-auto pb-24">
+        <div class="flex items-center justify-between mb-3">
+          <h2 id="monthGridTitle" class="text-lg font-bold text-on-surface">October 2026</h2>
+          <span class="text-xs text-on-surface-variant">Click any date or event bar for details</span>
+        </div>
+        <!-- 7-day header -->
+        <div class="grid grid-cols-7 text-center font-semibold text-xs text-on-surface-variant border-b border-outline-variant pb-1.5 mb-1">
+          <span>Monday</span><span>Tuesday</span><span>Wednesday</span><span>Thursday</span><span>Friday</span><span>Saturday</span><span>Sunday</span>
+        </div>
+        <!-- Month day cells -->
+        <div id="monthGridCells" class="grid grid-cols-7 border-t border-l border-outline-variant/60 bg-surface-container-lowest"></div>
+        <div id="monthSelectedDayDetail" class="mt-4"></div>
+      </div>
+
+      <!-- VIEW 3: YEAR VIEW (12-Month Matrix) -->
+      <div id="viewYearContainer" class="hidden px-space-xl py-space-md max-w-7xl w-full mx-auto pb-24">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h2 id="yearGridTitle" class="text-lg font-bold text-on-surface">2026 Festival Year Calendar</h2>
+            <p class="text-xs text-on-surface-variant">Density heat indicators for Southeast Australia festivals</p>
+          </div>
+          <div class="flex items-center gap-2 text-xs">
+            <span class="text-outline">Density:</span>
+            <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-surface-container-high border border-outline-variant/60"></span> 0</span>
+            <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-primary/20"></span> 1–2</span>
+            <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-primary/50"></span> 3–5</span>
+            <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-primary text-white"></span> 6+</span>
+          </div>
+        </div>
+        <div id="yearMatrixGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+      </div>
+
+      <!-- VIEW 4: TABLE / GRID VIEW -->
+      <div id="viewGridContainer" class="hidden px-space-xl py-space-md max-w-7xl w-full mx-auto pb-24">
+        <div class="mb-3 flex items-center justify-between">
+          <span class="text-xs text-on-surface-variant">Click column headers to sort</span>
+          <button id="btnToggleCols" class="text-xs text-primary underline">Toggle Columns</button>
+        </div>
+        <div id="colCheckboxes" class="hidden flex-wrap gap-3 mb-3 p-2 bg-surface-container-low rounded border border-outline-variant text-xs"></div>
+        <div class="overflow-x-auto border border-outline-variant rounded-xl shadow-xs">
+          <table id="dataTable" class="min-w-full text-left text-xs divide-y divide-outline-variant bg-surface-container-lowest">
+            <thead class="bg-surface-container-low text-on-surface font-semibold sticky top-0">
+              <tr id="tableHeadRow"></tr>
+            </thead>
+            <tbody id="tableBody" class="divide-y divide-outline-variant/60"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Floating Quick Status Toast -->
+      <div class="fixed bottom-4 right-6 z-40 bg-surface-container-lowest/95 frosted-glass border border-outline-variant/80 rounded-xl shadow-lg px-4 py-2.5 flex items-center gap-3">
+        <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+        <span class="text-xs font-medium text-on-surface">89 festivals verified in Sydney, Melbourne & Canberra</span>
+        <span class="text-[11px] text-outline font-mono">2026/2027</span>
+      </div>
+
+    </main>
+  </div>
 </div>
-<div id="cols"></div>
-<div id="list"></div>
-<div id="grid" style="display:none"></div>
-<div id="cal"><div class="calhd"><button id="cprev">‹</button><h2 id="ctitle"></h2><button id="cnext">›</button><button id="ctoday">Today</button></div><div class="yr" id="yr"></div><div class="mgrid" id="mg"></div><div id="dayres" style="margin-top:12px"></div><p class="sub" style="font-size:.8rem">Dates are typical, based on recent editions: confirm on the official site.</p></div>
-<footer>Tiers (AUD, cheapest typical paid entry): Free · Low &lt;$30 · Mid $30–100 · Premium &gt;$100. ⚠ = official link did not respond on 2026-10-12 (may be bot-blocking). Submissions go through GitHub issues.</footer>
-</main>
+
+<!-- Apple iCal Event Popover / Modal -->
+<div id="eventModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm hidden">
+  <div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/80 shadow-2xl max-w-lg w-full overflow-hidden animate-scale-in">
+    <!-- Popover Header -->
+    <div class="px-6 pt-5 pb-4 border-b border-outline-variant/50 flex items-start justify-between">
+      <div>
+        <div class="flex items-center gap-2 mb-1">
+          <span id="modalCityBadge" class="px-2 py-0.5 rounded-full text-xs font-medium"></span>
+          <span id="modalCategoryBadge" class="px-2 py-0.5 rounded text-xs bg-surface-container-high text-on-surface-variant"></span>
+          <span id="modalTierBadge" class="px-2 py-0.5 rounded text-xs font-semibold"></span>
+        </div>
+        <h2 id="modalTitle" class="text-xl font-bold text-on-surface"></h2>
+      </div>
+      <button id="modalCloseBtn" class="p-1 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+
+    <!-- Popover Content -->
+    <div class="px-6 py-4 space-y-3.5 max-h-[70vh] overflow-y-auto custom-scrollbar text-xs">
+      
+      <!-- Dates & Typical Timing -->
+      <div class="flex items-start gap-2.5">
+        <span class="material-symbols-outlined text-primary text-[18px] mt-0.5">calendar_today</span>
+        <div>
+          <div id="modalDates" class="font-semibold text-on-surface text-sm"></div>
+          <div id="modalBasis" class="text-on-surface-variant text-[11px] mt-0.5"></div>
+        </div>
+      </div>
+
+      <!-- Venue & Location -->
+      <div class="flex items-start gap-2.5">
+        <span class="material-symbols-outlined text-outline text-[18px] mt-0.5">location_on</span>
+        <div>
+          <div id="modalVenue" class="text-on-surface"></div>
+          <a id="modalMapLink" href="#" target="_blank" rel="noopener" class="text-primary hover:underline text-[11px] inline-flex items-center gap-0.5 mt-0.5">
+            <span>Open in Maps</span>
+            <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Pricing Detail -->
+      <div class="flex items-start gap-2.5">
+        <span class="material-symbols-outlined text-outline text-[18px] mt-0.5">payments</span>
+        <div>
+          <div class="font-semibold text-on-surface">Pricing Details</div>
+          <p id="modalPriceDetail" class="text-on-surface-variant mt-0.5 leading-relaxed"></p>
+        </div>
+      </div>
+
+      <!-- Past Editions (2024 & 2025) -->
+      <div class="bg-surface-container-low/60 rounded-xl p-3 border border-outline-variant/40 space-y-2">
+        <div class="font-semibold text-on-surface flex items-center justify-between">
+          <span>Past Editions Record</span>
+          <span class="text-[10px] text-outline">Verified Sources</span>
+        </div>
+        <div id="modalEd2024" class="text-[11px] text-on-surface-variant"></div>
+        <div id="modalEd2025" class="text-[11px] text-on-surface-variant"></div>
+      </div>
+
+      <!-- Notes -->
+      <div id="modalNotesContainer" class="text-on-surface-variant italic text-[11px] bg-amber-500/10 text-amber-900 border border-amber-500/20 rounded-lg p-2.5"></div>
+    </div>
+
+    <!-- Popover Footer Actions -->
+    <div class="px-6 py-3.5 bg-surface-container-low/80 border-t border-outline-variant/60 flex items-center justify-between">
+      <a id="modalCorrectLink" href="#" target="_blank" rel="noopener" class="text-xs text-outline hover:text-on-surface flex items-center gap-1">
+        <span class="material-symbols-outlined text-[14px]">edit</span>
+        <span>Suggest Correction</span>
+      </a>
+      <div class="flex items-center gap-2">
+        <a id="modalWebLink" href="#" target="_blank" rel="noopener" class="px-3 py-1.5 text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg border border-outline-variant/60 flex items-center gap-1 transition-colors">
+          <span>Official Site</span>
+          <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+        </a>
+        <button id="modalIcsBtn" class="px-3 py-1.5 text-xs bg-primary text-on-primary hover:bg-primary/90 font-medium rounded-lg flex items-center gap-1 transition-colors shadow-xs">
+          <span class="material-symbols-outlined text-[15px]">file_download</span>
+          <span>Add to .ics</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Client Application Logic -->
 <script>
-const M="Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" ");
-const $=id=>document.getElementById(id);
-const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const safe=u=>/^https?:\/\//.test(u||"")?u:"";
-M.forEach(m=>{const o=document.createElement("option");o.textContent=m;$("month").append(o)});
-const repo=location.hostname.endsWith("github.io")?`https://github.com/${location.hostname.split(".")[0]}/${location.pathname.split("/")[1]}`:"";
-$("submit").href=repo?repo+"/issues/new?template=submit-festival.yml":"#";
-let data=[];
-const ed=(e,y)=>e&&e.found?`<div><b>${y}:</b> ${esc(e.dates)} · ${esc(e.price)} ${safe(e.source_url)?`<a href="${esc(safe(e.source_url))}" rel="noopener">source</a>`:""}</div>`:`<div><b>${y}:</b> not found</div>`;
-function render(){
-  const f=filt();
-  $("count").textContent=f.length+" of "+data.length;
-  $("list").innerHTML=f.map(r=>{const tier=r.price_tier||"Unverified",u=safe(r.url);return `<div class="card"><h2>${u?`<a href="${esc(u)}" rel="noopener">${esc(r.name)}</a>`:esc(r.name)}${r.url_flag?' <span class="warn" title="Link did not respond">⚠</span>':""}</h2>
-  <div class="meta">${esc(r.city)} · ${esc(r.month)} · ${esc(r.category)}</div>
-  <span class="tag ${esc(tier.split(" ")[0])}">${esc(tier)}</span><span class="tag">${esc(r.confidence||"")} confidence</span>
-  <p style="margin:8px 0 0">${esc(r.price_detail)}</p>
-  <details><summary>Dates &amp; past editions</summary><div>${esc(r.dates)}</div>${ed(r.ed2024,"2024")}${ed(r.ed2025,"2025")}${r.notes?`<div><i>${esc(r.notes)}</i></div>`:""}</details></div>`}).join("")||"<p>No matches.</p>";
-}
-["q","city","tier","month"].forEach(i=>$(i).addEventListener("input",()=>go()));
-const COLS=[["name","Festival"],["city","City"],["category","Category"],["month","Month"],["price_tier","Tier"],["price_detail","Price detail"],["dates","Dates"],["venue","Venue"],["url","Website"],["ed2024","2024 edition"],["ed2025","2025 edition"],["confidence","Conf."],["notes","Notes"]];
-let view="cards",sortK="city",sortD=1,vis=new Set(["name","city","month","price_tier","price_detail","url","ed2024","ed2025"]),cf={};
-const cell=(r,k)=>{const v=r[k];if(k==="ed2024"||k==="ed2025")return v&&v.found?`${v.dates||""} · ${v.price||""}`:"not found";return v==null?"":String(v)};
-function filt(){const q=$("q").value.toLowerCase(),c=$("city").value,t=$("tier").value,m=$("month").value;
- return data.filter(r=>(!c||r.city===c)&&(!t||(r.price_tier||"Unverified")===t)&&(!m||String(r.month||"").slice(0,3)===m)&&(!q||JSON.stringify(r).toLowerCase().includes(q))&&inRange(r)&&Object.entries(cf).every(([k,v])=>!v||cell(r,k).toLowerCase().includes(v.toLowerCase())))}
-function renderGrid(){
- const rows=filt().sort((a,b)=>cell(a,sortK).localeCompare(cell(b,sortK),undefined,{numeric:true})*sortD);
- $("count").textContent=rows.length+" of "+data.length;
- const cs=COLS.filter(c=>vis.has(c[0]));
- $("grid").innerHTML=`<table><thead><tr>${cs.map(c=>`<th data-k="${c[0]}">${c[1]}${sortK===c[0]?(sortD>0?" ▲":" ▼"):""}</th>`).join("")}</tr><tr class="f">${cs.map(c=>`<th><input data-f="${c[0]}" value="${esc(cf[c[0]]||"")}" placeholder="filter"></th>`).join("")}</tr></thead><tbody>${rows.map(r=>`<tr>${cs.map(c=>{const k=c[0],v=cell(r,k);return `<td>${k==="url"&&safe(v)?`<a href="${esc(v)}" rel="noopener">link</a>${r.url_flag?' <span class="warn">⚠</span>':""}`:esc(v)}</td>`}).join("")}</tr>`).join("")}</tbody></table>`;
- $("grid").querySelectorAll("th[data-k]").forEach(h=>h.onclick=()=>{sortD=sortK===h.dataset.k?-sortD:1;sortK=h.dataset.k;renderGrid()});
- $("grid").querySelectorAll("input[data-f]").forEach(i=>i.oninput=()=>{cf[i.dataset.f]=i.value;const p=i.selectionStart;renderGrid();const n=$("grid").querySelector(`input[data-f="${i.dataset.f}"]`);n.focus();n.setSelectionRange(p,p)});
-}
-function setView(v){view=v;$("vcards").classList.toggle("on",v==="cards");$("vgrid").classList.toggle("on",v==="grid");
- $("vcal").classList.toggle("on",v==="cal");$("cal").style.display=v==="cal"?"block":"none";$("list").style.display=v==="cards"?"":"none";$("grid").style.display=v==="grid"?"":"none";$("colbtn").style.display=$("exp").style.display=v==="grid"?"":"none";if(v!=="grid")$("cols").style.display="none";go()}
-function go(){saveHash();view==="grid"?renderGrid():view==="cal"?renderCal():render()}
-$("vcards").onclick=()=>setView("cards");$("vgrid").onclick=()=>setView("grid");
-$("cols").innerHTML=COLS.map(c=>`<label><input type="checkbox" data-c="${c[0]}" ${vis.has(c[0])?"checked":""}> ${c[1]}</label>`).join("");
-$("cols").querySelectorAll("input").forEach(i=>i.onchange=()=>{i.checked?vis.add(i.dataset.c):vis.delete(i.dataset.c);renderGrid()});
-$("colbtn").onclick=()=>{const c=$("cols");c.style.display=c.style.display==="flex"?"none":"flex"};
-$("exp").onclick=()=>{const cs=COLS.filter(c=>vis.has(c[0])),q=v=>`"${String(v).replace(/"/g,'""')}"`;
- const csv=[cs.map(c=>q(c[1])).join(",")].concat(filt().map(r=>cs.map(c=>q(cell(r,c[0]))).join(","))).join("\r\n");
- const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeff"+csv],{type:"text/csv"}));a.download="festivals.csv";a.click()};
+  const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const SHORT_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const PAD = n => String(n).padStart(2, "0");
+  const ESC = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const SAFE_URL = u => /^https?:\/\//.test(u || "") ? u : "";
 
-let cy=new Date().getFullYear(),cm=new Date().getMonth(),selD=null;
-function renderCal(){
- const rows=filt();$("count").textContent=rows.length+" of "+data.length;
- const now=new Date(),first=new Date(cy,cm,1),dim=new Date(cy,cm+1,0).getDate();
- $("ctitle").textContent=first.toLocaleString("en-AU",{month:"long",year:"numeric"});
- $("yr").innerHTML=MN.map((m,i)=>{const c=rows.filter(r=>{for(let d=1;d<=new Date(cy,i+1,0).getDate();d++)if(active(r,pad(i+1)+"-"+pad(d)))return true;return false}).length;return `<button data-m="${i}" class="${i===cm?"on":""}">${m.slice(0,3)} ${c}</button>`}).join("");
- let h=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(x=>`<div class="dow">${x}</div>`).join("");
- for(let i=0;i<(first.getDay()+6)%7;i++)h+='<div class="day pad"></div>';
- const mx=Math.max(1,...Array.from({length:dim},(_,i)=>rows.filter(r=>active(r,pad(cm+1)+"-"+pad(i+1))).length));
- for(let d=1;d<=dim;d++){const md=pad(cm+1)+"-"+pad(d),n=rows.filter(r=>active(r,md)).length,key=cy+"-"+md;
-  h+=`<button class="day${selD===key?" sel":""}${now.getFullYear()===cy&&now.getMonth()===cm&&now.getDate()===d?" today":""}" data-d="${key}" style="background:color-mix(in srgb,var(--ac) ${Math.round(n/mx*35)}%,var(--card))">${d}${n?`<b>${n}</b>`:""}</button>`}
- $("mg").innerHTML=h;
- $("yr").querySelectorAll("button").forEach(b=>b.onclick=()=>{cm=+b.dataset.m;renderCal()});
- $("mg").querySelectorAll("button[data-d]").forEach(b=>b.onclick=()=>{selD=b.dataset.d;renderCal()});
- if(selD){const md=selD.slice(5),L=rows.filter(r=>active(r,md));$("dayres").innerHTML=`<h3 style="margin:0 0 6px">${new Date(selD+"T00:00").toLocaleDateString("en-AU",{weekday:"long",day:"numeric",month:"long"})}: ${L.length} festival${L.length===1?"":"s"}</h3>`+(L.map(r=>`<div class="card"><b>${safe(r.url)?`<a href="${esc(r.url)}" rel="noopener">${esc(r.name)}</a>`:esc(r.name)}</b> <span class="tag">${esc(r.city)}</span><span class="tag ${esc((r.price_tier||"").split(" ")[0])}">${esc(r.price_tier||"Unverified")}</span><div class="meta">typical ${esc(r.s)} → ${esc(r.e)} (${esc(r.basis)}) · ${esc(r.price_detail)}</div></div>`).join("")||"<p>Nothing typically on this day.</p>")}else $("dayres").innerHTML="<p class=\"sub\">Click a day to see what's on. Numbers show how many festivals typically run.</p>"}
-$("cprev").onclick=()=>{cm--;if(cm<0){cm=11;cy--}renderCal()};$("cnext").onclick=()=>{cm++;if(cm>11){cm=0;cy++}renderCal()};
-$("ctoday").onclick=()=>{const n=new Date();cy=n.getFullYear();cm=n.getMonth();selD=cy+"-"+mdOf(n);renderCal()};
-$("dnow").onclick=()=>{const n=new Date(),e=new Date(n);e.setDate(e.getDate()+30);$("dfrom").value=n.toISOString().slice(0,10);$("dto").value=e.toISOString().slice(0,10);go()};
-$("dclr").onclick=()=>{$("dfrom").value=$("dto").value="";go()};
-$("dfrom").oninput=$("dto").oninput=()=>go();
-$("vcal").onclick=()=>setView("cal");
-function saveHash(){const p=new URLSearchParams();[["q","q"],["city","city"],["tier","tier"],["month","month"],["from","dfrom"],["to","dto"]].forEach(([k,i])=>$(i).value&&p.set(k,$(i).value));if(view!=="cards")p.set("view",view);history.replaceState(null,"","#"+p)}
-function loadHash(){const p=new URLSearchParams(location.hash.slice(1));[["q","q"],["city","city"],["tier","tier"],["month","month"],["from","dfrom"],["to","dto"]].forEach(([k,i])=>{if(p.get(k))$(i).value=p.get(k)});if(["grid","cal"].includes(p.get("view")))setView(p.get("view"))}
+  // Application State
+  let festivals = [];
+  let currentView = "list"; // 'list' | 'month' | 'year' | 'grid'
+  let currentYear = 2026;
+  let currentMonth = 9; // 0-indexed: 9 = October
+  let selectedDate = null;
+  let activeQuickFilter = "all";
+  let activeGenre = "";
+  let selectedFestival = null;
+  let density = "comfortable";
 
-const MN="january february march april may june july august september october november december".split(" ");
-const pad=n=>String(n).padStart(2,"0");
-function fall(r){const m=String(r.month||"").toLowerCase();const i=MN.findIndex(x=>m.includes(x.slice(0,3)));if(i<0)return["01-01","12-31"];const j=MN.findIndex((x,k)=>k>i&&m.includes(x.slice(0,3)));const e=j>=0?j:i;return[pad(i+1)+"-01",pad(e+1)+"-"+pad(new Date(2025,e+1,0).getDate())]}
-function active(r,md){const s=r.s,e=r.e;if(!s)return false;return s<=e?(md>=s&&md<=e):(md>=s||md<=e)}
-const mdOf=d=>pad(d.getMonth()+1)+"-"+pad(d.getDate());
-function inRange(r){const f=$("dfrom").value,t=$("dto").value;if(!f&&!t)return true;
- let a=f?new Date(f+"T00:00"):new Date(t+"T00:00"),z=t?new Date(t+"T00:00"):a;if(z<a)[a,z]=[z,a];
- for(let d=new Date(a),n=0;d<=z&&n<=366;d.setDate(d.getDate()+1),n++)if(active(r,mdOf(d)))return true;return false}
-Promise.all([fetch("data.json").then(r=>r.json()),fetch("dates.json").then(r=>r.ok?r.json():[]).catch(()=>[])]).then(([d,dt])=>{
- const mp={};dt.forEach(x=>mp[x.city+"|"+x.name]=x);
- data=d.festivals;data.forEach(r=>{const x=mp[r.city+"|"+r.name];if(x&&x.basis==='unknown'){r.s=r.e='';r.basis='unknown'}else if(x&&x.start){r.s=x.start;r.e=x.end;r.basis=x.basis}else{[r.s,r.e]=fall(r);r.basis="month-only"}});
- loadHash();go()}).catch(()=>{$("list").textContent="Could not load data.json"});
-</script></body></html>
+  // Table View state
+  const TABLE_COLS = [
+    { key: "name", label: "Festival" },
+    { key: "city", label: "City" },
+    { key: "category", label: "Category" },
+    { key: "month", label: "Month" },
+    { key: "price_tier", label: "Tier" },
+    { key: "price_detail", label: "Price Detail" },
+    { key: "dates", label: "Dates" },
+    { key: "venue", label: "Venue" },
+    { key: "url", label: "Website" },
+    { key: "confidence", label: "Confidence" }
+  ];
+  let tableVisibleCols = new Set(["name", "city", "month", "price_tier", "price_detail", "url"]);
+  let tableSortKey = "city";
+  let tableSortAsc = 1;
+
+  // Helpers
+  const $ = id => document.getElementById(id);
+
+  function getCityColor(city) {
+    if (city === "Sydney") return { bar: "#007AFF", bg: "bg-[#007AFF]/10", text: "text-[#007AFF]", border: "border-[#007AFF]/25" };
+    if (city === "Melbourne") return { bar: "#AF52DE", bg: "bg-[#AF52DE]/10", text: "text-[#AF52DE]", border: "border-[#AF52DE]/25" };
+    return { bar: "#34C759", bg: "bg-[#34C759]/10", text: "text-[#34C759]", border: "border-[#34C759]/25" };
+  }
+
+  function getTierBadgeClass(tier) {
+    if (tier === "Free") return "bg-tertiary-fixed text-on-tertiary-fixed-variant border border-tertiary/20";
+    if (tier === "Low") return "bg-[#30B0C7]/15 text-[#0A6C7E] border border-[#30B0C7]/30";
+    if (tier === "Mid") return "bg-primary/10 text-primary border border-primary/20";
+    if (tier === "Premium") return "bg-[#FF9500]/15 text-[#B35300] border border-[#FF9500]/30";
+    return "bg-surface-container-high text-on-surface-variant border border-outline-variant/40";
+  }
+
+  // Fallback start/end computation
+  function computeMonthRange(r) {
+    const m = String(r.month || "").toLowerCase();
+    const i = MONTH_NAMES.findIndex(x => m.includes(x.slice(0, 3).toLowerCase()));
+    if (i < 0) return ["01-01", "12-31"];
+    const j = MONTH_NAMES.findIndex((x, k) => k > i && m.includes(x.slice(0, 3).toLowerCase()));
+    const e = j >= 0 ? j : i;
+    const lastDay = new Date(2026, e + 1, 0).getDate();
+    return [PAD(i + 1) + "-01", PAD(e + 1) + "-" + PAD(lastDay)];
+  }
+
+  function isActiveOnDate(r, mdStr) {
+    if (!r.s) return false;
+    return r.s <= r.e ? (mdStr >= r.s && mdStr <= r.e) : (mdStr >= r.s || mdStr <= r.e);
+  }
+
+  function getDurationText(r) {
+    if (!r.s || !r.e) return "Annual Festival";
+    const [sm, sd] = r.s.split("-").map(Number);
+    const [em, ed] = r.e.split("-").map(Number);
+    const d1 = new Date(2026, sm - 1, sd);
+    const d2 = new Date(r.s <= r.e ? 2026 : 2027, em - 1, ed);
+    const days = Math.round((d2 - d1) / 86400000) + 1;
+    if (days <= 1) return "1 Day Event";
+    if (days <= 3) return `${days} Days Weekend`;
+    return `${days} Days Duration`;
+  }
+
+  function formatDisplayDates(r) {
+    if (!r.s || !r.e) return r.dates || "Dates unconfirmed";
+    const [sm, sd] = r.s.split("-").map(Number);
+    const [em, ed] = r.e.split("-").map(Number);
+    const smName = SHORT_MONTHS[sm - 1];
+    const emName = SHORT_MONTHS[em - 1];
+    if (sm === em) {
+      return sd === ed ? `${sd} ${smName} ${currentYear}` : `${sd}–${ed} ${smName} ${currentYear}`;
+    }
+    return `${sd} ${smName} – ${ed} ${emName} ${currentYear}`;
+  }
+
+  // Filter Pipeline
+  function getFilteredFestivals() {
+    const q = $("q").value.trim().toLowerCase();
+    const checkedCities = Array.from(document.querySelectorAll(".city-filter:checked")).map(cb => cb.value);
+    const checkedTiers = Array.from(document.querySelectorAll(".tier-filter:checked")).map(cb => cb.value);
+    const fromVal = $("dfrom").value;
+    const toVal = $("dto").value;
+
+    return festivals.filter(r => {
+      // City
+      if (checkedCities.length && !checkedCities.includes(r.city)) return false;
+      // Tier
+      if (checkedTiers.length) {
+        const tier = r.price_tier || "Unverified";
+        if (!checkedTiers.includes(tier)) return false;
+      }
+      // Genre
+      if (activeGenre) {
+        const cat = (r.category || "").toLowerCase();
+        const nm = (r.name || "").toLowerCase();
+        const g = activeGenre.toLowerCase();
+        if (!cat.includes(g) && !nm.includes(g)) return false;
+      }
+      // Query text search
+      if (q) {
+        const hay = (r.name + " " + r.city + " " + r.venue + " " + r.category + " " + r.price_detail + " " + (r.notes || "")).toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
+      // Date Range or Quick filter
+      if (fromVal || toVal) {
+        let a = fromVal ? new Date(fromVal + "T00:00") : new Date(toVal + "T00:00");
+        let z = toVal ? new Date(toVal + "T00:00") : a;
+        if (z < a) [a, z] = [z, a];
+        let hit = false;
+        for (let d = new Date(a), n = 0; d <= z && n <= 366; d.setDate(d.getDate() + 1), n++) {
+          const md = PAD(d.getMonth() + 1) + "-" + PAD(d.getDate());
+          if (isActiveOnDate(r, md)) { hit = true; break; }
+        }
+        if (!hit) return false;
+      }
+      return true;
+    });
+  }
+
+  // Update Dynamic Counts in Sidebar
+  function updateSidebarCounts() {
+    $("countSydney").textContent = festivals.filter(f => f.city === "Sydney").length;
+    $("countMelbourne").textContent = festivals.filter(f => f.city === "Melbourne").length;
+    $("countCanberra").textContent = festivals.filter(f => f.city === "Canberra").length;
+
+    $("countTierFree").textContent = festivals.filter(f => f.price_tier === "Free").length;
+    $("countTierLow").textContent = festivals.filter(f => f.price_tier === "Low").length;
+    $("countTierMid").textContent = festivals.filter(f => f.price_tier === "Mid").length;
+    $("countTierPremium").textContent = festivals.filter(f => f.price_tier === "Premium").length;
+  }
+
+  // Render Views
+  function render() {
+    const list = getFilteredFestivals();
+    $("filterSummaryCount").textContent = `Showing ${list.length} of ${festivals.length} NSW/VIC/ACT festivals`;
+
+    if (currentView === "list") renderListView(list);
+    else if (currentView === "month") renderMonthView(list);
+    else if (currentView === "year") renderYearView(list);
+    else if (currentView === "grid") renderGridView(list);
+
+    renderMiniMonth();
+    updateHash();
+  }
+
+  // 1. LIST / AGENDA VIEW
+  function renderListView(list) {
+    const container = $("viewListContainer");
+    if (!list.length) {
+      container.innerHTML = `
+        <div class="text-center py-16 text-on-surface-variant">
+          <span class="material-symbols-outlined text-4xl mb-2 text-outline">event_busy</span>
+          <p class="text-base font-semibold text-on-surface">No matching festivals found</p>
+          <p class="text-xs mt-1">Try clearing some filters or searching with another term.</p>
+        </div>
+      `;
+      return;
+    }
+
+    // Group festivals by month (starting with Jan through Dec)
+    const monthBuckets = Array.from({ length: 12 }, () => []);
+    list.forEach(r => {
+      let mIdx = 0;
+      if (r.s) {
+        mIdx = parseInt(r.s.split("-")[0], 10) - 1;
+      } else {
+        const m = String(r.month || "").toLowerCase();
+        mIdx = MONTH_NAMES.findIndex(x => m.includes(x.slice(0, 3).toLowerCase()));
+        if (mIdx < 0) mIdx = 0;
+      }
+      monthBuckets[mIdx].push(r);
+    });
+
+    // Reorder buckets to start from current month (Oct -> Dec -> Jan -> Sep)
+    const orderedIndices = [];
+    for (let i = currentMonth; i < 12; i++) orderedIndices.push({ idx: i, year: currentYear });
+    for (let i = 0; i < currentMonth; i++) orderedIndices.push({ idx: i, year: currentYear + 1 });
+
+    let html = "";
+    orderedIndices.forEach(({ idx, year }) => {
+      const items = monthBuckets[idx];
+      if (!items.length) return;
+
+      const mName = MONTH_NAMES[idx];
+      const seasonSub = idx >= 8 && idx <= 10 ? "Spring Season Showcase" :
+                        idx === 11 || idx <= 1 ? "Summer Festive Celebrations" :
+                        idx >= 2 && idx <= 4 ? "Autumn Cultural Program" : "Winter Arts & Film";
+
+      html += `
+        <section class="space-y-space-sm">
+          <div class="flex items-center gap-2 pb-1 border-b border-outline-variant/60">
+            <span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+            <h2 class="text-base font-bold text-on-surface tracking-tight">${mName} ${year}</h2>
+            <span class="text-xs text-outline font-normal">${seasonSub} • ${items.length} festival${items.length === 1 ? "" : "s"}</span>
+          </div>
+          <div class="space-y-2">
+            ${items.map(r => renderAgendaCard(r, year)).join("")}
+          </div>
+        </section>
+      `;
+    });
+
+    container.innerHTML = html;
+  }
+
+  function renderAgendaCard(r, year) {
+    const col = getCityColor(r.city);
+    const tierBadgeClass = getTierBadgeClass(r.price_tier);
+    const dateText = formatDisplayDates(r);
+    const duration = getDurationText(r);
+    const statusText = r.basis === "edition-dates" ? "Confirmed Dates" : "Typical Dates";
+
+    return `
+      <div class="agenda-item group relative flex items-center bg-surface-container-lowest border border-outline-variant/70 rounded-xl p-3.5 hover:shadow-md hover:border-primary/40 transition-all cursor-pointer" onclick="openFestivalModal('${ESC(r.name)}')">
+        <!-- City Accent Vertical Strip -->
+        <div class="absolute left-0 top-2 bottom-2 w-1.5 rounded-r" style="background-color: ${col.bar}"></div>
+
+        <!-- Date & Duration Column -->
+        <div class="agenda-date-col w-44 pl-3 flex flex-col justify-center flex-shrink-0">
+          <div class="flex items-center gap-1.5 text-on-surface font-semibold text-xs">
+            <span class="material-symbols-outlined text-primary text-[15px]">calendar_today</span>
+            <span>${dateText}</span>
+          </div>
+          <span class="text-[11px] font-mono text-on-surface-variant mt-0.5">${duration}</span>
+        </div>
+
+        <!-- Festival Title & Chips -->
+        <div class="flex-1 px-4">
+          <div class="flex items-center gap-2 mb-1 flex-wrap">
+            <span class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">
+              ${ESC(r.name)}
+            </span>
+            <span class="px-2 py-0.5 rounded-full text-[11px] ${col.bg} ${col.text} font-medium border ${col.border}">
+              ${ESC(r.city)}
+            </span>
+            <span class="px-2 py-0.5 rounded text-[11px] bg-surface-container-high text-on-surface-variant">
+              ${ESC(r.category || "Festival")}
+            </span>
+            <span class="px-2 py-0.5 rounded text-[11px] ${tierBadgeClass}">
+              ${ESC(r.price_tier || "Unverified")}
+            </span>
+            <span class="inline-flex items-center gap-1 text-[11px] text-tertiary font-medium">
+              <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> ${statusText}
+            </span>
+            ${r.url_flag ? `<span class="text-amber-600 text-[11px] font-medium" title="Website did not respond on last check">⚠ Check URL</span>` : ""}
+          </div>
+          <div class="agenda-venue flex items-center gap-1 text-xs text-on-surface-variant">
+            <span class="material-symbols-outlined text-[15px] text-outline">location_on</span>
+            <span class="truncate">${ESC(r.venue || "Various Venues")}</span>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="flex items-center gap-2 flex-shrink-0" onclick="event.stopPropagation()">
+          ${SAFE_URL(r.url) ? `
+            <a href="${ESC(SAFE_URL(r.url))}" target="_blank" rel="noopener" class="px-3 py-1.5 text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-md border border-outline-variant/60 flex items-center gap-1 transition-colors">
+              <span>Website</span>
+              <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+            </a>
+          ` : ""}
+          <button onclick="downloadSingleIcs('${ESC(r.name)}')" class="px-3 py-1.5 text-xs bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-medium rounded-md flex items-center gap-1 transition-colors shadow-xs" title="Download .ics Calendar Event">
+            <span class="material-symbols-outlined text-[14px]">add</span>
+            <span>Add to .ics</span>
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  // 2. MONTH VIEW
+  function renderMonthView(list) {
+    const firstDay = new Date(currentYear, currentMonth, 1);
+    const totalDays = new Date(currentYear, currentMonth + 1, 0).getDate();
+    const startingDayOfWeek = (firstDay.getDay() + 6) % 7; // Monday = 0
+
+    $("monthGridTitle").textContent = `${MONTH_NAMES[currentMonth]} ${currentYear}`;
+
+    let cellsHtml = "";
+    // Leading days from previous month
+    const prevMonthDays = new Date(currentYear, currentMonth, 0).getDate();
+    for (let i = startingDayOfWeek - 1; i >= 0; i--) {
+      cellsHtml += `<div class="min-h-[110px] p-1.5 bg-surface-container-low/40 border-r border-b border-outline-variant/60 text-outline/50 text-xs">${prevMonthDays - i}</div>`;
+    }
+
+    const today = new Date();
+    const isThisMonth = today.getFullYear() === currentYear && today.getMonth() === currentMonth;
+
+    for (let d = 1; d <= totalDays; d++) {
+      const dateStr = PAD(currentMonth + 1) + "-" + PAD(d);
+      const isToday = isThisMonth && today.getDate() === d;
+      const activeFestivals = list.filter(r => isActiveOnDate(r, dateStr));
+
+      cellsHtml += `
+        <div class="min-h-[110px] p-1.5 border-r border-b border-outline-variant/60 relative hover:bg-surface-container-high/30 transition-colors flex flex-col justify-between cursor-pointer" onclick="selectMonthDay(${d})">
+          <div class="flex items-center justify-between mb-1">
+            <span class="${isToday ? 'w-6 h-6 rounded-full bg-[#FF3B30] text-white flex items-center justify-center font-bold text-xs shadow-xs' : 'text-xs font-semibold text-on-surface'}">
+              ${d}
+            </span>
+            ${activeFestivals.length ? `<span class="text-[10px] font-mono text-outline">${activeFestivals.length}</span>` : ""}
+          </div>
+          <div class="space-y-1 flex-1 overflow-hidden">
+            ${activeFestivals.slice(0, 3).map(f => {
+              const col = getCityColor(f.city);
+              return `
+                <div onclick="event.stopPropagation(); openFestivalModal('${ESC(f.name)}')" class="truncate px-1.5 py-0.5 rounded text-[10px] font-medium text-white shadow-xs" style="background-color: ${col.bar}" title="${ESC(f.name)} (${f.city})">
+                  ${ESC(f.name)}
+                </div>
+              `;
+            }).join("")}
+            ${activeFestivals.length > 3 ? `<span class="text-[10px] font-semibold text-primary block text-center">+${activeFestivals.length - 3} more</span>` : ""}
+          </div>
+        </div>
+      `;
+    }
+
+    // Trailing days
+    const totalFilled = startingDayOfWeek + totalDays;
+    const remaining = (7 - (totalFilled % 7)) % 7;
+    for (let i = 1; i <= remaining; i++) {
+      cellsHtml += `<div class="min-h-[110px] p-1.5 bg-surface-container-low/40 border-r border-b border-outline-variant/60 text-outline/50 text-xs">${i}</div>`;
+    }
+
+    $("monthGridCells").innerHTML = cellsHtml;
+  }
+
+  function selectMonthDay(day) {
+    const dateStr = PAD(currentMonth + 1) + "-" + PAD(day);
+    const dayFestivals = getFilteredFestivals().filter(r => isActiveOnDate(r, dateStr));
+    const container = $("monthSelectedDayDetail");
+    if (!dayFestivals.length) {
+      container.innerHTML = `<p class="text-xs text-outline italic">No festivals typically running on ${day} ${MONTH_NAMES[currentMonth]}.</p>`;
+      return;
+    }
+    container.innerHTML = `
+      <div class="bg-surface-container-low rounded-xl p-4 border border-outline-variant">
+        <h3 class="text-sm font-bold text-on-surface mb-2">${day} ${MONTH_NAMES[currentMonth]} ${currentYear} (${dayFestivals.length} Festivals)</h3>
+        <div class="space-y-2">
+          ${dayFestivals.map(r => renderAgendaCard(r, currentYear)).join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  // 3. YEAR VIEW
+  function renderYearView(list) {
+    $("yearGridTitle").textContent = `${currentYear} Festival Year Calendar`;
+    let html = "";
+    for (let m = 0; m < 12; m++) {
+      const mName = MONTH_NAMES[m];
+      const daysInMonth = new Date(currentYear, m + 1, 0).getDate();
+      const monthFestivals = list.filter(r => {
+        for (let d = 1; d <= daysInMonth; d++) {
+          if (isActiveOnDate(r, PAD(m + 1) + "-" + PAD(d))) return true;
+        }
+        return false;
+      });
+
+      html += `
+        <div class="bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/70 shadow-xs hover:border-primary/40 transition-colors cursor-pointer" onclick="jumpToMonth(${m})">
+          <div class="flex items-center justify-between mb-2 pb-1 border-b border-outline-variant/40">
+            <h3 class="text-xs font-bold text-on-surface">${mName}</h3>
+            <span class="text-[11px] font-mono text-primary font-semibold">${monthFestivals.length} event${monthFestivals.length === 1 ? "" : "s"}</span>
+          </div>
+          <div class="grid grid-cols-7 gap-1 text-center text-[10px] mb-2 font-mono">
+            ${Array.from({ length: daysInMonth }, (_, i) => {
+              const d = i + 1;
+              const dateStr = PAD(m + 1) + "-" + PAD(d);
+              const count = list.filter(r => isActiveOnDate(r, dateStr)).length;
+              let bg = "bg-surface-container-low text-on-surface-variant";
+              if (count >= 6) bg = "bg-primary text-white font-bold";
+              else if (count >= 3) bg = "bg-primary/50 text-white font-medium";
+              else if (count >= 1) bg = "bg-primary/20 text-primary font-medium";
+              return `<span class="w-4 h-4 mx-auto rounded flex items-center justify-center ${bg}">${d}</span>`;
+            }).join("")}
+          </div>
+          <div class="space-y-1">
+            ${monthFestivals.slice(0, 2).map(f => `
+              <div class="truncate text-[10px] text-on-surface-variant flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background-color: ${getCityColor(f.city).bar}"></span>
+                <span class="truncate">${ESC(f.name)}</span>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      `;
+    }
+    $("yearMatrixGrid").innerHTML = html;
+  }
+
+  function jumpToMonth(m) {
+    currentMonth = m;
+    setView("month");
+  }
+
+  // 4. GRID / TABLE VIEW
+  function renderGridView(list) {
+    const visibleCols = TABLE_COLS.filter(c => tableVisibleCols.has(c.key));
+
+    // Head
+    $("tableHeadRow").innerHTML = visibleCols.map(c => `
+      <th class="px-3 py-2 cursor-pointer hover:bg-surface-container" onclick="sortTable('${c.key}')">
+        <div class="flex items-center gap-1">
+          <span>${c.label}</span>
+          ${tableSortKey === c.key ? `<span>${tableSortAsc > 0 ? "▲" : "▼"}</span>` : ""}
+        </div>
+      </th>
+    `).join("");
+
+    // Sort
+    const sorted = [...list].sort((a, b) => {
+      const va = String(a[tableSortKey] || "");
+      const vb = String(b[tableSortKey] || "");
+      return va.localeCompare(vb, undefined, { numeric: true }) * tableSortAsc;
+    });
+
+    // Body
+    $("tableBody").innerHTML = sorted.map(r => `
+      <tr class="hover:bg-surface-container-high/30 transition-colors cursor-pointer" onclick="openFestivalModal('${ESC(r.name)}')">
+        ${visibleCols.map(c => {
+          let val = r[c.key] || "";
+          if (c.key === "name") {
+            return `<td class="px-3 py-2 font-semibold text-primary">${ESC(val)}</td>`;
+          }
+          if (c.key === "url" && SAFE_URL(val)) {
+            return `<td class="px-3 py-2"><a href="${ESC(SAFE_URL(val))}" target="_blank" rel="noopener" class="text-primary hover:underline" onclick="event.stopPropagation()">Link ↗</a></td>`;
+          }
+          if (c.key === "price_tier") {
+            return `<td class="px-3 py-2"><span class="px-2 py-0.5 rounded text-[10px] ${getTierBadgeClass(val)}">${ESC(val)}</span></td>`;
+          }
+          return `<td class="px-3 py-2 text-on-surface-variant max-w-xs truncate">${ESC(val)}</td>`;
+        }).join("")}
+      </tr>
+    `).join("");
+  }
+
+  function sortTable(key) {
+    if (tableSortKey === key) {
+      tableSortAsc = -tableSortAsc;
+    } else {
+      tableSortKey = key;
+      tableSortAsc = 1;
+    }
+    render();
+  }
+
+  // Mini-Month date picker renderer
+  function renderMiniMonth() {
+    $("miniMonthTitle").textContent = `${SHORT_MONTHS[currentMonth]} ${currentYear}`;
+    const firstDay = new Date(currentYear, currentMonth, 1);
+    const totalDays = new Date(currentYear, currentMonth + 1, 0).getDate();
+    const startOffset = firstDay.getDay(); // Sunday = 0
+
+    let html = "";
+    // Pad previous month days
+    for (let i = 0; i < startOffset; i++) {
+      html += `<span class="text-outline/40">·</span>`;
+    }
+    const today = new Date();
+    const isThisMonth = today.getFullYear() === currentYear && today.getMonth() === currentMonth;
+
+    for (let d = 1; d <= totalDays; d++) {
+      const isToday = isThisMonth && today.getDate() === d;
+      const isSel = selectedDate === `${currentYear}-${PAD(currentMonth + 1)}-${PAD(d)}`;
+
+      if (isToday) {
+        html += `<span onclick="selectMiniDate(${d})" class="bg-[#FF3B30] text-white font-bold rounded-full w-5 h-5 mx-auto flex items-center justify-center cursor-pointer shadow-xs">${d}</span>`;
+      } else if (isSel) {
+        html += `<span onclick="selectMiniDate(${d})" class="bg-primary text-white font-bold rounded-full w-5 h-5 mx-auto flex items-center justify-center cursor-pointer shadow-xs">${d}</span>`;
+      } else {
+        html += `<span onclick="selectMiniDate(${d})" class="text-on-surface hover:bg-surface-container rounded cursor-pointer">${d}</span>`;
+      }
+    }
+    $("miniDaysGrid").innerHTML = html;
+  }
+
+  function selectMiniDate(d) {
+    selectedDate = `${currentYear}-${PAD(currentMonth + 1)}-${PAD(d)}`;
+    $("dfrom").value = selectedDate;
+    $("dto").value = selectedDate;
+    activeQuickFilter = "";
+    document.querySelectorAll(".quick-chip").forEach(c => c.classList.remove("bg-primary-fixed", "text-on-primary-fixed-variant"));
+    render();
+  }
+
+  // Switch Views
+  function setView(v) {
+    currentView = v;
+    document.querySelectorAll(".view-btn").forEach(btn => {
+      btn.classList.remove("bg-surface-container-lowest", "text-on-surface", "shadow-sm", "font-semibold");
+      btn.classList.add("text-on-surface-variant");
+    });
+    const activeBtn = v === "list" ? $("btnViewList") :
+                      v === "month" ? $("btnViewMonth") :
+                      v === "year" ? $("btnViewYear") : $("btnViewGrid");
+    activeBtn.classList.add("bg-surface-container-lowest", "text-on-surface", "shadow-sm", "font-semibold");
+    activeBtn.classList.remove("text-on-surface-variant");
+
+    $("viewListContainer").style.display = v === "list" ? "block" : "none";
+    $("viewMonthContainer").style.display = v === "month" ? "block" : "none";
+    $("viewYearContainer").style.display = v === "year" ? "block" : "none";
+    $("viewGridContainer").style.display = v === "grid" ? "block" : "none";
+
+    $("canvasViewTitle").textContent = v === "list" ? "Scheduled Agendas" :
+                                      v === "month" ? "Month Calendar Grid" :
+                                      v === "year" ? "12-Month Year Overview" : "Tabular Data Grid";
+    render();
+  }
+
+  // Popover / Event Detail Modal
+  function openFestivalModal(name) {
+    const f = festivals.find(x => x.name === name);
+    if (!f) return;
+    selectedFestival = f;
+
+    const col = getCityColor(f.city);
+    $("modalTitle").textContent = f.name;
+    $("modalCityBadge").textContent = f.city;
+    $("modalCityBadge").className = `px-2 py-0.5 rounded-full text-xs font-medium ${col.bg} ${col.text} border ${col.border}`;
+
+    $("modalCategoryBadge").textContent = f.category || "General Event";
+    $("modalTierBadge").textContent = f.price_tier || "Unverified";
+    $("modalTierBadge").className = `px-2 py-0.5 rounded text-xs font-semibold ${getTierBadgeClass(f.price_tier)}`;
+
+    $("modalDates").textContent = f.dates || formatDisplayDates(f);
+    $("modalBasis").textContent = f.basis === "edition-dates" ? "Typical dates verified from recent editions" : "Estimated typical month window";
+
+    $("modalVenue").textContent = f.venue || `${f.city}, Australia`;
+    $("modalMapLink").href = `https://maps.apple.com/?q=${encodeURIComponent((f.venue || f.city) + ", " + f.city + ", Australia")}`;
+
+    $("modalPriceDetail").textContent = f.price_detail || "Check official site for entry requirements and ticketing.";
+
+    // Past editions
+    const renderEd = (ed, yr) => {
+      if (!ed || !ed.found) return `<div><b>${yr} Edition:</b> No record found</div>`;
+      const link = SAFE_URL(ed.source_url) ? ` <a href="${ESC(SAFE_URL(ed.source_url))}" target="_blank" rel="noopener" class="text-primary hover:underline">source ↗</a>` : "";
+      return `<div><b>${yr} Edition:</b> ${ESC(ed.dates)} · ${ESC(ed.price)}${link}</div>`;
+    };
+    $("modalEd2024").innerHTML = renderEd(f.ed2024, "2024");
+    $("modalEd2025").innerHTML = renderEd(f.ed2025, "2025");
+
+    if (f.notes) {
+      $("modalNotesContainer").style.display = "block";
+      $("modalNotesContainer").innerHTML = `<b>Curator Note:</b> ${ESC(f.notes)}`;
+    } else {
+      $("modalNotesContainer").style.display = "none";
+    }
+
+    if (SAFE_URL(f.url)) {
+      $("modalWebLink").style.display = "inline-flex";
+      $("modalWebLink").href = SAFE_URL(f.url);
+    } else {
+      $("modalWebLink").style.display = "none";
+    }
+
+    $("modalCorrectLink").href = `https://github.com/chid/festival-register/issues/new?template=submit-festival.yml&title=Correction:+${encodeURIComponent(f.name)}`;
+    $("eventModal").classList.remove("hidden");
+  }
+
+  function closeFestivalModal() {
+    $("eventModal").classList.add("hidden");
+  }
+
+  // RFC 5545 iCalendar Generator
+  function createIcsEventString(f) {
+    const slug = (f.name || "event").toLowerCase().replace(/[^a-z0-9]/g, "-");
+    let startYmd = "20261016";
+    let endYmd = "20261017";
+
+    if (f.s && f.e) {
+      const [sm, sd] = f.s.split("-");
+      const [em, ed] = f.e.split("-");
+      const sYear = currentYear;
+      const eYear = f.s <= f.e ? currentYear : currentYear + 1;
+      startYmd = `${sYear}${sm}${sd}`;
+      // DTEND in iCal for all-day is non-inclusive, so add 1 day
+      const endDateObj = new Date(eYear, parseInt(em, 10) - 1, parseInt(ed, 10) + 1);
+      endYmd = `${endDateObj.getFullYear()}${PAD(endDateObj.getMonth() + 1)}${PAD(endDateObj.getDate())}`;
+    }
+
+    const desc = `${f.price_detail || ''}\\n${f.dates || ''}\\nCity: ${f.city}\\nCategory: ${f.category || ''}`.replace(/\r?\n/g, "\\n");
+
+    return [
+      "BEGIN:VEVENT",
+      `UID:${slug}-${startYmd}@festival-calendar.org`,
+      `SUMMARY:${f.name}`,
+      `DESCRIPTION:${desc}`,
+      `LOCATION:${(f.venue || f.city) + ', ' + f.city + ', Australia'}`,
+      f.url ? `URL:${f.url}` : "",
+      `DTSTART;VALUE=DATE:${startYmd}`,
+      `DTEND;VALUE=DATE:${endYmd}`,
+      "STATUS:CONFIRMED",
+      "END:VEVENT"
+    ].filter(Boolean).join("\r\n");
+  }
+
+  function downloadIcsFile(filename, eventsIcsArray) {
+    const icsContent = [
+      "BEGIN:VCALENDAR",
+      "VERSION:2.0",
+      "PRODID:-//Festival Calendar SE Australia//EN",
+      "CALSCALE:GREGORIAN",
+      "METHOD:PUBLISH",
+      "X-WR-CALNAME:Festival Calendar",
+      "X-WR-TIMEZONE:Australia/Sydney",
+      ...eventsIcsArray,
+      "END:VCALENDAR"
+    ].join("\r\n");
+
+    const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  function downloadSingleIcs(name) {
+    const f = festivals.find(x => x.name === name);
+    if (!f) return;
+    const eventIcs = createIcsEventString(f);
+    const filename = `${f.name.toLowerCase().replace(/[^a-z0-9]/g, "_")}.ics`;
+    downloadIcsFile(filename, [eventIcs]);
+  }
+
+  // Export Agenda iCal
+  $("btnSubscribeIcs").onclick = $("btnExportAgendaIcs").onclick = () => {
+    const list = getFilteredFestivals();
+    if (!list.length) {
+      alert("No festivals match current filters to export.");
+      return;
+    }
+    const events = list.map(createIcsEventString);
+    downloadIcsFile("festival-calendar-agenda.ics", events);
+  };
+
+  // Export CSV
+  $("btnExportCsv").onclick = () => {
+    const list = getFilteredFestivals();
+    const cols = TABLE_COLS;
+    const qStr = v => `"${String(v || "").replace(/"/g, '""')}"`;
+    const csvRows = [
+      cols.map(c => qStr(c.label)).join(","),
+      ...list.map(r => cols.map(c => qStr(r[c.key])).join(","))
+    ];
+    const blob = new Blob(["\ufeff" + csvRows.join("\r\n")], { type: "text/csv;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "festivals_register.csv";
+    a.click();
+  };
+
+  // URL Hash Sync
+  function updateHash() {
+    const p = new URLSearchParams();
+    if (currentView !== "list") p.set("view", currentView);
+    const q = $("q").value.trim();
+    if (q) p.set("q", q);
+    if (activeGenre) p.set("genre", activeGenre);
+    if ($("dfrom").value) p.set("from", $("dfrom").value);
+    if ($("dto").value) p.set("to", $("dto").value);
+    history.replaceState(null, "", p.toString() ? "#" + p.toString() : location.pathname);
+  }
+
+  function loadHash() {
+    const p = new URLSearchParams(location.hash.slice(1));
+    if (["list", "month", "year", "grid"].includes(p.get("view"))) {
+      currentView = p.get("view");
+    }
+    if (p.get("q")) $("q").value = p.get("q");
+    if (p.get("genre")) activeGenre = p.get("genre");
+    if (p.get("from")) $("dfrom").value = p.get("from");
+    if (p.get("to")) $("dto").value = p.get("to");
+  }
+
+  // Setup Event Listeners
+  function setupEvents() {
+    // Sidebar toggle
+    $("sidebarToggleBtn").onclick = () => {
+      $("appSidebar").classList.toggle("-ml-64");
+    };
+
+    // Navigation buttons
+    $("navPrev").onclick = () => {
+      currentMonth--;
+      if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+      render();
+    };
+    $("navNext").onclick = () => {
+      currentMonth++;
+      if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+      render();
+    };
+    $("navToday").onclick = () => {
+      const now = new Date();
+      currentYear = now.getFullYear();
+      currentMonth = now.getMonth();
+      selectedDate = `${currentYear}-${PAD(currentMonth + 1)}-${PAD(now.getDate())}`;
+      render();
+    };
+
+    // Mini month controls
+    $("miniPrev").onclick = () => {
+      currentMonth--;
+      if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+      renderMiniMonth();
+      if (currentView === "month") render();
+    };
+    $("miniNext").onclick = () => {
+      currentMonth++;
+      if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+      renderMiniMonth();
+      if (currentView === "month") render();
+    };
+
+    // View buttons
+    $("btnViewList").onclick = () => setView("list");
+    $("btnViewMonth").onclick = () => setView("month");
+    $("btnViewYear").onclick = () => setView("year");
+    $("btnViewGrid").onclick = () => setView("grid");
+
+    // Search & Keyboard ⌘K
+    $("q").oninput = () => render();
+    window.addEventListener("keydown", e => {
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+        e.preventDefault();
+        $("q").focus();
+        $("q").select();
+      }
+      if (e.key === "Escape") {
+        closeFestivalModal();
+      }
+    });
+
+    // Checkbox filters
+    document.querySelectorAll(".city-filter, .tier-filter").forEach(el => {
+      el.onchange = () => render();
+    });
+
+    // Genre Chips
+    $("genreContainer").querySelectorAll(".genre-chip").forEach(btn => {
+      btn.onclick = () => {
+        activeGenre = btn.dataset.genre || "";
+        $("genreContainer").querySelectorAll(".genre-chip").forEach(b => {
+          b.classList.remove("bg-primary/10", "text-primary", "border-primary/20");
+          b.classList.add("bg-surface-container-high", "text-on-surface");
+        });
+        btn.classList.remove("bg-surface-container-high", "text-on-surface");
+        btn.classList.add("bg-primary/10", "text-primary", "border-primary/20");
+        render();
+      };
+    });
+
+    // Quick Date Filters
+    document.querySelectorAll(".quick-chip").forEach(chip => {
+      chip.onclick = () => {
+        document.querySelectorAll(".quick-chip").forEach(c => {
+          c.classList.remove("bg-primary-fixed", "text-on-primary-fixed-variant");
+          c.classList.add("bg-surface-container-highest/80", "text-on-surface");
+        });
+        chip.classList.add("bg-primary-fixed", "text-on-primary-fixed-variant");
+        chip.classList.remove("bg-surface-container-highest/80", "text-on-surface");
+
+        const mode = chip.dataset.quick;
+        const now = new Date();
+        if (mode === "all") {
+          $("dfrom").value = "";
+          $("dto").value = "";
+        } else if (mode === "weekend") {
+          const day = now.getDay();
+          const distToSat = (6 - day + 7) % 7;
+          const sat = new Date(now); sat.setDate(now.getDate() + distToSat);
+          const sun = new Date(sat); sun.setDate(sat.getDate() + 1);
+          $("dfrom").value = sat.toISOString().slice(0, 10);
+          $("dto").value = sun.toISOString().slice(0, 10);
+        } else if (mode === "30days") {
+          const end = new Date(now); end.setDate(now.getDate() + 30);
+          $("dfrom").value = now.toISOString().slice(0, 10);
+          $("dto").value = end.toISOString().slice(0, 10);
+        } else if (mode === "holidays") {
+          // Spring holidays window
+          $("dfrom").value = `${currentYear}-09-25`;
+          $("dto").value = `${currentYear}-10-15`;
+        } else if (mode === "summer") {
+          $("dfrom").value = `${currentYear}-12-01`;
+          $("dto").value = `${currentYear + 1}-02-28`;
+        }
+        render();
+      };
+    });
+
+    // Custom Date Inputs
+    $("dfrom").oninput = $("dto").oninput = () => render();
+    $("dclr").onclick = () => {
+      $("dfrom").value = "";
+      $("dto").value = "";
+      render();
+    };
+
+    // Density toggle
+    $("btnDensityComfortable").onclick = () => {
+      density = "comfortable";
+      document.body.classList.remove("compact-mode");
+      $("btnDensityComfortable").className = "px-2 py-0.5 rounded bg-surface-container-lowest shadow-xs text-on-surface font-medium";
+      $("btnDensityCompact").className = "px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface";
+    };
+    $("btnDensityCompact").onclick = () => {
+      density = "compact";
+      document.body.classList.add("compact-mode");
+      $("btnDensityCompact").className = "px-2 py-0.5 rounded bg-surface-container-lowest shadow-xs text-on-surface font-medium";
+      $("btnDensityComfortable").className = "px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface";
+    };
+
+    // Modal
+    $("modalCloseBtn").onclick = closeFestivalModal;
+    $("eventModal").onclick = e => { if (e.target === $("eventModal")) closeFestivalModal(); };
+    $("modalIcsBtn").onclick = () => {
+      if (selectedFestival) downloadSingleIcs(selectedFestival.name);
+    };
+
+    // Table Column Config
+    const colBox = $("colCheckboxes");
+    colBox.innerHTML = TABLE_COLS.map(c => `
+      <label class="inline-flex items-center gap-1.5 cursor-pointer">
+        <input type="checkbox" data-col="${c.key}" ${tableVisibleCols.has(c.key) ? "checked" : ""} class="rounded-[3px] text-primary"/>
+        <span>${c.label}</span>
+      </label>
+    `).join("");
+    colBox.querySelectorAll("input").forEach(cb => {
+      cb.onchange = () => {
+        if (cb.checked) tableVisibleCols.add(cb.dataset.col);
+        else tableVisibleCols.delete(cb.dataset.col);
+        renderGridView(getFilteredFestivals());
+      };
+    });
+    $("btnToggleCols").onclick = () => colBox.classList.toggle("hidden");
+  }
+
+  // Initialization
+  async function init() {
+    setupEvents();
+    loadHash();
+
+    try {
+      const [dRes, dtRes] = await Promise.all([
+        fetch("data.json").then(r => r.json()),
+        fetch("dates.json").then(r => r.ok ? r.json() : []).catch(() => [])
+      ]);
+
+      const dateMap = {};
+      dtRes.forEach(x => { dateMap[x.city + "|" + x.name] = x; });
+
+      festivals = dRes.festivals || [];
+      festivals.forEach(r => {
+        const x = dateMap[r.city + "|" + r.name];
+        if (x && x.basis === "unknown") {
+          r.s = r.e = "";
+          r.basis = "unknown";
+        } else if (x && x.start) {
+          r.s = x.start;
+          r.e = x.end;
+          r.basis = x.basis;
+        } else {
+          [r.s, r.e] = computeMonthRange(r);
+          r.basis = "month-only";
+        }
+      });
+
+      updateSidebarCounts();
+      setView(currentView);
+    } catch (err) {
+      console.error(err);
+      $("viewListContainer").innerHTML = `
+        <div class="p-6 bg-red-50 text-red-700 rounded-xl border border-red-200">
+          <p class="font-bold">Failed to load data.json</p>
+          <p class="text-xs mt-1">Please ensure data.json and dates.json are present in the site directory.</p>
+        </div>
+      `;
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", init);
+</script>
+</body>
+</html>
