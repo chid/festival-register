@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Festival Register: Sydney, Melbourne, Canberra</title>
+<style>
+:root{--bg:#fafaf7;--fg:#1c1c1a;--mut:#6b6b66;--card:#fff;--bd:#e3e2dc;--ac:#0b6e4f;--warn:#b45309}
+@media (prefers-color-scheme:dark){:root{--bg:#161614;--fg:#ecebe6;--mut:#9a9990;--card:#1f1f1c;--bd:#33332f;--ac:#4ec9a0;--warn:#f59e0b}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
+main{max-width:1000px;margin:0 auto;padding:24px 16px 64px}
+h1{margin:0 0 4px;font-size:1.6rem}.sub{color:var(--mut);margin:0 0 16px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0;position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:2}
+input,select,button,.btn{font:inherit;padding:8px 10px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--fg)}
+input{flex:1;min-width:180px}.btn{background:var(--ac);color:#fff;border-color:var(--ac);text-decoration:none;display:inline-block}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px;margin:10px 0}
+.card h2{font-size:1.1rem;margin:0}.meta{color:var(--mut);font-size:.9rem;margin:2px 0 8px}
+.tag{display:inline-block;font-size:.78rem;padding:1px 8px;border-radius:99px;border:1px solid var(--bd);margin-right:4px}
+.Free{border-color:var(--ac);color:var(--ac)}.Premium{border-color:var(--warn);color:var(--warn)}
+details{margin-top:6px;font-size:.9rem}summary{cursor:pointer;color:var(--mut)}
+a{color:var(--ac)}.warn{color:var(--warn)}footer{color:var(--mut);font-size:.85rem;margin-top:32px}
+</style></head><body><main>
+<h1>Festival Register</h1>
+<p class="sub">Sydney, Melbourne &amp; Canberra: price tiers and 2024/2025 past editions. AI-compiled and unverified, so check official sites. <span id="count"></span></p>
+<div class="bar">
+<input id="q" type="search" placeholder="Search festivals…" aria-label="Search">
+<select id="city" aria-label="City"><option value="">All cities</option><option>Sydney</option><option>Melbourne</option><option>Canberra</option></select>
+<select id="tier" aria-label="Price tier"><option value="">All prices</option><option>Free</option><option>Low</option><option>Mid</option><option>Premium</option><option>Unverified</option></select>
+<select id="month" aria-label="Month"><option value="">Any month</option></select>
+<a class="btn" id="submit" target="_blank" rel="noopener">+ Submit / correct</a>
+</div>
+<div id="list"></div>
+<footer>Tiers (AUD, cheapest typical paid entry): Free · Low &lt;$30 · Mid $30–100 · Premium &gt;$100. ⚠ = official link did not respond on 2026-10-12 (may be bot-blocking). Submissions go through GitHub issues.</footer>
+</main>
+<script>
+const M="Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" ");
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const safe=u=>/^https?:\/\//.test(u||"")?u:"";
+M.forEach(m=>{const o=document.createElement("option");o.textContent=m;$("month").append(o)});
+const repo=location.hostname.endsWith("github.io")?`https://github.com/${location.hostname.split(".")[0]}/${location.pathname.split("/")[1]}`:"";
+$("submit").href=repo?repo+"/issues/new?template=submit-festival.yml":"#";
+let data=[];
+const ed=(e,y)=>e&&e.found?`<div><b>${y}:</b> ${esc(e.dates)} · ${esc(e.price)} ${safe(e.source_url)?`<a href="${esc(safe(e.source_url))}" rel="noopener">source</a>`:""}</div>`:`<div><b>${y}:</b> not found</div>`;
+function render(){
+  const q=$("q").value.toLowerCase(),c=$("city").value,t=$("tier").value,m=$("month").value;
+  const f=data.filter(r=>(!c||r.city===c)&&(!t||(r.price_tier||"Unverified")===t||(t==="Unverified"&&!r.price_tier))&&(!m||String(r.month||"").slice(0,3)===m)&&(!q||JSON.stringify(r).toLowerCase().includes(q)));
+  $("count").textContent=f.length+" of "+data.length;
+  $("list").innerHTML=f.map(r=>{const tier=r.price_tier||"Unverified",u=safe(r.url);return `<div class="card"><h2>${u?`<a href="${esc(u)}" rel="noopener">${esc(r.name)}</a>`:esc(r.name)}${r.url_flag?' <span class="warn" title="Link did not respond">⚠</span>':""}</h2>
+  <div class="meta">${esc(r.city)} · ${esc(r.month)} · ${esc(r.category)}</div>
+  <span class="tag ${esc(tier.split(" ")[0])}">${esc(tier)}</span><span class="tag">${esc(r.confidence||"")} confidence</span>
+  <p style="margin:8px 0 0">${esc(r.price_detail)}</p>
+  <details><summary>Dates &amp; past editions</summary><div>${esc(r.dates)}</div>${ed(r.ed2024,"2024")}${ed(r.ed2025,"2025")}${r.notes?`<div><i>${esc(r.notes)}</i></div>`:""}</details></div>`}).join("")||"<p>No matches.</p>";
+}
+["q","city","tier","month"].forEach(i=>$(i).addEventListener("input",render));
+fetch("data.json").then(r=>r.json()).then(d=>{data=d.festivals;render()}).catch(()=>{$("list").textContent="Could not load data.json"});
+</script></body></html>

@@ -1,0 +1,32 @@
+name: Submit or correct a festival
+description: Suggest a new festival or correct an existing entry
+title: "[Festival] "
+labels: ["submission"]
+body:
+  - type: input
+    id: name
+    attributes: {label: Festival name}
+    validations: {required: true}
+  - type: dropdown
+    id: city
+    attributes:
+      label: City
+      options: [Sydney, Melbourne, Canberra, Other]
+    validations: {required: true}
+  - type: input
+    id: when
+    attributes: {label: Usual month / dates, placeholder: "e.g. late May to June"}
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Price tier
+      options: [Free, "Low (under $30)", "Mid ($30-100)", "Premium (over $100)", Unknown]
+  - type: input
+    id: url
+    attributes: {label: Official website}
+  - type: input
+    id: precedent
+    attributes: {label: Link showing a past edition (2024 or 2025)}
+  - type: textarea
+    id: notes
+    attributes: {label: Notes or correction details}
