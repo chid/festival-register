@@ -152,15 +152,15 @@
     <div class="flex flex-wrap justify-between items-center w-full px-space-lg py-space-sm border-b border-outline-variant/40 gap-2">
       <!-- Leading: Traffic Lights + Sidebar Toggle + Date Navigation -->
       <div class="flex items-center gap-space-md">
-        <!-- macOS Traffic Lights -->
-        <div class="flex items-center gap-1.5 mr-2">
+        <!-- macOS Traffic Lights (Desktop only) -->
+        <div class="hidden sm:flex items-center gap-1.5 mr-2">
           <span class="macos-traffic-light bg-[#FF5F56] border border-[#E0443E]"></span>
           <span class="macos-traffic-light bg-[#FFBD2E] border border-[#DEA123]"></span>
           <span class="macos-traffic-light bg-[#27C93F] border border-[#1AAB29]"></span>
         </div>
         <!-- Sidebar Toggle Icon Button -->
-        <button id="sidebarToggleBtn" class="p-1 rounded-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center justify-center" title="Toggle Sidebar (Calendars)">
-          <span class="material-symbols-outlined">view_sidebar</span>
+        <button id="sidebarToggleBtn" class="p-1 rounded-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center justify-center" title="Toggle Sidebar (Calendars & Filters)">
+          <span class="material-symbols-outlined">tune</span>
         </button>
         <!-- Navigation Controls: Prev, Next, Today, Dynamic Header Title -->
         <div class="flex items-center gap-space-xs ml-1">
@@ -175,14 +175,14 @@
           <button id="navToday" class="px-space-md py-space-xs bg-surface-container-lowest border border-outline-variant/60 text-on-surface hover:bg-surface-container rounded-md shadow-sm text-xs font-medium transition-colors active:scale-[0.98]">
             Today
           </button>
-          <h1 id="appTitle" class="ml-2 text-base font-semibold text-on-surface tracking-tight truncate max-w-xs md:max-w-md">
+          <h1 id="appTitle" class="ml-2 text-sm sm:text-base font-semibold text-on-surface tracking-tight truncate max-w-[140px] sm:max-w-xs md:max-w-md">
             Festivals Agenda 2026/2027
           </h1>
         </div>
       </div>
 
-      <!-- Center: Segmented View Switch (List | Month | Year | Grid) -->
-      <div class="flex items-center bg-surface-container-high/70 p-0.5 rounded-lg border border-outline-variant/40 shadow-inner">
+      <!-- Center: Segmented View Switch (Desktop only) -->
+      <div class="hidden md:flex items-center bg-surface-container-high/70 p-0.5 rounded-lg border border-outline-variant/40 shadow-inner">
         <button id="btnViewList" class="view-btn bg-surface-container-lowest text-on-surface shadow-sm rounded-md px-3 py-1 text-xs font-semibold transition-all">
           List
         </button>
@@ -198,11 +198,11 @@
       </div>
 
       <!-- Trailing: Search Bar + Subscribe + Submit CTA -->
-      <div class="flex items-center gap-space-sm">
+      <div class="flex items-center gap-1.5 sm:gap-space-sm ml-auto sm:ml-0">
         <!-- Live Search -->
-        <div class="relative w-48 lg:w-60">
-          <span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px]">search</span>
-          <input id="q" type="search" placeholder="Search festivals... ⌘K" class="w-full bg-surface-container-lowest/90 border border-outline-variant/60 rounded-md pl-8 pr-3 py-1 text-xs text-on-surface placeholder-on-surface-variant/70 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary shadow-sm" aria-label="Search festivals"/>
+        <div class="relative w-32 sm:w-48 lg:w-60">
+          <span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-outline text-[16px]">search</span>
+          <input id="q" type="search" placeholder="Search... ⌘K" class="w-full bg-surface-container-lowest/90 border border-outline-variant/60 rounded-md pl-7 sm:pl-8 pr-2.5 py-1 text-xs text-on-surface placeholder-on-surface-variant/70 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary shadow-sm" aria-label="Search festivals"/>
         </div>
         <!-- Subscribe (.ics / webcal) Export -->
         <button id="btnSubscribeIcs" class="hidden sm:flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest border border-outline-variant/60 text-on-surface hover:bg-surface-container rounded-md shadow-sm text-xs font-medium transition-colors active:scale-[0.98]" title="Export all matching festivals to iCalendar (.ics)">
@@ -210,9 +210,10 @@
           <span>Subscribe (.ics)</span>
         </button>
         <!-- Submit / Suggest Festival (GitHub) -->
-        <a id="btnSubmit" href="https://github.com/chid/festival-register/issues/new?template=submit-festival.yml" target="_blank" rel="noopener" class="flex items-center gap-1.5 px-3 py-1 bg-primary text-on-primary hover:bg-primary/90 rounded-md shadow-sm text-xs font-medium transition-transform active:scale-[0.98]">
-          <span class="material-symbols-outlined text-[16px]">add</span>
-          <span>+ New Festival</span>
+        <a id="btnSubmit" href="https://github.com/chid/festival-register/issues/new?template=submit-festival.yml" target="_blank" rel="noopener" class="flex items-center gap-1 px-2.5 sm:px-3 py-1 bg-primary text-on-primary hover:bg-primary/90 rounded-md shadow-sm text-xs font-medium transition-transform active:scale-[0.98]">
+          <span class="material-symbols-outlined text-[15px]">add</span>
+          <span class="hidden sm:inline">+ New Festival</span>
+          <span class="sm:hidden">Add</span>
         </a>
       </div>
     </div>
@@ -220,18 +221,18 @@
     <!-- Quick Date-Range Filter Chips Bar & Density Controls -->
     <div class="flex flex-wrap items-center justify-between gap-2 px-space-lg py-1.5 bg-surface-container-low/60 border-t border-outline-variant/30 text-xs">
       <div class="flex items-center gap-1.5 flex-wrap">
-        <span class="text-[11px] uppercase font-semibold text-on-surface-variant tracking-wider mr-1">Quick Filter:</span>
+        <span class="text-[11px] uppercase font-semibold text-on-surface-variant tracking-wider mr-1">Quick:</span>
         <button data-quick="all" class="quick-chip px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant border border-primary/20 font-medium shadow-sm transition-colors">
           All
         </button>
         <button data-quick="weekend" class="quick-chip px-2.5 py-0.5 rounded-full bg-surface-container-highest/80 text-on-surface hover:bg-surface-container-highest border border-outline-variant/40 transition-colors">
-          This weekend
+          Weekend
         </button>
         <button data-quick="30days" class="quick-chip px-2.5 py-0.5 rounded-full bg-surface-container-highest/80 text-on-surface hover:bg-surface-container-highest border border-outline-variant/40 transition-colors">
-          Next 30 days
+          Next 30d
         </button>
         <button data-quick="holidays" class="quick-chip px-2.5 py-0.5 rounded-full bg-surface-container-highest/80 text-on-surface hover:bg-surface-container-highest border border-outline-variant/40 transition-colors">
-          School holidays
+          Holidays
         </button>
         <button data-quick="summer" class="quick-chip px-2.5 py-0.5 rounded-full bg-surface-container-highest/80 text-on-surface hover:bg-surface-container-highest border border-outline-variant/40 transition-colors">
           Summer
@@ -246,8 +247,8 @@
         </div>
       </div>
 
-      <!-- Density & View Actions -->
-      <div class="flex items-center gap-space-sm ml-auto">
+      <!-- Density & View Actions (Desktop only) -->
+      <div class="hidden sm:flex items-center gap-space-sm ml-auto">
         <span class="text-[11px] text-on-surface-variant flex items-center gap-1">
           <span class="material-symbols-outlined text-[14px]">tune</span> Density:
         </span>
@@ -262,9 +263,20 @@
   <!-- Main Body Layout: Collapsible Sidebar + Canvas -->
   <div class="flex flex-1 overflow-hidden relative">
 
-    <!-- Collapsible Left Sidebar (260px wide, macOS Sequoia style) -->
-    <aside id="appSidebar" class="w-64 flex-shrink-0 bg-surface-container-low border-r border-outline-variant flex flex-col justify-between h-full p-space-md custom-scrollbar overflow-y-auto z-20 transition-all duration-200">
+    <!-- Mobile Sidebar Backdrop -->
+    <div id="sidebarBackdrop" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-30 hidden md:hidden"></div>
+
+    <!-- Collapsible Left Sidebar (macOS sidebar on desktop, off-canvas drawer on mobile) -->
+    <aside id="appSidebar" class="fixed inset-y-0 left-0 z-40 w-72 bg-surface-container-low border-r border-outline-variant flex flex-col justify-between h-full p-space-md custom-scrollbar overflow-y-auto shadow-2xl transition-transform duration-200 -translate-x-full md:static md:translate-x-0 md:w-64 md:shadow-none md:flex-shrink-0">
       <div class="space-y-3.5">
+        
+        <!-- Mobile Sidebar Header -->
+        <div class="flex items-center justify-between md:hidden pb-2 mb-1 border-b border-outline-variant/60">
+          <span class="font-bold text-xs text-on-surface uppercase tracking-wider">Calendars &amp; Filters</span>
+          <button id="sidebarCloseBtn" class="p-1 rounded-md text-on-surface-variant hover:bg-surface-container">
+            <span class="material-symbols-outlined text-[18px]">close</span>
+          </button>
+        </div>
         
         <!-- Mini-Month Date Picker -->
         <div class="bg-surface-container-lowest p-3 rounded-lg border border-outline-variant/50 shadow-xs">
@@ -395,35 +407,42 @@
     <main class="flex-1 flex flex-col h-full bg-surface-container-lowest custom-scrollbar overflow-y-auto relative">
       
       <!-- Filter Summary Sub-header -->
-      <div class="sticky top-0 z-20 frosted-glass bg-surface-container-lowest/90 border-b border-outline-variant px-space-xl py-space-sm flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <span id="canvasViewTitle" class="text-sm font-bold text-on-surface">Scheduled Agendas</span>
-          <span id="filterSummaryCount" class="bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full text-xs font-medium">
+      <div class="sticky top-0 z-20 frosted-glass bg-surface-container-lowest/90 border-b border-outline-variant px-3 sm:px-space-xl py-space-sm flex items-center justify-between">
+        <div class="flex items-center gap-2 sm:gap-3">
+          <span id="canvasViewTitle" class="text-xs sm:text-sm font-bold text-on-surface">Scheduled Agendas</span>
+          <span id="filterSummaryCount" class="bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-medium">
             Loading festivals...
           </span>
         </div>
         <div class="flex items-center gap-2">
-          <button id="btnExportAgendaIcs" class="inline-flex items-center gap-1 text-xs px-2.5 py-1 text-primary hover:bg-primary/10 rounded-md transition-colors font-medium">
+          <button id="btnExportAgendaIcs" class="inline-flex items-center gap-1 text-[11px] sm:text-xs px-2 sm:px-2.5 py-1 text-primary hover:bg-primary/10 rounded-md transition-colors font-medium">
             <span class="material-symbols-outlined text-[15px]">file_download</span>
-            <span>Export Agenda .ics</span>
+            <span class="hidden xs:inline sm:inline">Export Agenda .ics</span>
+            <span class="xs:hidden sm:hidden">.ics</span>
           </button>
         </div>
       </div>
 
       <!-- VIEW 1: AGENDA / LIST VIEW (Default) -->
-      <div id="viewListContainer" class="px-space-xl py-space-md space-y-space-xl max-w-7xl w-full mx-auto pb-24">
+      <div id="viewListContainer" class="px-3 sm:px-space-xl py-space-md space-y-space-xl max-w-7xl w-full mx-auto pb-24">
         <!-- Rendered dynamically -->
       </div>
 
       <!-- VIEW 2: MONTH VIEW (Apple Calendar Grid) -->
-      <div id="viewMonthContainer" class="hidden px-space-xl py-space-md max-w-7xl w-full mx-auto pb-24">
-        <div class="flex items-center justify-between mb-3">
-          <h2 id="monthGridTitle" class="text-lg font-bold text-on-surface">October 2026</h2>
-          <span class="text-xs text-on-surface-variant">Click any date or event bar for details</span>
+      <div id="viewMonthContainer" class="hidden px-2 sm:px-space-xl py-space-md max-w-7xl w-full mx-auto pb-24">
+        <div class="flex items-center justify-between mb-3 px-1">
+          <h2 id="monthGridTitle" class="text-base sm:text-lg font-bold text-on-surface">October 2026</h2>
+          <span class="text-[11px] sm:text-xs text-on-surface-variant">Tap date for details</span>
         </div>
         <!-- 7-day header -->
-        <div class="grid grid-cols-7 text-center font-semibold text-xs text-on-surface-variant border-b border-outline-variant pb-1.5 mb-1">
-          <span>Monday</span><span>Tuesday</span><span>Wednesday</span><span>Thursday</span><span>Friday</span><span>Saturday</span><span>Sunday</span>
+        <div class="grid grid-cols-7 text-center font-semibold text-[11px] sm:text-xs text-on-surface-variant border-b border-outline-variant pb-1.5 mb-1">
+          <span><span class="sm:hidden">M</span><span class="hidden sm:inline">Monday</span></span>
+          <span><span class="sm:hidden">T</span><span class="hidden sm:inline">Tuesday</span></span>
+          <span><span class="sm:hidden">W</span><span class="hidden sm:inline">Wednesday</span></span>
+          <span><span class="sm:hidden">T</span><span class="hidden sm:inline">Thursday</span></span>
+          <span><span class="sm:hidden">F</span><span class="hidden sm:inline">Friday</span></span>
+          <span><span class="sm:hidden">S</span><span class="hidden sm:inline">Saturday</span></span>
+          <span><span class="sm:hidden">S</span><span class="hidden sm:inline">Sunday</span></span>
         </div>
         <!-- Month day cells -->
         <div id="monthGridCells" class="grid grid-cols-7 border-t border-l border-outline-variant/60 bg-surface-container-lowest"></div>
@@ -431,13 +450,13 @@
       </div>
 
       <!-- VIEW 3: YEAR VIEW (12-Month Matrix) -->
-      <div id="viewYearContainer" class="hidden px-space-xl py-space-md max-w-7xl w-full mx-auto pb-24">
+      <div id="viewYearContainer" class="hidden px-3 sm:px-space-xl py-space-md max-w-7xl w-full mx-auto pb-24">
         <div class="flex items-center justify-between mb-4">
           <div>
-            <h2 id="yearGridTitle" class="text-lg font-bold text-on-surface">2026 Festival Year Calendar</h2>
-            <p class="text-xs text-on-surface-variant">Density heat indicators for Southeast Australia festivals</p>
+            <h2 id="yearGridTitle" class="text-base sm:text-lg font-bold text-on-surface">2026 Festival Year Calendar</h2>
+            <p class="text-[11px] sm:text-xs text-on-surface-variant">Density heat indicators for Southeast Australia festivals</p>
           </div>
-          <div class="flex items-center gap-2 text-xs">
+          <div class="hidden sm:flex items-center gap-2 text-xs">
             <span class="text-outline">Density:</span>
             <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-surface-container-high border border-outline-variant/60"></span> 0</span>
             <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded bg-primary/20"></span> 1–2</span>
@@ -449,7 +468,7 @@
       </div>
 
       <!-- VIEW 4: TABLE / GRID VIEW -->
-      <div id="viewGridContainer" class="hidden px-space-xl py-space-md max-w-7xl w-full mx-auto pb-24">
+      <div id="viewGridContainer" class="hidden px-3 sm:px-space-xl py-space-md max-w-7xl w-full mx-auto pb-24">
         <div class="mb-3 flex items-center justify-between">
           <span class="text-xs text-on-surface-variant">Click column headers to sort</span>
           <button id="btnToggleCols" class="text-xs text-primary underline">Toggle Columns</button>
@@ -465,8 +484,8 @@
         </div>
       </div>
 
-      <!-- Floating Quick Status Toast -->
-      <div class="fixed bottom-4 right-6 z-40 bg-surface-container-lowest/95 frosted-glass border border-outline-variant/80 rounded-xl shadow-lg px-4 py-2.5 flex items-center gap-3">
+      <!-- Floating Quick Status Toast (Desktop only) -->
+      <div class="hidden sm:flex fixed bottom-4 right-6 z-40 bg-surface-container-lowest/95 frosted-glass border border-outline-variant/80 rounded-xl shadow-lg px-4 py-2.5 items-center gap-3">
         <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
         <span class="text-xs font-medium text-on-surface">89 festivals verified in Sydney, Melbourne & Canberra</span>
         <span class="text-[11px] text-outline font-mono">2026/2027</span>
@@ -474,28 +493,52 @@
 
     </main>
   </div>
+
+  <!-- iOS Mobile Bottom Navigation Tab Bar (iOS HIG, 390px viewport optimized) -->
+  <nav id="mobileBottomNav" class="md:hidden flex items-center justify-around bg-surface-container-low/95 frosted-glass border-t border-outline-variant/60 py-1.5 px-2 z-30 flex-shrink-0">
+    <button id="tabList" class="mobile-tab flex-1 flex flex-col items-center justify-center py-1 text-primary transition-colors">
+      <span class="material-symbols-outlined text-[20px]">view_agenda</span>
+      <span class="text-[10px] font-semibold tracking-tight mt-0.5">Agenda</span>
+    </button>
+    <button id="tabMonth" class="mobile-tab flex-1 flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-on-surface transition-colors">
+      <span class="material-symbols-outlined text-[20px]">calendar_month</span>
+      <span class="text-[10px] font-semibold tracking-tight mt-0.5">Month</span>
+    </button>
+    <button id="tabYear" class="mobile-tab flex-1 flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-on-surface transition-colors">
+      <span class="material-symbols-outlined text-[20px]">calendar_view_month</span>
+      <span class="text-[10px] font-semibold tracking-tight mt-0.5">Year</span>
+    </button>
+    <button id="tabCalendars" class="mobile-tab flex-1 flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-on-surface transition-colors">
+      <span class="material-symbols-outlined text-[20px]">tune</span>
+      <span class="text-[10px] font-semibold tracking-tight mt-0.5">Filters</span>
+    </button>
+    <button id="tabIcs" class="mobile-tab flex-1 flex flex-col items-center justify-center py-1 text-on-surface-variant hover:text-on-surface transition-colors">
+      <span class="material-symbols-outlined text-[20px]">file_download</span>
+      <span class="text-[10px] font-semibold tracking-tight mt-0.5">.ics</span>
+    </button>
+  </nav>
 </div>
 
 <!-- Apple iCal Event Popover / Modal -->
 <div id="eventModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm hidden">
   <div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/80 shadow-2xl max-w-lg w-full overflow-hidden animate-scale-in">
     <!-- Popover Header -->
-    <div class="px-6 pt-5 pb-4 border-b border-outline-variant/50 flex items-start justify-between">
+    <div class="px-4 sm:px-6 pt-4 sm:pt-5 pb-3 sm:pb-4 border-b border-outline-variant/50 flex items-start justify-between">
       <div>
-        <div class="flex items-center gap-2 mb-1">
+        <div class="flex items-center gap-1.5 sm:gap-2 mb-1 flex-wrap">
           <span id="modalCityBadge" class="px-2 py-0.5 rounded-full text-xs font-medium"></span>
           <span id="modalCategoryBadge" class="px-2 py-0.5 rounded text-xs bg-surface-container-high text-on-surface-variant"></span>
           <span id="modalTierBadge" class="px-2 py-0.5 rounded text-xs font-semibold"></span>
         </div>
-        <h2 id="modalTitle" class="text-xl font-bold text-on-surface"></h2>
+        <h2 id="modalTitle" class="text-lg sm:text-xl font-bold text-on-surface"></h2>
       </div>
-      <button id="modalCloseBtn" class="p-1 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors">
+      <button id="modalCloseBtn" class="p-1 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors ml-2">
         <span class="material-symbols-outlined">close</span>
       </button>
     </div>
 
     <!-- Popover Content -->
-    <div class="px-6 py-4 space-y-3.5 max-h-[70vh] overflow-y-auto custom-scrollbar text-xs">
+    <div class="px-4 sm:px-6 py-4 space-y-3.5 max-h-[70vh] overflow-y-auto custom-scrollbar text-xs">
       
       <!-- Dates & Typical Timing -->
       <div class="flex items-start gap-2.5">
@@ -542,7 +585,7 @@
     </div>
 
     <!-- Popover Footer Actions -->
-    <div class="px-6 py-3.5 bg-surface-container-low/80 border-t border-outline-variant/60 flex items-center justify-between">
+    <div class="px-4 sm:px-6 py-3 sm:py-3.5 bg-surface-container-low/80 border-t border-outline-variant/60 flex items-center justify-between flex-wrap gap-2">
       <a id="modalCorrectLink" href="#" target="_blank" rel="noopener" class="text-xs text-outline hover:text-on-surface flex items-center gap-1">
         <span class="material-symbols-outlined text-[14px]">edit</span>
         <span>Suggest Correction</span>
@@ -792,38 +835,38 @@
     const statusText = r.basis === "edition-dates" ? "Confirmed Dates" : "Typical Dates";
 
     return `
-      <div class="agenda-item group relative flex items-center bg-surface-container-lowest border border-outline-variant/70 rounded-xl p-3.5 hover:shadow-md hover:border-primary/40 transition-all cursor-pointer" onclick="openFestivalModal('${ESC(r.name)}')">
+      <div class="agenda-item group relative flex flex-col sm:flex-row sm:items-center bg-surface-container-lowest border border-outline-variant/70 rounded-xl p-3 sm:p-3.5 hover:shadow-md hover:border-primary/40 transition-all cursor-pointer gap-2.5 sm:gap-0" onclick="openFestivalModal('${ESC(r.name)}')">
         <!-- City Accent Vertical Strip -->
         <div class="absolute left-0 top-2 bottom-2 w-1.5 rounded-r" style="background-color: ${col.bar}"></div>
 
         <!-- Date & Duration Column -->
-        <div class="agenda-date-col w-44 pl-3 flex flex-col justify-center flex-shrink-0">
+        <div class="agenda-date-col w-full sm:w-44 pl-3 flex flex-row sm:flex-col justify-between sm:justify-center flex-shrink-0 border-b sm:border-b-0 pb-1.5 sm:pb-0 border-outline-variant/30">
           <div class="flex items-center gap-1.5 text-on-surface font-semibold text-xs">
             <span class="material-symbols-outlined text-primary text-[15px]">calendar_today</span>
             <span>${dateText}</span>
           </div>
-          <span class="text-[11px] font-mono text-on-surface-variant mt-0.5">${duration}</span>
+          <span class="text-[11px] font-mono text-on-surface-variant sm:mt-0.5">${duration}</span>
         </div>
 
         <!-- Festival Title & Chips -->
-        <div class="flex-1 px-4">
-          <div class="flex items-center gap-2 mb-1 flex-wrap">
+        <div class="flex-1 pl-3 sm:px-4">
+          <div class="flex items-center gap-1.5 sm:gap-2 mb-1 flex-wrap">
             <span class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">
               ${ESC(r.name)}
             </span>
-            <span class="px-2 py-0.5 rounded-full text-[11px] ${col.bg} ${col.text} font-medium border ${col.border}">
+            <span class="px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] ${col.bg} ${col.text} font-medium border ${col.border}">
               ${ESC(r.city)}
             </span>
-            <span class="px-2 py-0.5 rounded text-[11px] bg-surface-container-high text-on-surface-variant">
+            <span class="px-2 py-0.5 rounded text-[10px] sm:text-[11px] bg-surface-container-high text-on-surface-variant">
               ${ESC(r.category || "Festival")}
             </span>
-            <span class="px-2 py-0.5 rounded text-[11px] ${tierBadgeClass}">
+            <span class="px-2 py-0.5 rounded text-[10px] sm:text-[11px] ${tierBadgeClass}">
               ${ESC(r.price_tier || "Unverified")}
             </span>
-            <span class="inline-flex items-center gap-1 text-[11px] text-tertiary font-medium">
+            <span class="inline-flex items-center gap-1 text-[10px] sm:text-[11px] text-tertiary font-medium">
               <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> ${statusText}
             </span>
-            ${r.url_flag ? `<span class="text-amber-600 text-[11px] font-medium" title="Website did not respond on last check">⚠ Check URL</span>` : ""}
+            ${r.url_flag ? `<span class="text-amber-600 text-[10px] sm:text-[11px] font-medium" title="Website did not respond on last check">⚠ Check URL</span>` : ""}
           </div>
           <div class="agenda-venue flex items-center gap-1 text-xs text-on-surface-variant">
             <span class="material-symbols-outlined text-[15px] text-outline">location_on</span>
@@ -832,14 +875,14 @@
         </div>
 
         <!-- Quick Actions -->
-        <div class="flex items-center gap-2 flex-shrink-0" onclick="event.stopPropagation()">
+        <div class="flex items-center justify-end gap-2 flex-shrink-0 pt-1.5 sm:pt-0 border-t sm:border-t-0 border-outline-variant/30 pl-3 sm:pl-0" onclick="event.stopPropagation()">
           ${SAFE_URL(r.url) ? `
-            <a href="${ESC(SAFE_URL(r.url))}" target="_blank" rel="noopener" class="px-3 py-1.5 text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-md border border-outline-variant/60 flex items-center gap-1 transition-colors">
+            <a href="${ESC(SAFE_URL(r.url))}" target="_blank" rel="noopener" class="px-2.5 sm:px-3 py-1 sm:py-1.5 text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-md border border-outline-variant/60 flex items-center gap-1 transition-colors">
               <span>Website</span>
               <span class="material-symbols-outlined text-[13px]">open_in_new</span>
             </a>
           ` : ""}
-          <button onclick="downloadSingleIcs('${ESC(r.name)}')" class="px-3 py-1.5 text-xs bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-medium rounded-md flex items-center gap-1 transition-colors shadow-xs" title="Download .ics Calendar Event">
+          <button onclick="downloadSingleIcs('${ESC(r.name)}')" class="px-2.5 sm:px-3 py-1 sm:py-1.5 text-xs bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-medium rounded-md flex items-center gap-1 transition-colors shadow-xs" title="Download .ics Calendar Event">
             <span class="material-symbols-outlined text-[14px]">add</span>
             <span>Add to .ics</span>
           </button>
@@ -860,7 +903,7 @@
     // Leading days from previous month
     const prevMonthDays = new Date(currentYear, currentMonth, 0).getDate();
     for (let i = startingDayOfWeek - 1; i >= 0; i--) {
-      cellsHtml += `<div class="min-h-[110px] p-1.5 bg-surface-container-low/40 border-r border-b border-outline-variant/60 text-outline/50 text-xs">${prevMonthDays - i}</div>`;
+      cellsHtml += `<div class="min-h-[58px] sm:min-h-[110px] p-1 sm:p-1.5 bg-surface-container-low/40 border-r border-b border-outline-variant/60 text-outline/50 text-[11px] sm:text-xs">${prevMonthDays - i}</div>`;
     }
 
     const today = new Date();
@@ -872,14 +915,16 @@
       const activeFestivals = list.filter(r => isActiveOnDate(r, dateStr));
 
       cellsHtml += `
-        <div class="min-h-[110px] p-1.5 border-r border-b border-outline-variant/60 relative hover:bg-surface-container-high/30 transition-colors flex flex-col justify-between cursor-pointer" onclick="selectMonthDay(${d})">
-          <div class="flex items-center justify-between mb-1">
-            <span class="${isToday ? 'w-6 h-6 rounded-full bg-[#FF3B30] text-white flex items-center justify-center font-bold text-xs shadow-xs' : 'text-xs font-semibold text-on-surface'}">
+        <div class="min-h-[58px] sm:min-h-[110px] p-1 sm:p-1.5 border-r border-b border-outline-variant/60 relative hover:bg-surface-container-high/30 transition-colors flex flex-col justify-between cursor-pointer" onclick="selectMonthDay(${d})">
+          <div class="flex items-center justify-between mb-0.5 sm:mb-1">
+            <span class="${isToday ? 'w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#FF3B30] text-white flex items-center justify-center font-bold text-[11px] sm:text-xs shadow-xs' : 'text-[11px] sm:text-xs font-semibold text-on-surface'}">
               ${d}
             </span>
-            ${activeFestivals.length ? `<span class="text-[10px] font-mono text-outline">${activeFestivals.length}</span>` : ""}
+            ${activeFestivals.length ? `<span class="text-[9px] sm:text-[10px] font-mono text-outline">${activeFestivals.length}</span>` : ""}
           </div>
-          <div class="space-y-1 flex-1 overflow-hidden">
+          
+          <!-- Desktop view: event bars -->
+          <div class="hidden sm:block space-y-1 flex-1 overflow-hidden">
             ${activeFestivals.slice(0, 3).map(f => {
               const col = getCityColor(f.city);
               return `
@@ -890,6 +935,15 @@
             }).join("")}
             ${activeFestivals.length > 3 ? `<span class="text-[10px] font-semibold text-primary block text-center">+${activeFestivals.length - 3} more</span>` : ""}
           </div>
+
+          <!-- Mobile view: colored dots indicators (iOS Calendar style) -->
+          <div class="sm:hidden flex items-center justify-center gap-0.5 py-1">
+            ${activeFestivals.slice(0, 3).map(f => {
+              const col = getCityColor(f.city);
+              return `<span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background-color: ${col.bar}"></span>`;
+            }).join("")}
+            ${activeFestivals.length > 3 ? `<span class="text-[8px] font-bold text-outline">+</span>` : ""}
+          </div>
         </div>
       `;
     }
@@ -898,7 +952,7 @@
     const totalFilled = startingDayOfWeek + totalDays;
     const remaining = (7 - (totalFilled % 7)) % 7;
     for (let i = 1; i <= remaining; i++) {
-      cellsHtml += `<div class="min-h-[110px] p-1.5 bg-surface-container-low/40 border-r border-b border-outline-variant/60 text-outline/50 text-xs">${i}</div>`;
+      cellsHtml += `<div class="min-h-[58px] sm:min-h-[110px] p-1 sm:p-1.5 bg-surface-container-low/40 border-r border-b border-outline-variant/60 text-outline/50 text-[11px] sm:text-xs">${i}</div>`;
     }
 
     $("monthGridCells").innerHTML = cellsHtml;
@@ -1073,8 +1127,25 @@
     const activeBtn = v === "list" ? $("btnViewList") :
                       v === "month" ? $("btnViewMonth") :
                       v === "year" ? $("btnViewYear") : $("btnViewGrid");
-    activeBtn.classList.add("bg-surface-container-lowest", "text-on-surface", "shadow-sm", "font-semibold");
-    activeBtn.classList.remove("text-on-surface-variant");
+    if (activeBtn) {
+      activeBtn.classList.add("bg-surface-container-lowest", "text-on-surface", "shadow-sm", "font-semibold");
+      activeBtn.classList.remove("text-on-surface-variant");
+    }
+
+    // Update Mobile Bottom Nav Tabs
+    document.querySelectorAll(".mobile-tab").forEach(tab => {
+      tab.classList.remove("text-primary");
+      tab.classList.add("text-on-surface-variant");
+    });
+    const tabMap = {
+      list: $("tabList"),
+      month: $("tabMonth"),
+      year: $("tabYear")
+    };
+    if (tabMap[v]) {
+      tabMap[v].classList.add("text-primary");
+      tabMap[v].classList.remove("text-on-surface-variant");
+    }
 
     $("viewListContainer").style.display = v === "list" ? "block" : "none";
     $("viewMonthContainer").style.display = v === "month" ? "block" : "none";
@@ -1256,12 +1327,39 @@
     if (p.get("to")) $("dto").value = p.get("to");
   }
 
+  // Toggle Sidebar (both Desktop toggle and Mobile Drawer)
+  function toggleSidebar(open) {
+    const sidebar = $("appSidebar");
+    const backdrop = $("sidebarBackdrop");
+    const isMobile = window.innerWidth < 768;
+
+    if (isMobile) {
+      const shouldOpen = open !== undefined ? open : sidebar.classList.contains("-translate-x-full");
+      if (shouldOpen) {
+        sidebar.classList.remove("-translate-x-full");
+        backdrop.classList.remove("hidden");
+      } else {
+        sidebar.classList.add("-translate-x-full");
+        backdrop.classList.add("hidden");
+      }
+    } else {
+      sidebar.classList.toggle("md:hidden");
+    }
+  }
+
   // Setup Event Listeners
   function setupEvents() {
-    // Sidebar toggle
-    $("sidebarToggleBtn").onclick = () => {
-      $("appSidebar").classList.toggle("-ml-64");
-    };
+    // Sidebar toggle buttons & mobile backdrop
+    $("sidebarToggleBtn").onclick = () => toggleSidebar();
+    if ($("sidebarCloseBtn")) $("sidebarCloseBtn").onclick = () => toggleSidebar(false);
+    if ($("sidebarBackdrop")) $("sidebarBackdrop").onclick = () => toggleSidebar(false);
+
+    // Mobile Bottom Tab Navigation
+    if ($("tabList")) $("tabList").onclick = () => setView("list");
+    if ($("tabMonth")) $("tabMonth").onclick = () => setView("month");
+    if ($("tabYear")) $("tabYear").onclick = () => setView("year");
+    if ($("tabCalendars")) $("tabCalendars").onclick = () => toggleSidebar(true);
+    if ($("tabIcs")) $("tabIcs").onclick = () => $("btnSubscribeIcs").click();
 
     // Navigation buttons
     $("navPrev").onclick = () => {
