@@ -1,0 +1,625 @@
+[
+ {
+  "name": "Summernats",
+  "city": "Canberra",
+  "start": "01-08",
+  "end": "01-11",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Enlighten Festival",
+  "city": "Canberra",
+  "start": "02-28",
+  "end": "03-10",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "National Multicultural Festival",
+  "city": "Canberra",
+  "start": "02-06",
+  "end": "02-08",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Canberra Balloon Spectacular",
+  "city": "Canberra",
+  "start": "03-15",
+  "end": "03-23",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Skyfire and Canberra New Year's Eve Fireworks",
+  "city": "Canberra",
+  "start": "03-15",
+  "end": "03-15",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Art, Not Apart",
+  "city": "Canberra",
+  "start": "03-16",
+  "end": "03-16",
+  "basis": "estimate"
+ },
+ {
+  "name": "National Folk Festival",
+  "city": "Canberra",
+  "start": "04-03",
+  "end": "04-06",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Canberra International Music Festival",
+  "city": "Canberra",
+  "start": "04-30",
+  "end": "05-04",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Canberra Truffle Festival",
+  "city": "Canberra",
+  "start": "06-07",
+  "end": "08-31",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Floriade",
+  "city": "Canberra",
+  "start": "09-13",
+  "end": "10-12",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Canberra Writers Festival",
+  "city": "Canberra",
+  "start": "10-15",
+  "end": "10-18",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Midsumma Festival",
+  "city": "Melbourne",
+  "start": "01-18",
+  "end": "02-08",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Melbourne Chinese Lunar New Year Festival (Chinatown)",
+  "city": "Melbourne",
+  "start": "02-22",
+  "end": "02-22",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Australian Open",
+  "city": "Melbourne",
+  "start": "01-12",
+  "end": "02-01",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "St Kilda Festival",
+  "city": "Melbourne",
+  "start": "02-15",
+  "end": "02-16",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Moonee Valley Festival",
+  "city": "Melbourne",
+  "start": "02-22",
+  "end": "02-22",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Moomba Festival",
+  "city": "Melbourne",
+  "start": "03-05",
+  "end": "03-09",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Melbourne International Comedy Festival",
+  "city": "Melbourne",
+  "start": "03-26",
+  "end": "04-20",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Australian Grand Prix (Formula 1)",
+  "city": "Melbourne",
+  "start": "03-13",
+  "end": "03-16",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Melbourne Food & Wine Festival",
+  "city": "Melbourne",
+  "start": "03-21",
+  "end": "03-30",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Melbourne Food and Wine Festival",
+  "city": "Melbourne",
+  "start": "03-21",
+  "end": "03-30",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Anzac Day Dawn Service (Shrine of Remembrance)",
+  "city": "Melbourne",
+  "start": "04-25",
+  "end": "04-25",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Melbourne Writers Festival",
+  "city": "Melbourne",
+  "start": "05-07",
+  "end": "05-10",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "RISING Festival",
+  "city": "Melbourne",
+  "start": "06-04",
+  "end": "06-15",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Melbourne International Film Festival (MIFF)",
+  "city": "Melbourne",
+  "start": "08-07",
+  "end": "08-24",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Melbourne Fringe Festival",
+  "city": "Melbourne",
+  "start": "09-30",
+  "end": "10-19",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Royal Melbourne Show",
+  "city": "Melbourne",
+  "start": "09-25",
+  "end": "10-05",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "AFL Grand Final",
+  "city": "Melbourne",
+  "start": "09-26",
+  "end": "09-26",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Melbourne International Jazz Festival",
+  "city": "Melbourne",
+  "start": "10-17",
+  "end": "10-26",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Lygon Street Festa (Carlton Italian Festa)",
+  "city": "Melbourne",
+  "start": "10-18",
+  "end": "10-19",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Oakleigh Glendi (Greek festival)",
+  "city": "Melbourne",
+  "start": "10-31",
+  "end": "11-01",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Melbourne Cup Carnival (Flemington race days incl. Lexus Melbourne Cup)",
+  "city": "Melbourne",
+  "start": "11-01",
+  "end": "11-08",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Melbourne New Year's Eve (City of Melbourne Celebration Zones and fireworks)",
+  "city": "Melbourne",
+  "start": "12-31",
+  "end": "12-31",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "NGV Triennial",
+  "city": "Melbourne",
+  "start": "12-13",
+  "end": "04-11",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Boxing Day Test (MCG)",
+  "city": "Melbourne",
+  "start": "12-26",
+  "end": "12-30",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Queen Victoria Market Night Markets (Summer, Hawker 88, Winter, Fringe Flavours)",
+  "city": "Melbourne",
+  "start": "11-19",
+  "end": "03-11",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "White Night Melbourne",
+  "city": "Melbourne",
+  "start": "02-01",
+  "end": "03-31",
+  "basis": "estimate"
+ },
+ {
+  "name": "Sydney Festival",
+  "city": "Sydney",
+  "start": "01-08",
+  "end": "01-25",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Epiphany Greek Festival (Carss Bush Park)",
+  "city": "Sydney",
+  "start": "01-11",
+  "end": "01-11",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Sydney Harbour Australia Day",
+  "city": "Sydney",
+  "start": "01-26",
+  "end": "01-26",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Australia Day Live (Sydney Opera House)",
+  "city": "Sydney",
+  "start": "01-26",
+  "end": "01-26",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Field Day",
+  "city": "Sydney",
+  "start": "01-01",
+  "end": "01-01",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Sydney Lunar Festival (Lunar New Year)",
+  "city": "Sydney",
+  "start": "02-14",
+  "end": "03-01",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Greek Festival of Sydney",
+  "city": "Sydney",
+  "start": "02-01",
+  "end": "05-31",
+  "basis": "estimate"
+ },
+ {
+  "name": "Greek Summer Festival (Carss Bush Park)",
+  "city": "Sydney",
+  "start": "02-15",
+  "end": "02-15",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Burwood Lunar Lanes",
+  "city": "Sydney",
+  "start": "02-21",
+  "end": "02-21",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Sydney Gay and Lesbian Mardi Gras Parade",
+  "city": "Sydney",
+  "start": "02-14",
+  "end": "03-02",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Queer Screen Mardi Gras Film Festival",
+  "city": "Sydney",
+  "start": "02-12",
+  "end": "02-26",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Laneway Festival Sydney",
+  "city": "Sydney",
+  "start": "02-09",
+  "end": "02-09",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Biennale of Sydney",
+  "city": "Sydney",
+  "start": "03-14",
+  "end": "06-14",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "TAB Golden Slipper Day",
+  "city": "Sydney",
+  "start": "03-21",
+  "end": "03-21",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Taste of Sydney",
+  "city": "Sydney",
+  "start": "03-01",
+  "end": "03-31",
+  "basis": "month-only"
+ },
+ {
+  "name": "Sydney Comedy Festival",
+  "city": "Sydney",
+  "start": "04-13",
+  "end": "05-17",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Sydney Royal Easter Show",
+  "city": "Sydney",
+  "start": "04-02",
+  "end": "04-13",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Vivid Sydney",
+  "city": "Sydney",
+  "start": "05-22",
+  "end": "06-13",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Sydney Writers' Festival",
+  "city": "Sydney",
+  "start": "05-17",
+  "end": "05-24",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Sydney Con Jazz Festival",
+  "city": "Sydney",
+  "start": "05-31",
+  "end": "05-31",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Winter Magic Festival (Katoomba)",
+  "city": "Sydney",
+  "start": "06-20",
+  "end": "06-21",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Sydney Film Festival",
+  "city": "Sydney",
+  "start": "06-03",
+  "end": "06-14",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Good Food & Wine Show Sydney",
+  "city": "Sydney",
+  "start": "06-19",
+  "end": "06-21",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Winterfest Sydney Medieval Fair",
+  "city": "Sydney",
+  "start": "07-04",
+  "end": "07-05",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Bondi Festival (July)",
+  "city": "Sydney",
+  "start": "07-03",
+  "end": "07-19",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Sydney Fringe Festival",
+  "city": "Sydney",
+  "start": "09-01",
+  "end": "09-30",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Voltaren City2Surf",
+  "city": "Sydney",
+  "start": "08-09",
+  "end": "08-09",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "TCS Sydney Marathon",
+  "city": "Sydney",
+  "start": "08-30",
+  "end": "08-30",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Mid-Autumn Moon Festival (Haymarket Chinatown)",
+  "city": "Sydney",
+  "start": "09-27",
+  "end": "10-12",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Parramatta Moon Festival",
+  "city": "Sydney",
+  "start": "10-01",
+  "end": "10-01",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Festival of the Winds (Bondi Beach)",
+  "city": "Sydney",
+  "start": "09-14",
+  "end": "09-14",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Sydney Underground Film Festival",
+  "city": "Sydney",
+  "start": "09-10",
+  "end": "09-13",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Sydney Contemporary",
+  "city": "Sydney",
+  "start": "09-03",
+  "end": "09-06",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Listen Out",
+  "city": "Sydney",
+  "start": "09-01",
+  "end": "10-31",
+  "basis": "estimate"
+ },
+ {
+  "name": "Antidote (Sydney Opera House)",
+  "city": "Sydney",
+  "start": "09-01",
+  "end": "09-30",
+  "basis": "month-only"
+ },
+ {
+  "name": "Sculpture by the Sea (Bondi)",
+  "city": "Sydney",
+  "start": "10-16",
+  "end": "11-02",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Granny Smith Festival",
+  "city": "Sydney",
+  "start": "10-17",
+  "end": "10-17",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Parramatta Lanes",
+  "city": "Sydney",
+  "start": "10-21",
+  "end": "10-24",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Diwali Festival (Bella Vista Farm and Sydney Diwali events)",
+  "city": "Sydney",
+  "start": "10-20",
+  "end": "10-20",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Sydney Jacaranda Season",
+  "city": "Sydney",
+  "start": "10-15",
+  "end": "11-15",
+  "basis": "estimate"
+ },
+ {
+  "name": "Night Noodle Markets",
+  "city": "Sydney",
+  "start": "10-01",
+  "end": "10-31",
+  "basis": "month-only"
+ },
+ {
+  "name": "Oktoberfest in the Gardens (The Domain)",
+  "city": "Sydney",
+  "start": "10-31",
+  "end": "10-31",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Sydney International Women's Jazz Festival",
+  "city": "Sydney",
+  "start": "10-22",
+  "end": "10-31",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Art & About Sydney",
+  "city": "Sydney",
+  "start": "10-23",
+  "end": "10-25",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Good Food Month",
+  "city": "Sydney",
+  "start": "10-01",
+  "end": "10-31",
+  "basis": "month-only"
+ },
+ {
+  "name": "Eden Whale Festival (regional, outside Greater Sydney)",
+  "city": "Sydney",
+  "start": "10-16",
+  "end": "10-18",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Greek Fest Brighton-Le-Sands (Bay Street)",
+  "city": "Sydney",
+  "start": "11-16",
+  "end": "11-16",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Just For Laughs Sydney",
+  "city": "Sydney",
+  "start": "11-09",
+  "end": "11-22",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Rolex Sydney to Hobart Yacht Race (start)",
+  "city": "Sydney",
+  "start": "12-26",
+  "end": "12-26",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Sydney New Year's Eve Fireworks",
+  "city": "Sydney",
+  "start": "12-31",
+  "end": "12-31",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Good Things Festival Sydney",
+  "city": "Sydney",
+  "start": "12-06",
+  "end": "12-06",
+  "basis": "edition-dates"
+ },
+ {
+  "name": "Parramasala Festival",
+  "city": "Sydney",
+  "start": "",
+  "end": "",
+  "basis": "unknown"
+ }
+]

@@ -23,6 +23,12 @@ tr.f th{top:34px;cursor:default;padding:2px}tr.f input{width:100%;min-width:70px
 tbody tr:nth-child(even){background:color-mix(in srgb,var(--fg) 4%,transparent)}
 #cols{display:none;flex-wrap:wrap;gap:6px 16px;margin:0 0 8px;font-size:.85rem}#cols label{display:flex;align-items:center;gap:5px}#cols input{flex:none;min-width:0;width:auto;padding:0}
 .seg button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+#cal{display:none}.calhd{display:flex;align-items:center;gap:8px;margin:8px 0;flex-wrap:wrap}.calhd h2{margin:0;font-size:1.15rem;min-width:150px}
+.mgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}.dow{font-size:.75rem;color:var(--mut);text-align:center}
+.day{min-height:54px;border:1px solid var(--bd);border-radius:8px;background:var(--card);padding:3px 5px;cursor:pointer;font-size:.8rem;text-align:left;color:var(--fg)}
+.day.sel{outline:2px solid var(--ac)}.day.today{border-color:var(--warn)}.day.pad{visibility:hidden}.day b{display:block;color:var(--ac);font-size:.95rem}
+.yr{display:flex;flex-wrap:wrap;gap:4px;margin:6px 0}.yr button{padding:4px 8px;font-size:.8rem}.yr button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.dr{display:flex;align-items:center;gap:6px;font-size:.85rem;color:var(--mut)}.dr input{flex:none;min-width:0;padding:6px}
 a{color:var(--ac)}.warn{color:var(--warn)}footer{color:var(--mut);font-size:.85rem;margin-top:32px}
 </style></head><body><main>
 <h1>Festival Register</h1>
@@ -32,13 +38,15 @@ a{color:var(--ac)}.warn{color:var(--warn)}footer{color:var(--mut);font-size:.85r
 <select id="city" aria-label="City"><option value="">All cities</option><option>Sydney</option><option>Melbourne</option><option>Canberra</option></select>
 <select id="tier" aria-label="Price tier"><option value="">All prices</option><option>Free</option><option>Low</option><option>Mid</option><option>Premium</option><option>Unverified</option></select>
 <select id="month" aria-label="Month"><option value="">Any month</option></select>
-<span class="seg"><button id="vcards" class="on">Cards</button><button id="vgrid">Grid</button></span>
+<span class="seg"><button id="vcards" class="on">Cards</button><button id="vgrid">Grid</button><button id="vcal">Calendar</button></span>
 <button id="colbtn" style="display:none">Columns</button><button id="exp" style="display:none">Export CSV</button>
+<span class="dr"><label>From <input type="date" id="dfrom"></label><label>to <input type="date" id="dto"></label><button id="dclr" title="Clear dates">✕</button><button id="dnow">Now</button></span>
 <a class="btn" id="submit" target="_blank" rel="noopener">+ Submit / correct</a>
 </div>
 <div id="cols"></div>
 <div id="list"></div>
 <div id="grid" style="display:none"></div>
+<div id="cal"><div class="calhd"><button id="cprev">‹</button><h2 id="ctitle"></h2><button id="cnext">›</button><button id="ctoday">Today</button></div><div class="yr" id="yr"></div><div class="mgrid" id="mg"></div><div id="dayres" style="margin-top:12px"></div><p class="sub" style="font-size:.8rem">Dates are typical, based on recent editions: confirm on the official site.</p></div>
 <footer>Tiers (AUD, cheapest typical paid entry): Free · Low &lt;$30 · Mid $30–100 · Premium &gt;$100. ⚠ = official link did not respond on 2026-10-12 (may be bot-blocking). Submissions go through GitHub issues.</footer>
 </main>
 <script>
@@ -52,8 +60,7 @@ $("submit").href=repo?repo+"/issues/new?template=submit-festival.yml":"#";
 let data=[];
 const ed=(e,y)=>e&&e.found?`<div><b>${y}:</b> ${esc(e.dates)} · ${esc(e.price)} ${safe(e.source_url)?`<a href="${esc(safe(e.source_url))}" rel="noopener">source</a>`:""}</div>`:`<div><b>${y}:</b> not found</div>`;
 function render(){
-  const q=$("q").value.toLowerCase(),c=$("city").value,t=$("tier").value,m=$("month").value;
-  const f=data.filter(r=>(!c||r.city===c)&&(!t||(r.price_tier||"Unverified")===t||(t==="Unverified"&&!r.price_tier))&&(!m||String(r.month||"").slice(0,3)===m)&&(!q||JSON.stringify(r).toLowerCase().includes(q)));
+  const f=filt();
   $("count").textContent=f.length+" of "+data.length;
   $("list").innerHTML=f.map(r=>{const tier=r.price_tier||"Unverified",u=safe(r.url);return `<div class="card"><h2>${u?`<a href="${esc(u)}" rel="noopener">${esc(r.name)}</a>`:esc(r.name)}${r.url_flag?' <span class="warn" title="Link did not respond">⚠</span>':""}</h2>
   <div class="meta">${esc(r.city)} · ${esc(r.month)} · ${esc(r.category)}</div>
@@ -66,7 +73,7 @@ const COLS=[["name","Festival"],["city","City"],["category","Category"],["month"
 let view="cards",sortK="city",sortD=1,vis=new Set(["name","city","month","price_tier","price_detail","url","ed2024","ed2025"]),cf={};
 const cell=(r,k)=>{const v=r[k];if(k==="ed2024"||k==="ed2025")return v&&v.found?`${v.dates||""} · ${v.price||""}`:"not found";return v==null?"":String(v)};
 function filt(){const q=$("q").value.toLowerCase(),c=$("city").value,t=$("tier").value,m=$("month").value;
- return data.filter(r=>(!c||r.city===c)&&(!t||(r.price_tier||"Unverified")===t)&&(!m||String(r.month||"").slice(0,3)===m)&&(!q||JSON.stringify(r).toLowerCase().includes(q))&&Object.entries(cf).every(([k,v])=>!v||cell(r,k).toLowerCase().includes(v.toLowerCase())))}
+ return data.filter(r=>(!c||r.city===c)&&(!t||(r.price_tier||"Unverified")===t)&&(!m||String(r.month||"").slice(0,3)===m)&&(!q||JSON.stringify(r).toLowerCase().includes(q))&&inRange(r)&&Object.entries(cf).every(([k,v])=>!v||cell(r,k).toLowerCase().includes(v.toLowerCase())))}
 function renderGrid(){
  const rows=filt().sort((a,b)=>cell(a,sortK).localeCompare(cell(b,sortK),undefined,{numeric:true})*sortD);
  $("count").textContent=rows.length+" of "+data.length;
@@ -76,8 +83,8 @@ function renderGrid(){
  $("grid").querySelectorAll("input[data-f]").forEach(i=>i.oninput=()=>{cf[i.dataset.f]=i.value;const p=i.selectionStart;renderGrid();const n=$("grid").querySelector(`input[data-f="${i.dataset.f}"]`);n.focus();n.setSelectionRange(p,p)});
 }
 function setView(v){view=v;$("vcards").classList.toggle("on",v==="cards");$("vgrid").classList.toggle("on",v==="grid");
- $("list").style.display=v==="cards"?"":"none";$("grid").style.display=v==="grid"?"":"none";$("colbtn").style.display=$("exp").style.display=v==="grid"?"":"none";if(v!=="grid")$("cols").style.display="none";go()}
-function go(){view==="grid"?renderGrid():render()}
+ $("vcal").classList.toggle("on",v==="cal");$("cal").style.display=v==="cal"?"block":"none";$("list").style.display=v==="cards"?"":"none";$("grid").style.display=v==="grid"?"":"none";$("colbtn").style.display=$("exp").style.display=v==="grid"?"":"none";if(v!=="grid")$("cols").style.display="none";go()}
+function go(){saveHash();view==="grid"?renderGrid():view==="cal"?renderCal():render()}
 $("vcards").onclick=()=>setView("cards");$("vgrid").onclick=()=>setView("grid");
 $("cols").innerHTML=COLS.map(c=>`<label><input type="checkbox" data-c="${c[0]}" ${vis.has(c[0])?"checked":""}> ${c[1]}</label>`).join("");
 $("cols").querySelectorAll("input").forEach(i=>i.onchange=()=>{i.checked?vis.add(i.dataset.c):vis.delete(i.dataset.c);renderGrid()});
@@ -86,5 +93,40 @@ $("exp").onclick=()=>{const cs=COLS.filter(c=>vis.has(c[0])),q=v=>`"${String(v).
  const csv=[cs.map(c=>q(c[1])).join(",")].concat(filt().map(r=>cs.map(c=>q(cell(r,c[0]))).join(","))).join("\r\n");
  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeff"+csv],{type:"text/csv"}));a.download="festivals.csv";a.click()};
 
-fetch("data.json").then(r=>r.json()).then(d=>{data=d.festivals;go()}).catch(()=>{$("list").textContent="Could not load data.json"});
+let cy=new Date().getFullYear(),cm=new Date().getMonth(),selD=null;
+function renderCal(){
+ const rows=filt();$("count").textContent=rows.length+" of "+data.length;
+ const now=new Date(),first=new Date(cy,cm,1),dim=new Date(cy,cm+1,0).getDate();
+ $("ctitle").textContent=first.toLocaleString("en-AU",{month:"long",year:"numeric"});
+ $("yr").innerHTML=MN.map((m,i)=>{const c=rows.filter(r=>{for(let d=1;d<=new Date(cy,i+1,0).getDate();d++)if(active(r,pad(i+1)+"-"+pad(d)))return true;return false}).length;return `<button data-m="${i}" class="${i===cm?"on":""}">${m.slice(0,3)} ${c}</button>`}).join("");
+ let h=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(x=>`<div class="dow">${x}</div>`).join("");
+ for(let i=0;i<(first.getDay()+6)%7;i++)h+='<div class="day pad"></div>';
+ const mx=Math.max(1,...Array.from({length:dim},(_,i)=>rows.filter(r=>active(r,pad(cm+1)+"-"+pad(i+1))).length));
+ for(let d=1;d<=dim;d++){const md=pad(cm+1)+"-"+pad(d),n=rows.filter(r=>active(r,md)).length,key=cy+"-"+md;
+  h+=`<button class="day${selD===key?" sel":""}${now.getFullYear()===cy&&now.getMonth()===cm&&now.getDate()===d?" today":""}" data-d="${key}" style="background:color-mix(in srgb,var(--ac) ${Math.round(n/mx*35)}%,var(--card))">${d}${n?`<b>${n}</b>`:""}</button>`}
+ $("mg").innerHTML=h;
+ $("yr").querySelectorAll("button").forEach(b=>b.onclick=()=>{cm=+b.dataset.m;renderCal()});
+ $("mg").querySelectorAll("button[data-d]").forEach(b=>b.onclick=()=>{selD=b.dataset.d;renderCal()});
+ if(selD){const md=selD.slice(5),L=rows.filter(r=>active(r,md));$("dayres").innerHTML=`<h3 style="margin:0 0 6px">${new Date(selD+"T00:00").toLocaleDateString("en-AU",{weekday:"long",day:"numeric",month:"long"})}: ${L.length} festival${L.length===1?"":"s"}</h3>`+(L.map(r=>`<div class="card"><b>${safe(r.url)?`<a href="${esc(r.url)}" rel="noopener">${esc(r.name)}</a>`:esc(r.name)}</b> <span class="tag">${esc(r.city)}</span><span class="tag ${esc((r.price_tier||"").split(" ")[0])}">${esc(r.price_tier||"Unverified")}</span><div class="meta">typical ${esc(r.s)} → ${esc(r.e)} (${esc(r.basis)}) · ${esc(r.price_detail)}</div></div>`).join("")||"<p>Nothing typically on this day.</p>")}else $("dayres").innerHTML="<p class=\"sub\">Click a day to see what's on. Numbers show how many festivals typically run.</p>"}
+$("cprev").onclick=()=>{cm--;if(cm<0){cm=11;cy--}renderCal()};$("cnext").onclick=()=>{cm++;if(cm>11){cm=0;cy++}renderCal()};
+$("ctoday").onclick=()=>{const n=new Date();cy=n.getFullYear();cm=n.getMonth();selD=cy+"-"+mdOf(n);renderCal()};
+$("dnow").onclick=()=>{const n=new Date(),e=new Date(n);e.setDate(e.getDate()+30);$("dfrom").value=n.toISOString().slice(0,10);$("dto").value=e.toISOString().slice(0,10);go()};
+$("dclr").onclick=()=>{$("dfrom").value=$("dto").value="";go()};
+$("dfrom").oninput=$("dto").oninput=()=>go();
+$("vcal").onclick=()=>setView("cal");
+function saveHash(){const p=new URLSearchParams();[["q","q"],["city","city"],["tier","tier"],["month","month"],["from","dfrom"],["to","dto"]].forEach(([k,i])=>$(i).value&&p.set(k,$(i).value));if(view!=="cards")p.set("view",view);history.replaceState(null,"","#"+p)}
+function loadHash(){const p=new URLSearchParams(location.hash.slice(1));[["q","q"],["city","city"],["tier","tier"],["month","month"],["from","dfrom"],["to","dto"]].forEach(([k,i])=>{if(p.get(k))$(i).value=p.get(k)});if(["grid","cal"].includes(p.get("view")))setView(p.get("view"))}
+
+const MN="january february march april may june july august september october november december".split(" ");
+const pad=n=>String(n).padStart(2,"0");
+function fall(r){const m=String(r.month||"").toLowerCase();const i=MN.findIndex(x=>m.includes(x.slice(0,3)));if(i<0)return["01-01","12-31"];const j=MN.findIndex((x,k)=>k>i&&m.includes(x.slice(0,3)));const e=j>=0?j:i;return[pad(i+1)+"-01",pad(e+1)+"-"+pad(new Date(2025,e+1,0).getDate())]}
+function active(r,md){const s=r.s,e=r.e;if(!s)return false;return s<=e?(md>=s&&md<=e):(md>=s||md<=e)}
+const mdOf=d=>pad(d.getMonth()+1)+"-"+pad(d.getDate());
+function inRange(r){const f=$("dfrom").value,t=$("dto").value;if(!f&&!t)return true;
+ let a=f?new Date(f+"T00:00"):new Date(t+"T00:00"),z=t?new Date(t+"T00:00"):a;if(z<a)[a,z]=[z,a];
+ for(let d=new Date(a),n=0;d<=z&&n<=366;d.setDate(d.getDate()+1),n++)if(active(r,mdOf(d)))return true;return false}
+Promise.all([fetch("data.json").then(r=>r.json()),fetch("dates.json").then(r=>r.ok?r.json():[]).catch(()=>[])]).then(([d,dt])=>{
+ const mp={};dt.forEach(x=>mp[x.city+"|"+x.name]=x);
+ data=d.festivals;data.forEach(r=>{const x=mp[r.city+"|"+r.name];if(x&&x.basis==='unknown'){r.s=r.e='';r.basis='unknown'}else if(x&&x.start){r.s=x.start;r.e=x.end;r.basis=x.basis}else{[r.s,r.e]=fall(r);r.basis="month-only"}});
+ loadHash();go()}).catch(()=>{$("list").textContent="Could not load data.json"});
 </script></body></html>
